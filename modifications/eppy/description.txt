@@ -1,0 +1,8 @@
+31  def iddversiontuple(afile):
+        ...
+
+44      # Version: 0.5.56
+45      # Ensures a ResourceWarning concerning an open .IDD file is not raised during program execution.
+46      fhandle.close()
+
+56      return versiontuple(vers)

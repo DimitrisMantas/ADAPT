@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.5.0-de239b2e5f, YMD=2021.10.10 02:15
+Program Version,EnergyPlus, Version 9.5.0-de239b2e5f, YMD=2021.10.10 03:40
 ! <Version>, Version ID
  Version, 9.5
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -543,26 +543,26 @@ Water Heater Information,WaterHeater:Mixed,100GAL NATURAL GAS WATER HEATER - 100
 ! <Environment:WarmupDays>, NumberofWarmupDays
 Environment,RUN PERIOD 1,WeatherFileRunPeriod,10/25/2021,10/25/2021,Monday,1,Use RunPeriod Specified Day,No,No,No,Yes,Yes,Clark and Allen
 Environment:Daylight Saving,Yes,InputFile,03/14,11/07
-Environment:WarmupDays,  9
+Environment:WarmupDays, 11
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,CORE_BOTTOM ZN,RunPeriod: RUN PERIOD 1,0.1542899228,0.3443627199,Pass,Pass,9.4771054009E-002,0.2752672509,Pass,Pass
- Warmup Convergence Information,CORE_MID ZN,RunPeriod: RUN PERIOD 1,0.1091909986,0.2220161228,Pass,Pass,0.1061752588,0.3005334415,Pass,Pass
- Warmup Convergence Information,CORE_TOP ZN,RunPeriod: RUN PERIOD 1,7.8055186908E-002,0.1590870460,Pass,Pass,0.1004075722,0.2600131853,Pass,Pass
- Warmup Convergence Information,FIRSTFLOOR_PLENUM ZN,RunPeriod: RUN PERIOD 1,4.4639061760E-002,6.7866443957E-002,Pass,Pass,0.4152469413,1.6378417780,Pass,Pass
- Warmup Convergence Information,MIDFLOOR_PLENUM ZN,RunPeriod: RUN PERIOD 1,3.1098586622E-002,3.9157524610E-002,Pass,Pass,0.2761540517,0.8975835494,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_1 ZN,RunPeriod: RUN PERIOD 1,0.1755815486,0.3837737145,Pass,Pass,0.1217264378,0.4811645714,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_2 ZN,RunPeriod: RUN PERIOD 1,0.1039814537,0.2527732960,Pass,Pass,8.9770290419E-002,0.2523774404,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_3 ZN,RunPeriod: RUN PERIOD 1,4.3019588978E-002,9.0736493108E-002,Pass,Pass,3.6287405585E-002,0.1063662032,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_4 ZN,RunPeriod: RUN PERIOD 1,6.4328744292E-002,0.1243662911,Pass,Pass,5.2004815469E-002,0.1254327879,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_1 ZN,RunPeriod: RUN PERIOD 1,0.1160275457,0.2310660862,Pass,Pass,0.3847432220,2.6529743110,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_2 ZN,RunPeriod: RUN PERIOD 1,9.3993097312E-002,0.2342509781,Pass,Pass,7.8077689976E-002,0.2192883626,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_3 ZN,RunPeriod: RUN PERIOD 1,4.9317220656E-002,9.8272060975E-002,Pass,Pass,0.1858172798,1.2484193036,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_4 ZN,RunPeriod: RUN PERIOD 1,7.3925952379E-002,0.1331265970,Pass,Pass,0.1111011891,0.4184305841,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_1 ZN,RunPeriod: RUN PERIOD 1,0.1125252334,0.2205751497,Pass,Pass,9.7908851667E-002,0.2319419515,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_2 ZN,RunPeriod: RUN PERIOD 1,8.8484708866E-002,0.2148860207,Pass,Pass,8.7661230409E-002,0.3498400238,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_3 ZN,RunPeriod: RUN PERIOD 1,5.7366030060E-002,0.1230802002,Pass,Pass,2.9041878326E-002,0.1077706413,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_4 ZN,RunPeriod: RUN PERIOD 1,8.4792740231E-002,0.1673981456,Pass,Pass,4.4764944685E-002,0.1244048510,Pass,Pass
- Warmup Convergence Information,TOPFLOOR_PLENUM ZN,RunPeriod: RUN PERIOD 1,3.7240764674E-002,3.2943001710E-002,Pass,Pass,0.1603705068,0.3707174999,Pass,Pass
+ Warmup Convergence Information,CORE_BOTTOM ZN,RunPeriod: RUN PERIOD 1,2.5068090847E-002,8.9983565841E-002,Pass,Pass,2.7413541072E-002,0.1174312193,Pass,Pass
+ Warmup Convergence Information,CORE_MID ZN,RunPeriod: RUN PERIOD 1,2.1654983592E-002,5.9843420297E-002,Pass,Pass,2.2712063512E-002,0.1044227283,Pass,Pass
+ Warmup Convergence Information,CORE_TOP ZN,RunPeriod: RUN PERIOD 1,3.0255500843E-002,6.4910205590E-002,Pass,Pass,2.2966206015E-002,0.1054238406,Pass,Pass
+ Warmup Convergence Information,FIRSTFLOOR_PLENUM ZN,RunPeriod: RUN PERIOD 1,1.2188251468E-002,1.3336565800E-002,Pass,Pass,3.2937035146E-002,0.1057137927,Pass,Pass
+ Warmup Convergence Information,MIDFLOOR_PLENUM ZN,RunPeriod: RUN PERIOD 1,1.4159347623E-002,1.2177060147E-002,Pass,Pass,0.2890331389,1.6057440191,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_1 ZN,RunPeriod: RUN PERIOD 1,0.1553901591,0.3866845727,Pass,Pass,9.3700946037E-002,0.4351313768,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_2 ZN,RunPeriod: RUN PERIOD 1,4.3754752036E-002,8.7399343711E-002,Pass,Pass,2.3478880685E-002,9.0063505108E-002,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_3 ZN,RunPeriod: RUN PERIOD 1,4.1636504535E-002,5.8358738265E-002,Pass,Pass,1.3128356956E-002,8.3164108976E-002,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_4 ZN,RunPeriod: RUN PERIOD 1,4.5990874058E-002,6.8986633473E-002,Pass,Pass,2.4518140959E-002,8.8408697391E-002,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_1 ZN,RunPeriod: RUN PERIOD 1,4.7635612464E-002,7.8038620265E-002,Pass,Pass,3.3325324863E-002,9.2819833449E-002,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_2 ZN,RunPeriod: RUN PERIOD 1,6.0984622098E-002,0.1083827735,Pass,Pass,2.9658417503E-002,9.5385332252E-002,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_3 ZN,RunPeriod: RUN PERIOD 1,4.8121591862E-002,5.7288510660E-002,Pass,Pass,1.3843200690E-002,8.3454351054E-002,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_4 ZN,RunPeriod: RUN PERIOD 1,6.1375384418E-002,7.8024955113E-002,Pass,Pass,2.9541719057E-002,9.1102375694E-002,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_1 ZN,RunPeriod: RUN PERIOD 1,5.6804112496E-002,8.3811029429E-002,Pass,Pass,5.8294687912E-002,0.1813505283,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_2 ZN,RunPeriod: RUN PERIOD 1,6.8150939253E-002,0.1239314532,Pass,Pass,5.3269511688E-002,0.2241254247,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_3 ZN,RunPeriod: RUN PERIOD 1,5.1140169570E-002,6.1031234085E-002,Pass,Pass,6.6274259938E-002,0.3582225589,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_4 ZN,RunPeriod: RUN PERIOD 1,6.8966860334E-002,9.9068526579E-002,Pass,Pass,0.1057751241,0.4244285871,Pass,Pass
+ Warmup Convergence Information,TOPFLOOR_PLENUM ZN,RunPeriod: RUN PERIOD 1,3.5438454165E-002,2.3704610873E-002,Pass,Pass,9.5313471538E-002,0.2627031969,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data
