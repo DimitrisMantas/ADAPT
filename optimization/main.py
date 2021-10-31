@@ -72,7 +72,8 @@ class OptimizationProblem(ElementwiseProblem):
     def __init__(self, decimals=preferences.parameters.parameters["SAMPLING_DECIMALS"]):
         """..."""
 
-        variable_bounds = utilities.optimization.read_problem_bounds("../data/optimization/model/variable_bounds.csv")
+        variable_bounds = utilities.optimization.read_problem_bounds(
+            "../database/optimization/model/variable_bounds.csv")
 
         # The number of design space variables depends on the simulation unit time.
         super().__init__(n_var=48, n_obj=2, xl=variable_bounds[0],
@@ -82,15 +83,14 @@ class OptimizationProblem(ElementwiseProblem):
         """..."""
 
         # Heating Schedule
-        simulation.modifier.modify_schedule(x[00:24],
-                                            "../data/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf", 0)
+        simulation.modifier.modify_schedule(x[00:24], "../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 29)
+
         # Cooling Schedule
-        simulation.modifier.modify_schedule(x[24:48],
-                                            "../data/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf", 5)
+        simulation.modifier.modify_schedule(x[24:48], "../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 36)
 
         # Simulation Controller
-        simulation.controller.run_eplus("../data/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf",
-                                        "../data/simulation/model/USA_AZ_Davis-Monthan.AFB.722745_TMY3/USA_AZ_Davis-Monthan.AFB.722745_TMY3.epw",
+        simulation.controller.run_eplus("../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
+                                        "../database/simulation/model/USA_AZ_Tucson-Davis-Monthan.AFB.722745_TMY3.epw",
                                         set_idd=False)
 
         # Objectives
@@ -113,13 +113,7 @@ optimization_algorithm = NSGA2(pop_size=100,
                                eliminate_duplicates=True
                                )
 
-termination_criterion = get_termination("time", "02:00:00")
-# termination_criterion = get_termination("time", "03:00:00")
-# termination_criterion = get_termination("time", "08:00:00")
-# termination_criterion = get_termination("time", "16:00:00")
-# termination_criterion = get_termination("time", "20:00:00")
-# termination_criterion = get_termination("time", "24:00:00")
-# termination_criterion = DesignSpaceToleranceTermination(tol=0.1, n_max_gen=5000)
+termination_criterion = DesignSpaceToleranceTermination(tol=0.1, n_max_gen=5000)
 
 convergence_callback = callback.ConvergenceCallback()
 
@@ -271,7 +265,7 @@ if __name__ == "__main__":
 # STEP 09 - CALCULATE THE OPTIMAL POINT OF THE PARETO FRONTIER - DONE
 
 
-def scalarize_objective_space_results(objective_space_results, max_owppd=8.42681939022):
+def scalarize_objective_space_results(objective_space_results, max_ppd=10.0):
     """
     Decompose the multi-objective simulation problem of BEC vs. owPPD and and estimate its optimal solution.
 
@@ -289,14 +283,14 @@ def scalarize_objective_space_results(objective_space_results, max_owppd=8.42681
     (ASF) proposed by Wierzbicki [2].
     """
     # CASE 1: Build the corresponding difference matrix.
-    diff = objective_space_results[:, 0] - max_owppd
+    diff = objective_space_results[:, 0] - max_ppd
     # CASE 1: Mask all values greater than 0% (i.e. owPPD > max_owPPD).
     mask = np.ma.greater(diff, 0)
     # If all values of the difference matrix need to be masked, then owPPD(x) > max_owPPD.
     if np.all(mask):
         warnings.warn(
             "owPPD(x) > {}%: Switching to Wierzbicki's ASF assuming equal simulation objective importance.".format(
-                max_owppd))
+                max_ppd))
         # CASE 2: Normalize the non-dominated solutions of the initial multi-objective simulation problem to fit
         # within the range [0, 1].
 
@@ -371,8 +365,8 @@ def write_logs(callback, decimals=preferences.parameters.parameters["OUTPUT_DECI
 
     # NOTE - This avoids a mutable default argument.
     if paths is None:
-        paths = {"F": "../data/optimization/logs/objective_space.csv",
-                 "X": "../data/optimization/logs/design_space.csv"
+        paths = {"F": "../database/optimization/logs/objective_space.csv",
+                 "X": "../database/optimization/logs/design_space.csv"
                  }
 
     # Instantiate two dataframes to store the design and objective space output per population generation.
@@ -401,12 +395,12 @@ def write_logs(callback, decimals=preferences.parameters.parameters["OUTPUT_DECI
 
 
 def write_result(design_space_result, lookup_table, decimals=preferences.parameters.parameters["OUTPUT_DECIMALS"],
-                 path="../data/optimization/output/schedules.csv"):
+                 path="../database/optimization/output/schedules.csv"):
     """
     # TODO - Fix the function docstring.
     Write the design space output to a CSV file.
 
-    The supplied data must be an iterable of iterables in the form of [StartIndex, StopIndex, Label],
+    The supplied database must be an iterable of iterables in the form of [StartIndex, StopIndex, Label],
     where StartIndex and LastIndex are the first and last (+1) values of a specific independent variable, respectively,
     and Label is said variable's given name (e.g. Heating Setpoints).
 
@@ -426,12 +420,12 @@ def write_result(design_space_result, lookup_table, decimals=preferences.paramet
     dataframe["Time (HH:MM:SS)"] = pd.date_range("01:00", freq=preferences.parameters.parameters["DF_FREQ_STR"],
                                                  periods=24 / preferences.parameters.parameters["DF_FREQ_NUM"]).time
 
-    # NOTE - The following procedure is repeated for each element of the supplemental data (i.e. each required data
+    # NOTE - The following procedure is repeated for each element of the supplemental database (i.e. each required database
     #  column).
     for i in range(len(lookup_table)):
-        # The design space output can be thought of as a compressed version of the required column data. To
-        # decompress this data, each "compressed" value must be repeated the appropriate amount of times,
-        # such that the length of the decompressed column data is equal to the number of rows of the dataframe.
+        # The design space output can be thought of as a compressed version of the required column database. To
+        # decompress this database, each "compressed" value must be repeated the appropriate amount of times,
+        # such that the length of the decompressed column database is equal to the number of rows of the dataframe.
         # NOTE - All compressed values must be repeated an equal number of times.
         compressed_column_data = design_space_result[lookup_table[i][0]:lookup_table[i][1]]
 
@@ -440,7 +434,7 @@ def write_result(design_space_result, lookup_table, decimals=preferences.paramet
 
         decompressed_column_data = np.repeat(compressed_column_data, repeats)
 
-        # Append the decompressed column data to the dataframe with the appropriate label.
+        # Append the decompressed column database to the dataframe with the appropriate label.
         dataframe[lookup_table[i][2]] = np.round(decompressed_column_data, decimals)
 
     # Write the required dataframe to a CSV file.
@@ -715,7 +709,7 @@ if __name__ == "__main__":
 
 
 def finalize_figure(main_axes_object, grid_linestyle="--", color=preferences.colors.colors["PANTONE_17_5104"],
-                    path="../data/optimization/output/pareto.png", dpi=300):
+                    path="../database/optimization/output/pareto.png", dpi=300):
     main_axes_object.grid(ls=grid_linestyle, c=color)
 
     main_axes_object.legend()

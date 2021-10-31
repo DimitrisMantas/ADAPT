@@ -1,0 +1,13 @@
+ ReadVarsESO
+ processing:C:\Users\Dimit\Documents\GitHub\ADAPT\simulation\in.rvi
+ Requested ESO file=C:\Users\Dimit\Documents\GitHub\ADAPT\database\simulation\logs\eplusout.eso
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.
+ ReadVarsESO
+ processing:C:\Users\Dimit\Documents\GitHub\ADAPT\simulation\in.mvi
+ input file:C:\Users\Dimit\Documents\GitHub\ADAPT\database\simulation\logs\eplusout.mtr
+ output file:C:\Users\Dimit\Documents\GitHub\ADAPT\database\simulation\logs\eplusmtr.csv
+ getting all vars from:C:\Users\Dimit\Documents\GitHub\ADAPT\database\simulation\logs\eplusout.mtr
+  number variables requested for output=           3
+ ReadVars Run Time=00hr 00min  0.14sec
+ ReadVarsESO program completed successfully.

@@ -89,7 +89,7 @@ def makeabunch(commdct, obj, obj_i, debugidd=True, block=None):
 
 
 def makebunches(data, commdct):
-    """make bunches with data"""
+    """make bunches with database"""
     bunchdt = CaseInsensitiveDict()
     ddtt, dtls = data.dt, data.dtls
     for obj_i, key in enumerate(dtls):
@@ -103,7 +103,7 @@ def makebunches(data, commdct):
 
 
 def makebunches_alter(data, commdct, theidf, block=None):
-    """make bunches with data"""
+    """make bunches with database"""
     bunchdt = CaseInsensitiveDict()
     dt, dtls = data.dt, data.dtls
     for obj_i, key in enumerate(dtls):
@@ -308,7 +308,7 @@ def idfreader1(fname, iddfile, theidf, conv=True, commdct=None, block=None):
         skiplist = None
     nofirstfields = iddgaps.missingkeys_standard(commdct, dtls, skiplist=skiplist)
     iddgaps.missingkeys_nonstandard(block, commdct, dtls, nofirstfields)
-    # bunchdt = makebunches(data, commdct)
+    # bunchdt = makebunches(database, commdct)
     bunchdt = makebunches_alter(data, commdct, theidf, block)
     return bunchdt, block, data, commdct, idd_index, versiontuple
 

@@ -1,6 +1,6 @@
 """
     This file is part of the interface of ADAPT. It defines the
-    directory creation methods for reading and writing data parsed form its
+    directory creation methods for reading and writing database parsed form its
     performance simulation to its simulation engine and vice versa.
 
     Copyright (C) 2021-2022

@@ -37,7 +37,7 @@ import numpy
 import pandas
 
 
-def read_nse(path="../data/simulation/logs/eplustbl.htm", convert_value=True) -> float:
+def read_nse(path="../database/simulation/logs/eplustbl.htm", convert_value=True) -> float:
     """Read the net site energy consumption from a standard eplustbl.HTM eplus™ result file."""
 
     with open(path, "r") as file:
@@ -54,7 +54,7 @@ def read_ppd(mode="max") -> float:
     """Read the occupancy-weighted PPD from a standard eplusout.HTM eplus™ result file."""
 
     # The .CSV file contains timestamps, which are not required.
-    dataframe = pandas.read_csv("../data/simulation/logs/eplusout.csv").drop("Date/Time", axis=1)
+    dataframe = pandas.read_csv("../database/simulation/logs/eplusout.csv").drop("Date/Time", axis=1)
 
     split_index = len(dataframe.columns) // 2
 

@@ -45,8 +45,8 @@ if __name__ == "__main__":
     def main():
         """Entry point for debugging purposes."""
 
-        osm2idf("../data/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.osm",
-                "../data/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf")
+        osm2idf("../database/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.osm",
+                "../database/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf")
 
 
     main()

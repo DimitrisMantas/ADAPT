@@ -61,7 +61,7 @@ class TerminationCriterion(SlidingWindowTermination):
 
         data_window_size: int
             The minimum number of population generations required for the pre-specified algorithm performance metric
-            to be computed once. This input argument affects the data storing process.
+            to be computed once. This input argument affects the database storing process.
 
         metric_window_size: int
             The number of the latest available non-dominated solution sets, which should be considered when computing

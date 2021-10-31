@@ -3,12 +3,14 @@
 
 ## ABOUT
 
-**ADAPT** ADAPT is a Python 3 module for the optimization of building energy consumption and human comfort using genetic
-algorithms coupled with whole building performance simulation software.
+**ADAPT** is an open-source Python 3 module for the optimization of building energy consumption and human comfort using 
+genetic algorithms coupled with whole building performance simulation software.
 
-**ADAPT** was originally developed for exclusive use in Greece by MYTILINEOS S.A., under the supervision of Dr. Vassilis Nikolopoulos, Head of Applied R&D and Innovation.
+**ADAPT** was originally developed for the electric power and natural gas business unit of MYTILINEOS S.A., under the
+supervision of Dr. Vassilis Nikolopoulos, Head of Applied Research and Development.
 
-**ADAPT** consists of two distinct modules: an optimization and a simulation engine. The former is based on the NGAII algorithm, while the latter is based on EnergyPlus and OpenStudio.
+**ADAPT** consists of two distinct modules: an optimization and a simulation engine. The former is based on the NGAII
+algorithm, while the latter is based on EnergyPlus and OpenStudio.
 
 Insisting on an open-source design philosophy, **ADAPT** comes bundled with EnergyPlus™, a whole building performance
 simulation engine developed and under direct funding from the United States Department of Energy. However, this engine

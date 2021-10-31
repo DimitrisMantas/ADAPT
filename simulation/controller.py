@@ -32,7 +32,7 @@
 import eppy.modeleditor
 
 
-def run_eplus(idf: str, epw: str, idd="eplus/eplus.idd", set_idd=True, output_path="../data/simulation/logs/",
+def run_eplus(idf: str, epw: str, idd="eplus/eplus.idd", set_idd=True, output_path="../database/simulation/logs/",
               read_vars=True, verbose="q") -> None:
     """Run an eplus™ whole building performance simulation."""
 
@@ -47,8 +47,8 @@ if __name__ == "__main__":
     def main():
         """Entry point for debugging purposes."""
 
-        run_eplus("../data/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf",
-                  "../data/simulation/model/USA_AZ_Davis-Monthan.AFB.722745_TMY3/USA_AZ_Davis-Monthan.AFB.722745_TMY3.epw")
+        run_eplus("../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
+                  "../database/simulation/model/USA_AZ_Tucson-Davis-Monthan.AFB.722745_TMY3.epw")
 
 
     main()
