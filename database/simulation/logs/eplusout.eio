@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 04:11
+Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 23:18
 ! <Version>, Version ID
  Version, 9.0
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -1017,3 +1017,28 @@ Environment:Special Days,MEMORIAL DAY,Holiday,InputFile,05/31,  1
 Environment:Special Days,LABOR DAY,Holiday,InputFile,09/06,  1
 Environment:Special Days,COLUMBUS DAY,Holiday,InputFile,10/11,  1
 Environment:Special Days,THANKSGIVING,Holiday,InputFile,11/25,  1
+Environment:WarmupDays,  7
+! <Tabular Report>,Style,Unit Conversion
+Tabular Report,Commaandhtml,commaandhtml
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,CORE_BOTTOM,RunPeriod: RUNPERIOD 1,0.2484170845,0.5356020818,Pass,Pass,0.1365710627,0.3646941821,Pass,Pass
+ Warmup Convergence Information,TOPFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,0.1088527702,0.1280035328,Pass,Pass,0.3250985278,1.0234889573,Pass,Pass
+ Warmup Convergence Information,MIDFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,6.7930280926E-002,7.7417940352E-002,Pass,Pass,0.7380774062,3.3803103989,Pass,Pass
+ Warmup Convergence Information,FIRSTFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,0.1185636097,0.1440304503,Pass,Pass,0.4465818431,1.5942890434,Pass,Pass
+ Warmup Convergence Information,CORE_MID,RunPeriod: RUNPERIOD 1,0.1476909686,0.2802809066,Pass,Pass,8.9976305016E-002,0.2431990846,Pass,Pass
+ Warmup Convergence Information,CORE_TOP,RunPeriod: RUNPERIOD 1,0.1342069838,0.2532357357,Pass,Pass,9.0444611602E-002,0.2517202467,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_3,RunPeriod: RUNPERIOD 1,0.1357626070,0.2839864490,Pass,Pass,9.0873101367E-002,0.3437376729,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_2,RunPeriod: RUNPERIOD 1,0.2246297738,0.4863460739,Pass,Pass,0.1509267590,0.4627465592,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_1,RunPeriod: RUNPERIOD 1,0.1744896262,0.3633694832,Pass,Pass,9.8327026295E-002,0.2371432086,Pass,Pass
+ Warmup Convergence Information,PERIMETER_TOP_ZN_4,RunPeriod: RUNPERIOD 1,0.1514396826,0.3671049912,Pass,Pass,9.9362843074E-002,0.2058649235,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_3,RunPeriod: RUNPERIOD 1,0.1455829930,0.2972678381,Pass,Pass,0.1093059443,0.3165636902,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_2,RunPeriod: RUNPERIOD 1,0.2404160522,0.5208716414,Pass,Pass,0.1513074457,0.4329837138,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_1,RunPeriod: RUNPERIOD 1,0.1917029919,0.4072802758,Pass,Pass,0.1047450996,0.3017548946,Pass,Pass
+ Warmup Convergence Information,PERIMETER_BOT_ZN_4,RunPeriod: RUNPERIOD 1,0.1840429453,0.4121243602,Pass,Pass,0.1166198113,0.2661389542,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_3,RunPeriod: RUNPERIOD 1,0.1368387204,0.2730488009,Pass,Pass,9.7979529674E-002,0.3122858018,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_2,RunPeriod: RUNPERIOD 1,5.0692287121E-002,0.1264512722,Pass,Pass,4.4485129697E-002,0.1063883750,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_1,RunPeriod: RUNPERIOD 1,0.1667265650,0.3396801551,Pass,Pass,9.9014429028E-002,0.2378135165,Pass,Pass
+ Warmup Convergence Information,PERIMETER_MID_ZN_4,RunPeriod: RUNPERIOD 1,0.1594755640,0.3721213657,Pass,Pass,0.1062273601,0.2153837227,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data

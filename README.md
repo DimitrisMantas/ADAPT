@@ -5,7 +5,7 @@
 [![Dependencies](https://img.shields.io/badge/Pymoo-0.5.0-blue)]()
 
 [![License](https://img.shields.io/badge/License-AGPL--3.0-orange)]()
-[![Version](https://img.shields.io/badge/Version-1.5.0-sucess)]()
+[![Version](https://img.shields.io/badge/Version-1.6.0-green)]()
 
 [![Python](https://img.shields.io/badge/Python-3.9-red)]()
 [![OS](https://img.shields.io/badge/OS-Windows%2010%2064--bit-red)]()

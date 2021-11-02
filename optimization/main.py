@@ -44,9 +44,6 @@ import pandas as pd
 from pymoo.core.problem import ElementwiseProblem
 from pymoo.algorithms.moo.nsga2 import NSGA2
 
-from pymoo.util.termination.x_tol import DesignSpaceToleranceTermination
-from pymoo.factory import get_termination
-
 from pymoo.optimize import minimize
 from pymoo.factory import get_performance_indicator
 from pymoo.factory import get_decomposition
@@ -54,8 +51,8 @@ from pymoo.factory import get_decision_making
 
 import algorithm
 import callback
-import termination
 import monitor
+import TerminationCriterion
 
 import preferences.colors
 import preferences.parameters
@@ -104,7 +101,7 @@ class OptimizationProblem(ElementwiseProblem):
 
 optimization_problem = OptimizationProblem()
 
-optimization_algorithm = NSGA2(pop_size=100,
+optimization_algorithm = NSGA2(pop_size=5,
                                sampling=algorithm.SamplingScheme(),
                                # NOTE - Check the parent population selection process.
                                crossover=algorithm.CrossoverScheme(
@@ -115,12 +112,8 @@ optimization_algorithm = NSGA2(pop_size=100,
                                eliminate_duplicates=True
                                )
 
-# termination_criterion = DesignSpaceToleranceTermination(tol=10, n_max_gen=1)
-termination_criterion = termination.TerminationCriterion1(epsilon=2)
-# termination_criterion = termination.TerminationCriterion1(epsilon=1)
-# termination_criterion = termination.TerminationCriterion1(epsilon=0.5)
-# termination_criterion = termination.TerminationCriterion1(epsilon=0.1)
-# termination_criterion = termination.TerminationCriterion1(epsilon=0.01)
+termination_criterion = TerminationCriterion.TerminationCriterion(tol=0.10)
+# termination_criterion = TerminationCriterion.TerminationCriterion(tol=0.01)
 
 convergence_callback = callback.ConvergenceCallback()
 
@@ -394,8 +387,8 @@ def write_logs(callback, decimals=preferences.parameters.parameters["OUTPUT_DECI
 
     # Write the required dataframes to CSV files.
     # TODO - Find a better way to write this.
-    utilities.directories.create_directory(os.path.split(paths["F"])[0])
-    utilities.directories.create_directory(os.path.split(paths["X"])[0])
+    utilities.librarian.create_directory(os.path.split(paths["F"])[0])
+    utilities.librarian.create_directory(os.path.split(paths["X"])[0])
 
     dataframe_F.to_csv(paths["F"], index_label="Evaluation")
     dataframe_X.to_csv(paths["X"], index_label="Evaluation")
@@ -445,7 +438,7 @@ def write_result(design_space_result, lookup_table, decimals=preferences.paramet
         dataframe[lookup_table[i][2]] = np.round(decompressed_column_data, decimals)
 
     # Write the required dataframe to a CSV file.
-    utilities.directories.create_directory(os.path.split(path)[0])
+    utilities.librarian.create_directory(os.path.split(path)[0])
     dataframe.to_csv(path, index=False)
 
 
@@ -723,7 +716,7 @@ def finalize_figure(main_axes_object, grid_linestyle="--", color=preferences.col
 
     # plt.show()
 
-    utilities.directories.create_directory(os.path.split(path)[0])
+    utilities.librarian.create_directory(os.path.split(path)[0])
     plt.savefig(path, dpi=dpi)
 
 
