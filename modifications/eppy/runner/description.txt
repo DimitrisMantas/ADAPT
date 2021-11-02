@@ -1,0 +1,12 @@
+207  def run(...):
+
+        ...
+
+359     # Disables console output during normal program execution.
+360     # check_call(cmd, stdout=open(os.devnull, "w")) --> Original Code
+361
+362     pass
+
+        ...
+
+370      return "OK"

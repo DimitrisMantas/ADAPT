@@ -1,4 +1,4 @@
-[![ADAPT](https://drive.google.com/uc?export=view&id=1YsXmL406EFRzlyCdZzz6B-fqRngIdJLO)]()
+# <img src="https://drive.google.com/uc?export=view&id=1YsXmL406EFRzlyCdZzz6B-fqRngIdJLO" height="100" />
 
 [![Dependencies](https://img.shields.io/badge/Eppy-0.5.56-blue)]()
 [![Dependencies](https://img.shields.io/badge/OpenStudio-3.2.1-blue)]()
