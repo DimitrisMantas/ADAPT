@@ -54,6 +54,8 @@ from pymoo.factory import get_decision_making
 
 import algorithm
 import callback
+import termination
+import display
 
 import preferences.colors
 import preferences.parameters
@@ -113,12 +115,17 @@ optimization_algorithm = NSGA2(pop_size=100,
                                eliminate_duplicates=True
                                )
 
-termination_criterion = DesignSpaceToleranceTermination(tol=0.1, n_max_gen=5000)
+# termination_criterion = DesignSpaceToleranceTermination(tol=10, n_max_gen=1)
+termination_criterion = termination.TerminationCriterion1(epsilon=2)
+# termination_criterion = termination.TerminationCriterion1(epsilon=1)
+# termination_criterion = termination.TerminationCriterion1(epsilon=0.5)
+# termination_criterion = termination.TerminationCriterion1(epsilon=0.1)
+# termination_criterion = termination.TerminationCriterion1(epsilon=0.01)
 
 convergence_callback = callback.ConvergenceCallback()
 
 res = minimize(optimization_problem, optimization_algorithm, termination_criterion, callback=convergence_callback,
-               seed=preferences.parameters.parameters["SEED"])
+               seed=preferences.parameters.parameters["SEED"], display=display.ConvergenceMonitor(), verbose=True)
 
 
 # API USAGE EXAMPLE
@@ -136,7 +143,7 @@ if __name__ == "__main__":
 # STEP 08 - ASSESS THE PERFORMANCE OF THE OPTIMIZATION ALGORITHM - DONE
 
 
-def assess_optimization_algorithm_performance(objective_space_results, reference_point=(1., 1.), reference_set=None,
+def algorithm_performance(objective_space_results, reference_point=(1., 1.), reference_set=None,
                                               extreme_solutions=None
                                               ):
     """Assess the performance of the simulation algorithm using various relevant metrics."""
@@ -265,7 +272,7 @@ if __name__ == "__main__":
 # STEP 09 - CALCULATE THE OPTIMAL POINT OF THE PARETO FRONTIER - DONE
 
 
-def scalarize_objective_space_results(objective_space_results, max_ppd=10.0):
+def recommend_point(objective_space_results, max_ppd=10.0):
     """
     Decompose the multi-objective simulation problem of BEC vs. owPPD and and estimate its optimal solution.
 
@@ -311,7 +318,7 @@ if __name__ == "__main__":
     # NOTE - The API accepts res.F and not res (more user-friendly) because pymoo performs scalarization and high
     #  trade-off area computation using indices. So, to get the actual output, you need to pas these indices to
     #  res.F and res.X, so you must already know what they are and how to use them.
-    I0 = scalarize_objective_space_results(non_dominated_solutions)
+    I0 = recommend_point(non_dominated_solutions)
     P0 = non_dominated_solutions[I0, :]
     print("OPTIMAL POINT - OBJECTIVE SPACE =\n" + "{}".format(P0))
 
@@ -322,14 +329,14 @@ if __name__ == "__main__":
 # STEP 10 - DECOMPOSE THE DESIGN SPACE RESULTS
 
 
-def decompose_design_space_results(design_space_results, index):
+def recommend_schedule(design_space_results, index):
     """Decompose the individual components of the input argument of BEC(x) for a given value of BEC."""
     return design_space_results[index, :]
 
 
 # API USAGE EXAMPLE
 if __name__ == "__main__":
-    design_space_results = decompose_design_space_results(res.X, I0)
+    design_space_results = recommend_schedule(res.X, I0)
     print("OPTIMAL POINT - DESIGN SPACE =\n" + "{}".format(design_space_results))
 
 
@@ -462,8 +469,8 @@ if __name__ == "__main__":
 
 
 def instantiate_figure(figure_dimensions=(10, 10), axis_labels=(
-"Occupancy-Weighted Predicted Percentage Dissatisfied (%)", "Net Site Energy Consumption (kWh)",
-"$\mathregular{CO_2eq}$ (kg)")):
+"Fanger's Thermal Comfort Model: Occupancy-Weighted PPD (%)", "Net Site Energy Consumption (kWh)",
+"Global Warming Potential (kg $\mathregular{CO_2eq}$)")):
     figure, main_axes = plt.subplots(constrained_layout=True, figsize=figure_dimensions)  # (W, H) in 10**2 pixels.
 
     main_axes.set_xlabel(axis_labels[0])
@@ -477,7 +484,7 @@ def instantiate_figure(figure_dimensions=(10, 10), axis_labels=(
 
 # API USAGE EXAMPLE
 if __name__ == "__main__":
-    fig, ax0, ax1 = instantiate_figure()
+    figure, main_axes, secondary_axes = instantiate_figure()
 
 
 ########################################################################################################################
@@ -486,7 +493,7 @@ if __name__ == "__main__":
 # STEP 14 - GRAPH THE MINIMUM REQUIRED DATA TO HELP SET UP THE MAIN AND SECONDARY AXES - DONE
 
 
-def scatter(figure_object, main_axes_object, data, marker=".", marker_fill_color=None,
+def scatter(figure_object, main_axes_object, data, marker=".", marker_fill_color=preferences.colors.colors["CORNFLOWERBLUE"],
             marker_label=None, marker_size=None
             ):
     """Create a scatter plot of a given colors, label, marker and marker size."""
@@ -507,7 +514,7 @@ def scatter(figure_object, main_axes_object, data, marker=".", marker_fill_color
 
 # API USAGE EXAMPLE
 if __name__ == "__main__":
-    scatter(fig, ax0, non_dominated_solutions, marker_fill_color=preferences.colors.colors["PANTONE_13_1520"])
+    scatter(figure, main_axes, non_dominated_solutions)
 
 
 ########################################################################################################################
@@ -516,7 +523,7 @@ if __name__ == "__main__":
 # STEP 15 - SET UP THE GRAPH MAIN AND SECONDARY AXES
 
 
-def axes_setup(axes_object, axes_name, num_ticks, optimal_point,
+def setup_axes(axes_object, axes_name, num_ticks, optimal_point,
                decimals=preferences.parameters.parameters["OUTPUT_DECIMALS"], axes_limits=None,
                secondary_axes_limits=None,
                secondary_axis_scale=1.
@@ -583,11 +590,11 @@ def axes_setup(axes_object, axes_name, num_ticks, optimal_point,
 
 # API USAGE EXAMPLE
 if __name__ == "__main__":
-    axes_setup(ax0, "x", 10, P0)
+    setup_axes(main_axes, "x", 10, P0)
     # We need the Y-axis limits for the secondary axis.
-    main_axes_limits = axes_setup(ax0, "y", 10, P0, axes_limits="return")
+    main_axes_limits = setup_axes(main_axes, "y", 10, P0, axes_limits="return")
     # Secondary axis.
-    axes_setup(ax1, "y", 10, P0, axes_limits="preferences", secondary_axes_limits=main_axes_limits,
+    setup_axes(secondary_axes, "y", 10, P0, axes_limits="preferences", secondary_axes_limits=main_axes_limits,
                secondary_axis_scale=0.579249757500518)
 
 
@@ -597,10 +604,10 @@ if __name__ == "__main__":
 # STEP 16 - DRAW THE OPTIMAL POINT OF THE PARETO FRONTIER - DONE
 
 
-def draw_optimal_point(figure_object, main_axes_object, optimal_point,
-                       marker_fill_color=preferences.colors.colors["PANTONE_17_5641"],
+def draw_recommended_point(figure_object, main_axes_object, optimal_point,
+                       marker_fill_color=preferences.colors.colors["MEDIUMSEAGREEN"],
                        marker_label="Optimal Point", marker_size=0.25,
-                       crosshair_stroke_color=preferences.colors.colors["PANTONE_17_5641"], crosshair_stroke_weight=None
+                       crosshair_stroke_color=preferences.colors.colors["MEDIUMSEAGREEN"], crosshair_stroke_weight=None
                        ):
     def _draw_crosshair(_figure_object=figure_object, _main_axes_object=main_axes_object, _optimal_point=optimal_point,
                         _crosshair_stroke_color=crosshair_stroke_color, _crosshair_stroke_weight=crosshair_stroke_weight
@@ -626,7 +633,7 @@ def draw_optimal_point(figure_object, main_axes_object, optimal_point,
 
 # API USAGE EXAMPLE
 if __name__ == "__main__":
-    draw_optimal_point(fig, ax0, P0)
+    draw_recommended_point(figure, main_axes, P0)
 
 
 ########################################################################################################################
@@ -636,10 +643,10 @@ if __name__ == "__main__":
 
 
 def draw_high_tradeoff_area(figure_object, main_axes_object, high_tradeoff_area,
-                            marker_fill_color=preferences.colors.colors["PANTONE_19_1557"],
+                            marker_fill_color=preferences.colors.colors["LIGHTCORAL"],
                             marker_label="High Trade-Off Area",
                             marker_size=0.25, rectangle_fill=False, rectangle_fill_color=None,
-                            rectangle_stroke_color=preferences.colors.colors["PANTONE_19_1557"],
+                            rectangle_stroke_color=preferences.colors.colors["LIGHTCORAL"],
                             rectangle_stroke_weight=None,
                             rectangle_size=0.5
                             ):
@@ -699,7 +706,7 @@ def draw_high_tradeoff_area(figure_object, main_axes_object, high_tradeoff_area,
 
 # API USAGE EXAMPLE
 if __name__ == "__main__":
-    draw_high_tradeoff_area(fig, ax0, P1)
+    draw_high_tradeoff_area(figure, main_axes, P1)
 
 
 ########################################################################################################################
@@ -708,7 +715,7 @@ if __name__ == "__main__":
 # STEP 18 - FINALIZE AND ACTIVATE THE FIGURE FOR THE GRAPHICAL OUTPUT
 
 
-def finalize_figure(main_axes_object, grid_linestyle="--", color=preferences.colors.colors["PANTONE_17_5104"],
+def finalize_figure(main_axes_object, grid_linestyle="--", color=preferences.colors.colors["GRAY"],
                     path="../database/optimization/output/pareto.png", dpi=300):
     main_axes_object.grid(ls=grid_linestyle, c=color)
 
@@ -722,7 +729,7 @@ def finalize_figure(main_axes_object, grid_linestyle="--", color=preferences.col
 
 # API USAGE EXAMPLE
 if __name__ == "__main__":
-    finalize_figure(ax0)
+    finalize_figure(main_axes)
 
 ###################H#####################################################################################################
 
