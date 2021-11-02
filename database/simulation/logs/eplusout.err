@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 03:45,
+Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 03:46,
    ** Warning ** ProcessScheduleInput: Schedule:Constant="VAV_BOT MAX OA FRACTION", Blank Schedule Type Limits Name input -- will not be validated.
    ** Warning ** ProcessScheduleInput: Schedule:Constant="VAV_MID MAX OA FRACTION", Blank Schedule Type Limits Name input -- will not be validated.
    ** Warning ** ProcessScheduleInput: Schedule:Constant="VAV_TOP MAX OA FRACTION", Blank Schedule Type Limits Name input -- will not be validated.
@@ -33,4 +33,54 @@ Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 03:45,
    ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
    **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORE_BOTTOM VAV BOX COMPONENT
    ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
-   **   ~~~   ** Occurs in AirT
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORE_MID VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORE_TOP VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_TOP_ZN_3 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_TOP_ZN_2 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_TOP_ZN_1 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_TOP_ZN_4 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_BOT_ZN_3 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_BOT_ZN_2 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_BOT_ZN_1 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_BOT_ZN_4 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_MID_ZN_3 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_MID_ZN_2 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_MID_ZN_1 VAV BOX COMPONENT
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = PERIMETER_MID_ZN_4 VAV BOX COMPONENT
+   ************* Beginning Plant Sizing Calculations
+   **  Fatal  ** DXFOut: Could not open file C:\Users\Dimit\Documents\GitHub\ADAPT\database\simulation\logs\eplusout.dxf for output (write).
+   ...Summary of Errors that led to program termination:
+   ..... Reference severe error count=0
+   ..... Last severe error=
+   ************* Fatal error -- final processing.  More error messages may appear.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 31 Warning; 0 Severe Errors.
+   ************* EnergyPlus Terminated--Fatal Error Detected. 31 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  0.98sec

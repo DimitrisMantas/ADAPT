@@ -1,0 +1,37 @@
+Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 03:46
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,Calendar Year of Simulation[] ! When Annual Report Variables Requested
+9,1,CORE_BOTTOM,Zone People Occupant Count [] !Hourly
+11,1,CORE_MID,Zone People Occupant Count [] !Hourly
+13,1,CORE_TOP,Zone People Occupant Count [] !Hourly
+15,1,PERIMETER_TOP_ZN_3,Zone People Occupant Count [] !Hourly
+17,1,PERIMETER_TOP_ZN_2,Zone People Occupant Count [] !Hourly
+19,1,PERIMETER_TOP_ZN_1,Zone People Occupant Count [] !Hourly
+21,1,PERIMETER_TOP_ZN_4,Zone People Occupant Count [] !Hourly
+23,1,PERIMETER_BOT_ZN_3,Zone People Occupant Count [] !Hourly
+25,1,PERIMETER_BOT_ZN_2,Zone People Occupant Count [] !Hourly
+27,1,PERIMETER_BOT_ZN_1,Zone People Occupant Count [] !Hourly
+29,1,PERIMETER_BOT_ZN_4,Zone People Occupant Count [] !Hourly
+31,1,PERIMETER_MID_ZN_3,Zone People Occupant Count [] !Hourly
+33,1,PERIMETER_MID_ZN_2,Zone People Occupant Count [] !Hourly
+35,1,PERIMETER_MID_ZN_1,Zone People Occupant Count [] !Hourly
+37,1,PERIMETER_MID_ZN_4,Zone People Occupant Count [] !Hourly
+1920,1,CORE_BOTTOM,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1921,1,CORE_MID,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1922,1,CORE_TOP,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1923,1,PERIMETER_TOP_ZN_3,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1924,1,PERIMETER_TOP_ZN_2,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1925,1,PERIMETER_TOP_ZN_1,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1926,1,PERIMETER_TOP_ZN_4,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1927,1,PERIMETER_BOT_ZN_3,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1928,1,PERIMETER_BOT_ZN_2,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1929,1,PERIMETER_BOT_ZN_1,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1930,1,PERIMETER_BOT_ZN_4,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1931,1,PERIMETER_MID_ZN_3,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1932,1,PERIMETER_MID_ZN_2,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1933,1,PERIMETER_MID_ZN_1,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
+1934,1,PERIMETER_MID_ZN_4,Zone Thermal Comfort Fanger Model PPD [%] !Hourly
