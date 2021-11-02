@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 02:06
+Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 02:07
 ! <Version>, Version ID
  Version, 9.0
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -1001,44 +1001,4 @@ HeatTransfer Surface,iz-CORE_MID_ZN_5_WALL_WEST,Wall,,CTF - ConductionTransferFu
 HeatTransfer Surface,PERIMETER_MID_ZN_4_FLOOR,Floor,,CTF - ConductionTransferFunction,INT_SLAB_FLOOR,3.839,1.986,,131.25,131.25,131.25,270.00,180.00,24.13,6.47,0.00,iz-PERIMETER_MID_ZN_4_FLOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,1.00,0.00,1.00,0.00,4
 HeatTransfer Surface,PERIMETER_MID_ZN_4_CEILING,Roof,,CTF - ConductionTransferFunction,DROPCEILING,4.488,2.432,,131.25,131.25,131.25,90.00,0.00,24.13,6.47,0.00,iz-PERIMETER_MID_ZN_4_CEILING,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
 HeatTransfer Surface,PERIMETER_MID_ZN_4_INTERNALMASS_1,Internal Mass,,CTF - ConductionTransferFunction,INTERIORFURNISHINGS,0.800,0.800,,262.51,262.51,262.51,0.00,90.00,262.51,1.00,0.00,PERIMETER_MID_ZN_4_INTERNALMASS_1,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,1.00,0.00,0
-! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values
-! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
-! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
-! <Environment:WarmupDays>, NumberofWarmupDays
-Environment,RUNPERIOD 1,WeatherFileRunPeriod,10/15/2021,10/15/2021,Friday,1,Use RunPeriod Specified Day,No,No,No,Yes,Yes
-Environment:Daylight Saving,Yes,InputFile,03/14,11/07
-Environment:Special Days,NEW YEARS DAY,Holiday,InputFile,01/01,  1
-Environment:Special Days,VETERANS DAY,Holiday,InputFile,11/11,  1
-Environment:Special Days,CHRISTMAS,Holiday,InputFile,12/25,  1
-Environment:Special Days,INDEPENDENCE DAY,Holiday,InputFile,07/04,  1
-Environment:Special Days,MLK DAY,Holiday,InputFile,01/18,  1
-Environment:Special Days,PRESIDENTS DAY,Holiday,InputFile,02/15,  1
-Environment:Special Days,MEMORIAL DAY,Holiday,InputFile,05/31,  1
-Environment:Special Days,LABOR DAY,Holiday,InputFile,09/06,  1
-Environment:Special Days,COLUMBUS DAY,Holiday,InputFile,10/11,  1
-Environment:Special Days,THANKSGIVING,Holiday,InputFile,11/25,  1
-Environment:WarmupDays,  8
-! <Tabular Report>,Style,Unit Conversion
-Tabular Report,Commaandhtml,commaandhtml
-! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,CORE_BOTTOM,RunPeriod: RUNPERIOD 1,0.1829901590,0.4137532437,Pass,Pass,0.1048947833,0.2231136287,Pass,Pass
- Warmup Convergence Information,TOPFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,9.3458936172E-002,0.1181173595,Pass,Pass,0.5785355858,3.2992671477,Pass,Pass
- Warmup Convergence Information,MIDFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,6.3274003047E-002,8.5724252538E-002,Pass,Pass,0.2747828012,0.7864905107,Pass,Pass
- Warmup Convergence Information,FIRSTFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,9.5920080421E-002,0.1329131317,Pass,Pass,0.3641100462,1.5920209340,Pass,Pass
- Warmup Convergence Information,CORE_MID,RunPeriod: RUNPERIOD 1,0.1324822270,0.2713210238,Pass,Pass,7.8048158460E-002,0.2374981775,Pass,Pass
- Warmup Convergence Information,CORE_TOP,RunPeriod: RUNPERIOD 1,0.1199718651,0.2299331257,Pass,Pass,6.6941699357E-002,0.2137693402,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_3,RunPeriod: RUNPERIOD 1,0.1129894215,0.2404752056,Pass,Pass,8.0199453171E-002,0.2455040101,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_2,RunPeriod: RUNPERIOD 1,0.1582780791,0.3541251204,Pass,Pass,0.1152851436,0.2879212068,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_1,RunPeriod: RUNPERIOD 1,0.1340093892,0.2936101565,Pass,Pass,9.1029606343E-002,0.2033621043,Pass,Pass
- Warmup Convergence Information,PERIMETER_TOP_ZN_4,RunPeriod: RUNPERIOD 1,0.1240978787,0.2919687826,Pass,Pass,8.7433258696E-002,0.2155778362,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_3,RunPeriod: RUNPERIOD 1,0.1308203911,0.2675273594,Pass,Pass,9.2140903502E-002,0.2476324815,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_2,RunPeriod: RUNPERIOD 1,0.1679917486,0.3828205276,Pass,Pass,0.1301580478,0.2915547571,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_1,RunPeriod: RUNPERIOD 1,0.1633724910,0.3513986199,Pass,Pass,0.1769881115,0.9048842996,Pass,Pass
- Warmup Convergence Information,PERIMETER_BOT_ZN_4,RunPeriod: RUNPERIOD 1,0.1518741603,0.3415417343,Pass,Pass,0.1055720041,0.2684565522,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_3,RunPeriod: RUNPERIOD 1,0.1155303298,0.2406831529,Pass,Pass,7.9062548328E-002,0.2575453855,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_2,RunPeriod: RUNPERIOD 1,4.9229720049E-002,0.1255477970,Pass,Pass,4.9276911974E-002,0.1139833263,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_1,RunPeriod: RUNPERIOD 1,0.1420386564,0.2900533920,Pass,Pass,9.0840492836E-002,0.1916055470,Pass,Pass
- Warmup Convergence Information,PERIMETER_MID_ZN_4,RunPeriod: RUNPERIOD 1,0.1306293713,0.3030258287,Pass,Pass,8.9002721631E-002,0.2021416965,Pass,Pass
-! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
-Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
-End of Data
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:S
