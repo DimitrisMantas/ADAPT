@@ -1,4 +1,4 @@
-Program Version:,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 02:03
+Program Version:,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 02:06
 Tabular Output Report in Format: ,Comma
 
 Building:,OfficeMedium
@@ -13,10 +13,10 @@ WARNING: THE REPORT DOES NOT REPRESENT A FULL ANNUAL SIMULATION.
 Site and Source Energy
 
 ,,Total Energy [GJ],Energy Per Total Building Area [MJ/m2],Energy Per Conditioned Building Area [MJ/m2]
-,Total Site Energy,5.70,1.14,1.14
-,Net Site Energy,5.70,1.14,1.14
-,Total Source Energy,17.59,3.53,3.53
-,Net Source Energy,17.59,3.53,3.53
+,Total Site Energy,5.74,1.15,1.15
+,Net Site Energy,5.74,1.15,1.15
+,Total Source Energy,17.74,3.56,3.56
+,Net Source Energy,17.74,3.56,3.56
 
 
 Site to Source Energy Conversion Factors
@@ -48,8 +48,8 @@ Building Area
 End Uses
 
 ,,Electricity [GJ],Natural Gas [GJ],Additional Fuel [GJ],District Cooling [GJ],District Heating [GJ],Water [m3]
-,Heating,0.00,0.00,0.00,0.00,0.00,0.00
-,Cooling,1.44,0.00,0.00,0.00,0.00,0.00
+,Heating,0.01,0.00,0.00,0.00,0.00,0.00
+,Cooling,1.48,0.00,0.00,0.00,0.00,0.00
 ,Interior Lighting,0.91,0.00,0.00,0.00,0.00,0.00
 ,Exterior Lighting,0.14,0.00,0.00,0.00,0.00,0.00
 ,Interior Equipment,2.50,0.00,0.00,0.00,0.00,0.00
@@ -63,14 +63,15 @@ End Uses
 ,Refrigeration,0.00,0.00,0.00,0.00,0.00,0.00
 ,Generators,0.00,0.00,0.00,0.00,0.00,0.00
 ,,,,,,,
-,Total End Uses,5.48,0.22,0.00,0.00,0.00,0.97
+,Total End Uses,5.53,0.22,0.00,0.00,0.00,0.97
+Note: Electricity appears to be the principal heating source based on energy usage.
 
 
 End Uses By Subcategory
 
 ,,Subcategory,Electricity [GJ],Natural Gas [GJ],Additional Fuel [GJ],District Cooling [GJ],District Heating [GJ],Water [m3]
-,Heating,General,0.00,0.00,0.00,0.00,0.00,0.00
-,Cooling,General,1.44,0.00,0.00,0.00,0.00,0.00
+,Heating,General,0.01,0.00,0.00,0.00,0.00,0.00
+,Cooling,General,1.48,0.00,0.00,0.00,0.00,0.00
 ,Interior Lighting,LightsWired,0.91,0.00,0.00,0.00,0.00,0.00
 ,Exterior Lighting,General,0.14,0.00,0.00,0.00,0.00,0.00
 ,Interior Equipment,MiscPlug,1.88,0.00,0.00,0.00,0.00,0.00
@@ -93,18 +94,18 @@ Utility Use Per Conditioned Floor Area
 
 ,,Electricity Intensity [MJ/m2],Natural Gas Intensity [MJ/m2],Additional Fuel Intensity [MJ/m2],District Cooling Intensity [MJ/m2],District Heating Intensity [MJ/m2],Water Intensity [m3/m2]
 ,Lighting,0.21,0.00,0.00,0.00,0.00,0.00
-,HVAC,0.38,0.04,0.00,0.00,0.00,0.00
+,HVAC,0.39,0.04,0.00,0.00,0.00,0.00
 ,Other,0.51,0.00,0.00,0.00,0.00,0.00
-,Total,1.10,0.04,0.00,0.00,0.00,0.00
+,Total,1.11,0.04,0.00,0.00,0.00,0.00
 
 
 Utility Use Per Total Floor Area
 
 ,,Electricity Intensity [MJ/m2],Natural Gas Intensity [MJ/m2],Additional Fuel Intensity [MJ/m2],District Cooling Intensity [MJ/m2],District Heating Intensity [MJ/m2],Water Intensity [m3/m2]
 ,Lighting,0.21,0.00,0.00,0.00,0.00,0.00
-,HVAC,0.38,0.04,0.00,0.00,0.00,0.00
+,HVAC,0.39,0.04,0.00,0.00,0.00,0.00
 ,Other,0.51,0.00,0.00,0.00,0.00,0.00
-,Total,1.10,0.04,0.00,0.00,0.00,0.00
+,Total,1.11,0.04,0.00,0.00,0.00,0.00
 
 
 Electric Loads Satisfied
@@ -118,12 +119,12 @@ Electric Loads Satisfied
 ,Net Decrease in On-Site Storage,0.000,0.00
 ,Total On-Site Electric Sources,0.000,0.00
 ,,,
-,Electricity Coming From Utility,5.479,100.00
+,Electricity Coming From Utility,5.527,100.00
 ,Surplus Electricity Going To Utility,0.000,0.00
-,Net Electricity From Utility,5.479,100.00
+,Net Electricity From Utility,5.527,100.00
 ,,,
-,Total On-Site and Utility Electric Sources,5.479,100.00
-,Total Electricity End Uses,5.479,100.00
+,Total On-Site and Utility Electric Sources,5.527,100.00
+,Total Electricity End Uses,5.527,100.00
 
 
 On-Site Thermal Sources
@@ -167,8 +168,8 @@ Comfort and Setpoint Not Met Summary
 
 ,,Facility [Hours]
 ,Time Setpoint Not Met During Occupied Heating,0.00
-,Time Setpoint Not Met During Occupied Cooling,4.67
-,Time Not Comfortable Based on Simple ASHRAE 55-2004,0.83
+,Time Setpoint Not Met During Occupied Cooling,3.67
+,Time Not Comfortable Based on Simple ASHRAE 55-2004,0.17
 
 
 Note 1: An asterisk (*) indicates that the feature is not yet implemented.
@@ -178,7 +179,7 @@ FOR:,Entire Facility
 General
 
 ,,Value
-,Program Version and Build,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 02:03
+,Program Version and Build,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2021.11.02 02:06
 ,RunPeriod,RUNPERIOD 1
 ,Weather File,Tucson-Davis Monthan AFB AZ USA TMY3 WMO#=722745
 ,Latitude [deg],32.17
@@ -255,40 +256,40 @@ End Uses
 ,,Electricity [W],Natural Gas [W],Propane [W],District Cooling [W],Steam [W],Water [m3/s]
 ,Time of Peak,15-OCT-14:09,15-OCT-11:20,-,-,-,15-OCT-11:20
 ,Heating,0.00,0.00,0.00,0.00,0.00,0.00
-,Cooling,58308.21,0.00,0.00,0.00,0.00,0.00
+,Cooling,64447.54,0.00,0.00,0.00,0.00,0.00
 ,Interior Lighting,20956.25,0.00,0.00,0.00,0.00,0.00
 ,Exterior Lighting,0.00,0.00,0.00,0.00,0.00,0.00
 ,Interior Equipment,46414.74,0.00,0.00,0.00,0.00,0.00
 ,Exterior Equipment,832.89,0.00,0.00,0.00,0.00,0.00
-,Fans,20648.04,0.00,0.00,0.00,0.00,0.00
+,Fans,24555.50,0.00,0.00,0.00,0.00,0.00
 ,Pumps,6.85,0.00,0.00,0.00,0.00,0.00
 ,Heat Rejection,0.00,0.00,0.00,0.00,0.00,0.00
 ,Humidification,0.00,0.00,0.00,0.00,0.00,0.00
 ,Heat Recovery,0.00,0.00,0.00,0.00,0.00,0.00
-,Water Systems,0.00,9485.26,0.00,0.00,0.00,0.00
+,Water Systems,0.00,9484.01,0.00,0.00,0.00,0.00
 ,Refrigeration,0.00,0.00,0.00,0.00,0.00,0.00
 ,Generators,0.00,0.00,0.00,0.00,0.00,0.00
 ,,,,,,,
-,Total End Uses,147166.97,9485.26,0.00,0.00,0.00,0.00
+,Total End Uses,157213.76,9484.01,0.00,0.00,0.00,0.00
 
 
 End Uses By Subcategory
 
 ,,Subcategory,Electricity [W],Natural Gas [W],Propane [W],District Cooling [W],Steam [W],Water [m3/s]
 ,Heating,General,0.00,0.00,0.00,0.00,0.00,0.00
-,Cooling,General,58308.21,0.00,0.00,0.00,0.00,0.00
+,Cooling,General,64447.54,0.00,0.00,0.00,0.00,0.00
 ,Interior Lighting,LightsWired,20956.25,0.00,0.00,0.00,0.00,0.00
 ,Exterior Lighting,General,0.00,0.00,0.00,0.00,0.00,0.00
 ,Interior Equipment,MiscPlug,34487.83,0.00,0.00,0.00,0.00,0.00
 ,,ElevatorLift,11880.66,0.00,0.00,0.00,0.00,0.00
 ,,ElevatorLightsFan,46.25,0.00,0.00,0.00,0.00,0.00
 ,Exterior Equipment,Transformer,832.89,0.00,0.00,0.00,0.00,0.00
-,Fans,General,20648.04,0.00,0.00,0.00,0.00,0.00
+,Fans,General,24555.50,0.00,0.00,0.00,0.00,0.00
 ,Pumps,General,6.85,0.00,0.00,0.00,0.00,0.00
 ,Heat Rejection,General,0.00,0.00,0.00,0.00,0.00,0.00
 ,Humidification,General,0.00,0.00,0.00,0.00,0.00,0.00
 ,Heat Recovery,General,0.00,0.00,0.00,0.00,0.00,0.00
-,Water Systems,Water Heater,0.00,9485.26,0.00,0.00,0.00,0.00
+,Water Systems,Water Heater,0.00,9484.01,0.00,0.00,0.00,0.00
 ,,WaterUse,0.00,0.00,0.00,0.00,0.00,0.00
 ,Refrigeration,General,0.00,0.00,0.00,0.00,0.00,0.00
 ,Generators,General,0.00,0.00,0.00,0.00,0.00,0.00
@@ -303,8 +304,8 @@ WARNING: THE REPORT DOES NOT REPRESENT A FULL ANNUAL SIMULATION.
 Source Energy End Use Components Summary
 
 ,,Source Electricity [GJ],Source Natural Gas [GJ],Source Additional Fuel [GJ],Source District Cooling [GJ],Source District Heating [GJ]
-,Heating,0.00,0.00,0.00,0.00,0.00
-,Cooling,4.56,0.00,0.00,0.00,0.00
+,Heating,0.02,0.00,0.00,0.00,0.00
+,Cooling,4.69,0.00,0.00,0.00,0.00
 ,Interior Lighting,2.88,0.00,0.00,0.00,0.00
 ,Exterior Lighting,0.45,0.00,0.00,0.00,0.00
 ,Interior Equipment,7.92,0.00,0.00,0.00,0.00
@@ -318,7 +319,7 @@ Source Energy End Use Components Summary
 ,Refrigeration,0.00,0.00,0.00,0.00,0.00
 ,Generators,0.00,0.00,0.00,0.00,0.00
 ,,,,,,
-,Total Source Energy End Use Components,17.35,0.23,0.00,0.00,0.00
+,Total Source Energy End Use Components,17.51,0.23,0.00,0.00,0.00
 
 
 Normalized Metrics
@@ -326,12 +327,12 @@ Source Energy End Use Components Per Conditioned Floor Area
 
 ,,Source Electricity [MJ/m2],Source Natural Gas [MJ/m2],Source Additional Fuel [MJ/m2],Source District Cooling [MJ/m2],Source District Heating [MJ/m2]
 ,Heating,0.00,0.00,0.00,0.00,0.00
-,Cooling,0.91,0.00,0.00,0.00,0.00
+,Cooling,0.94,0.00,0.00,0.00,0.00
 ,Interior Lighting,0.58,0.00,0.00,0.00,0.00
 ,Exterior Lighting,0.09,0.00,0.00,0.00,0.00
 ,Interior Equipment,1.59,0.00,0.00,0.00,0.00
 ,Exterior Equipment,0.02,0.00,0.00,0.00,0.00
-,Fans,0.28,0.00,0.00,0.00,0.00
+,Fans,0.29,0.00,0.00,0.00,0.00
 ,Pumps,0.00,0.00,0.00,0.00,0.00
 ,Heat Rejection,0.00,0.00,0.00,0.00,0.00
 ,Humidification,0.00,0.00,0.00,0.00,0.00
@@ -340,19 +341,19 @@ Source Energy End Use Components Per Conditioned Floor Area
 ,Refrigeration,0.00,0.00,0.00,0.00,0.00
 ,Generators,0.00,0.00,0.00,0.00,0.00
 ,,,,,,
-,Total Source Energy End Use Components,3.48,0.05,0.00,0.00,0.00
+,Total Source Energy End Use Components,3.51,0.05,0.00,0.00,0.00
 
 
 Source Energy End Use Components Per Total Floor Area
 
 ,,Source Electricity [MJ/m2],Source Natural Gas [MJ/m2],Source Additional Fuel [MJ/m2],Source District Cooling [MJ/m2],Source District Heating [MJ/m2]
 ,Heating,0.00,0.00,0.00,0.00,0.00
-,Cooling,0.91,0.00,0.00,0.00,0.00
+,Cooling,0.94,0.00,0.00,0.00,0.00
 ,Interior Lighting,0.58,0.00,0.00,0.00,0.00
 ,Exterior Lighting,0.09,0.00,0.00,0.00,0.00
 ,Interior Equipment,1.59,0.00,0.00,0.00,0.00
 ,Exterior Equipment,0.02,0.00,0.00,0.00,0.00
-,Fans,0.28,0.00,0.00,0.00,0.00
+,Fans,0.29,0.00,0.00,0.00,0.00
 ,Pumps,0.00,0.00,0.00,0.00,0.00
 ,Heat Rejection,0.00,0.00,0.00,0.00,0.00
 ,Humidification,0.00,0.00,0.00,0.00,0.00
@@ -361,7 +362,7 @@ Source Energy End Use Components Per Total Floor Area
 ,Refrigeration,0.00,0.00,0.00,0.00,0.00
 ,Generators,0.00,0.00,0.00,0.00,0.00
 ,,,,,,
-,Total Source Energy End Use Components,3.48,0.05,0.00,0.00,0.00
+,Total Source Energy End Use Components,3.51,0.05,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -1727,24 +1728,24 @@ Tabular Report
 Warmup Convergence Information
 
 ,,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
-,           1,CORE_BOTTOM,RunPeriod: RUNPERIOD 1,0.2046960133,0.4356341228,Pass,Pass,0.1304690199,0.3790831686,Pass,Pass
-,           2,TOPFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,0.1005630741,0.1088902267,Pass,Pass,0.2673120700,0.6662760398,Pass,Pass
-,           3,MIDFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,6.9174021080E-002,8.2203141226E-002,Pass,Pass,0.4098250528,1.9266780925,Pass,Pass
-,           4,FIRSTFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,0.1041849547,0.1347113136,Pass,Pass,0.3733013977,1.2126037828,Pass,Pass
-,           5,CORE_MID,RunPeriod: RUNPERIOD 1,0.1384834104,0.2639360174,Pass,Pass,8.4830947331E-002,0.2274235059,Pass,Pass
-,           6,CORE_TOP,RunPeriod: RUNPERIOD 1,0.1276537127,0.2422732811,Pass,Pass,8.9496160468E-002,0.2175014891,Pass,Pass
-,           7,PERIMETER_TOP_ZN_3,RunPeriod: RUNPERIOD 1,0.1226704110,0.2392471678,Pass,Pass,9.7827491306E-002,0.2444643893,Pass,Pass
-,           8,PERIMETER_TOP_ZN_2,RunPeriod: RUNPERIOD 1,0.1649167225,0.3627017791,Pass,Pass,0.1458192044,0.4071275608,Pass,Pass
-,           9,PERIMETER_TOP_ZN_1,RunPeriod: RUNPERIOD 1,0.1655879211,0.3571905831,Pass,Pass,0.1007275053,0.2658211381,Pass,Pass
-,          10,PERIMETER_TOP_ZN_4,RunPeriod: RUNPERIOD 1,0.1570942689,0.3666500184,Pass,Pass,0.1186412972,0.2753856539,Pass,Pass
-,          11,PERIMETER_BOT_ZN_3,RunPeriod: RUNPERIOD 1,0.1409073103,0.2835331408,Pass,Pass,0.1107233105,0.2930256288,Pass,Pass
-,          12,PERIMETER_BOT_ZN_2,RunPeriod: RUNPERIOD 1,0.1917694148,0.4182089767,Pass,Pass,0.1559818719,0.4843149716,Pass,Pass
-,          13,PERIMETER_BOT_ZN_1,RunPeriod: RUNPERIOD 1,0.1842085144,0.3823279724,Pass,Pass,0.1124065998,0.3594153875,Pass,Pass
-,          14,PERIMETER_BOT_ZN_4,RunPeriod: RUNPERIOD 1,0.1944597837,0.4332528455,Pass,Pass,0.1409655071,0.3675261457,Pass,Pass
-,          15,PERIMETER_MID_ZN_3,RunPeriod: RUNPERIOD 1,0.1303350657,0.2524988362,Pass,Pass,0.1074580206,0.2627222293,Pass,Pass
-,          16,PERIMETER_MID_ZN_2,RunPeriod: RUNPERIOD 1,4.8297412320E-002,0.1254689209,Pass,Pass,4.9252168864E-002,0.1096566372,Pass,Pass
-,          17,PERIMETER_MID_ZN_1,RunPeriod: RUNPERIOD 1,0.1628031090,0.3397708739,Pass,Pass,0.1022640190,0.2603142321,Pass,Pass
-,          18,PERIMETER_MID_ZN_4,RunPeriod: RUNPERIOD 1,0.1657439201,0.3828355318,Pass,Pass,0.1238251591,0.2930072989,Pass,Pass
+,           1,CORE_BOTTOM,RunPeriod: RUNPERIOD 1,0.1829901590,0.4137532437,Pass,Pass,0.1048947833,0.2231136287,Pass,Pass
+,           2,TOPFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,9.3458936172E-002,0.1181173595,Pass,Pass,0.5785355858,3.2992671477,Pass,Pass
+,           3,MIDFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,6.3274003047E-002,8.5724252538E-002,Pass,Pass,0.2747828012,0.7864905107,Pass,Pass
+,           4,FIRSTFLOOR_PLENUM,RunPeriod: RUNPERIOD 1,9.5920080421E-002,0.1329131317,Pass,Pass,0.3641100462,1.5920209340,Pass,Pass
+,           5,CORE_MID,RunPeriod: RUNPERIOD 1,0.1324822270,0.2713210238,Pass,Pass,7.8048158460E-002,0.2374981775,Pass,Pass
+,           6,CORE_TOP,RunPeriod: RUNPERIOD 1,0.1199718651,0.2299331257,Pass,Pass,6.6941699357E-002,0.2137693402,Pass,Pass
+,           7,PERIMETER_TOP_ZN_3,RunPeriod: RUNPERIOD 1,0.1129894215,0.2404752056,Pass,Pass,8.0199453171E-002,0.2455040101,Pass,Pass
+,           8,PERIMETER_TOP_ZN_2,RunPeriod: RUNPERIOD 1,0.1582780791,0.3541251204,Pass,Pass,0.1152851436,0.2879212068,Pass,Pass
+,           9,PERIMETER_TOP_ZN_1,RunPeriod: RUNPERIOD 1,0.1340093892,0.2936101565,Pass,Pass,9.1029606343E-002,0.2033621043,Pass,Pass
+,          10,PERIMETER_TOP_ZN_4,RunPeriod: RUNPERIOD 1,0.1240978787,0.2919687826,Pass,Pass,8.7433258696E-002,0.2155778362,Pass,Pass
+,          11,PERIMETER_BOT_ZN_3,RunPeriod: RUNPERIOD 1,0.1308203911,0.2675273594,Pass,Pass,9.2140903502E-002,0.2476324815,Pass,Pass
+,          12,PERIMETER_BOT_ZN_2,RunPeriod: RUNPERIOD 1,0.1679917486,0.3828205276,Pass,Pass,0.1301580478,0.2915547571,Pass,Pass
+,          13,PERIMETER_BOT_ZN_1,RunPeriod: RUNPERIOD 1,0.1633724910,0.3513986199,Pass,Pass,0.1769881115,0.9048842996,Pass,Pass
+,          14,PERIMETER_BOT_ZN_4,RunPeriod: RUNPERIOD 1,0.1518741603,0.3415417343,Pass,Pass,0.1055720041,0.2684565522,Pass,Pass
+,          15,PERIMETER_MID_ZN_3,RunPeriod: RUNPERIOD 1,0.1155303298,0.2406831529,Pass,Pass,7.9062548328E-002,0.2575453855,Pass,Pass
+,          16,PERIMETER_MID_ZN_2,RunPeriod: RUNPERIOD 1,4.9229720049E-002,0.1255477970,Pass,Pass,4.9276911974E-002,0.1139833263,Pass,Pass
+,          17,PERIMETER_MID_ZN_1,RunPeriod: RUNPERIOD 1,0.1420386564,0.2900533920,Pass,Pass,9.0840492836E-002,0.1916055470,Pass,Pass
+,          18,PERIMETER_MID_ZN_4,RunPeriod: RUNPERIOD 1,0.1306293713,0.3030258287,Pass,Pass,8.9002721631E-002,0.2021416965,Pass,Pass
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2178,50 +2179,50 @@ Demand Controlled Ventilation using Controller:MechanicalVentilation
 Time Not Comfortable Based on Simple ASHRAE 55-2004
 
 ,,Winter Clothes [hr],Summer Clothes [hr],Summer or Winter Clothes [hr]
-,CORE_BOTTOM,7.83,3.00,0.00
-,CORE_MID,1.83,5.00,0.00
-,CORE_TOP,1.50,7.00,0.00
-,PERIMETER_TOP_ZN_3,2.00,9.50,0.00
-,PERIMETER_TOP_ZN_2,6.00,5.33,0.00
-,PERIMETER_TOP_ZN_1,8.67,5.50,0.00
-,PERIMETER_TOP_ZN_4,6.50,8.33,0.83
-,PERIMETER_BOT_ZN_3,2.00,6.33,0.00
-,PERIMETER_BOT_ZN_2,8.67,3.50,0.00
-,PERIMETER_BOT_ZN_1,13.17,2.83,0.00
-,PERIMETER_BOT_ZN_4,10.17,3.67,0.50
-,PERIMETER_MID_ZN_3,1.33,7.17,0.00
-,PERIMETER_MID_ZN_2,0.33,4.67,0.00
-,PERIMETER_MID_ZN_1,9.33,4.83,0.00
-,PERIMETER_MID_ZN_4,6.33,7.00,0.67
+,CORE_BOTTOM,6.17,4.33,0.00
+,CORE_MID,1.83,7.00,0.00
+,CORE_TOP,2.00,7.50,0.00
+,PERIMETER_TOP_ZN_3,2.83,9.50,0.00
+,PERIMETER_TOP_ZN_2,5.50,6.33,0.00
+,PERIMETER_TOP_ZN_1,7.33,7.50,0.17
+,PERIMETER_TOP_ZN_4,6.17,7.67,0.00
+,PERIMETER_BOT_ZN_3,3.00,7.00,0.00
+,PERIMETER_BOT_ZN_2,6.17,4.00,0.00
+,PERIMETER_BOT_ZN_1,10.67,4.00,0.00
+,PERIMETER_BOT_ZN_4,7.83,6.33,0.00
+,PERIMETER_MID_ZN_3,2.17,8.33,0.00
+,PERIMETER_MID_ZN_2,0.17,4.83,0.00
+,PERIMETER_MID_ZN_1,7.33,6.00,0.00
+,PERIMETER_MID_ZN_4,6.17,7.67,0.00
 ,TOPFLOOR_PLENUM,0.00,0.00,0.00
 ,MIDFLOOR_PLENUM,0.00,0.00,0.00
 ,FIRSTFLOOR_PLENUM,0.00,0.00,0.00
-,Facility,13.50,10.83,0.83
+,Facility,12.00,11.00,0.17
 Aggregated over the RunPeriods for Weather
 
 
 Time Setpoint Not Met
 
 ,,During Heating [hr],During Cooling [hr],During Occupied Heating [hr],During Occupied Cooling [hr]
-,CORE_BOTTOM,0.00,0.33,0.00,0.33
+,CORE_BOTTOM,0.00,0.17,0.00,0.17
 ,CORE_MID,0.00,0.33,0.00,0.33
-,CORE_TOP,0.00,0.00,0.00,0.00
+,CORE_TOP,0.00,0.33,0.00,0.33
 ,PERIMETER_TOP_ZN_3,0.00,0.00,0.00,0.00
 ,PERIMETER_TOP_ZN_2,0.00,0.00,0.00,0.00
-,PERIMETER_TOP_ZN_1,0.00,1.00,0.00,1.00
+,PERIMETER_TOP_ZN_1,0.00,1.17,0.00,1.17
 ,PERIMETER_TOP_ZN_4,0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_3,0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_2,0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_1,0.00,4.33,0.00,4.33
+,PERIMETER_BOT_ZN_3,0.00,0.17,0.00,0.17
+,PERIMETER_BOT_ZN_2,0.00,0.17,0.00,0.17
+,PERIMETER_BOT_ZN_1,0.00,3.67,0.00,3.67
 ,PERIMETER_BOT_ZN_4,0.00,0.17,0.00,0.17
-,PERIMETER_MID_ZN_3,0.00,0.00,0.00,0.00
+,PERIMETER_MID_ZN_3,0.00,0.17,0.00,0.17
 ,PERIMETER_MID_ZN_2,0.00,0.00,0.00,0.00
-,PERIMETER_MID_ZN_1,0.00,2.33,0.00,2.33
+,PERIMETER_MID_ZN_1,0.00,1.33,0.00,1.33
 ,PERIMETER_MID_ZN_4,0.00,0.00,0.00,0.00
 ,TOPFLOOR_PLENUM,0.00,0.00,0.00,0.00
 ,MIDFLOOR_PLENUM,0.00,0.00,0.00,0.00
 ,FIRSTFLOOR_PLENUM,0.00,0.00,0.00,0.00
-,Facility,0.00,4.67,0.00,4.67
+,Facility,0.00,3.67,0.00,3.67
 Aggregated over the RunPeriods for Weather
 
 
@@ -2231,21 +2232,21 @@ FOR:,Entire Facility
 Average Outdoor Air During Occupied Hours
 
 ,,Average Number of Occupants,Nominal Number of Occupants,Zone Volume [m3],Mechanical Ventilation [ach],Infiltration [ach],AFN Infiltration [ach],Simple Ventilation [ach]
-,CORE_BOTTOM,31.36,52.94,2698.04,1.134,0.000,0.000,0.000
-,CORE_MID,31.36,52.94,2698.04,0.761,0.000,0.000,0.000
-,CORE_TOP,31.36,52.94,2698.04,0.673,0.000,0.000,0.000
-,PERIMETER_TOP_ZN_3,6.61,11.16,568.77,0.625,0.065,0.000,0.000
-,PERIMETER_TOP_ZN_2,4.19,7.07,360.08,0.981,0.069,0.000,0.000
-,PERIMETER_TOP_ZN_1,6.61,11.16,568.77,1.016,0.065,0.000,0.000
-,PERIMETER_TOP_ZN_4,4.19,7.06,360.05,0.869,0.069,0.000,0.000
-,PERIMETER_BOT_ZN_3,6.61,11.16,568.77,0.740,0.036,0.000,0.000
-,PERIMETER_BOT_ZN_2,4.19,7.07,360.08,1.162,0.037,0.000,0.000
-,PERIMETER_BOT_ZN_1,6.61,11.16,568.77,1.012,1.660,0.000,0.000
-,PERIMETER_BOT_ZN_4,4.19,7.06,360.05,0.996,0.037,0.000,0.000
-,PERIMETER_MID_ZN_3,6.61,11.16,568.77,0.724,0.054,0.000,0.000
-,PERIMETER_MID_ZN_2,4.04,7.07,360.08,1.151,0.058,0.000,0.000
-,PERIMETER_MID_ZN_1,6.61,11.16,568.77,1.117,0.055,0.000,0.000
-,PERIMETER_MID_ZN_4,4.19,7.06,360.05,0.975,0.057,0.000,0.000
+,CORE_BOTTOM,31.36,52.94,2698.04,1.053,0.000,0.000,0.000
+,CORE_MID,31.36,52.94,2698.04,0.696,0.000,0.000,0.000
+,CORE_TOP,31.36,52.94,2698.04,0.590,0.000,0.000,0.000
+,PERIMETER_TOP_ZN_3,6.61,11.16,568.77,0.575,0.065,0.000,0.000
+,PERIMETER_TOP_ZN_2,4.19,7.07,360.08,0.915,0.069,0.000,0.000
+,PERIMETER_TOP_ZN_1,6.61,11.16,568.77,1.032,0.065,0.000,0.000
+,PERIMETER_TOP_ZN_4,4.19,7.06,360.05,0.858,0.069,0.000,0.000
+,PERIMETER_BOT_ZN_3,6.61,11.16,568.77,0.646,0.036,0.000,0.000
+,PERIMETER_BOT_ZN_2,4.19,7.07,360.08,1.062,0.037,0.000,0.000
+,PERIMETER_BOT_ZN_1,6.61,11.16,568.77,1.169,1.661,0.000,0.000
+,PERIMETER_BOT_ZN_4,4.19,7.06,360.05,0.949,0.037,0.000,0.000
+,PERIMETER_MID_ZN_3,6.61,11.16,568.77,0.645,0.054,0.000,0.000
+,PERIMETER_MID_ZN_2,4.04,7.07,360.08,1.229,0.058,0.000,0.000
+,PERIMETER_MID_ZN_1,6.61,11.16,568.77,1.133,0.054,0.000,0.000
+,PERIMETER_MID_ZN_4,4.19,7.06,360.05,0.954,0.057,0.000,0.000
 Values shown for a single zone without multipliers
 
 
@@ -2259,14 +2260,14 @@ Minimum Outdoor Air During Occupied Hours
 ,PERIMETER_TOP_ZN_2,4.19,7.07,360.08,0.000,0.001,0.000,0.000
 ,PERIMETER_TOP_ZN_1,6.61,11.16,568.77,0.000,0.001,0.000,0.000
 ,PERIMETER_TOP_ZN_4,4.19,7.06,360.05,0.000,0.001,0.000,0.000
-,PERIMETER_BOT_ZN_3,6.61,11.16,568.77,0.000,0.000,0.000,0.000
-,PERIMETER_BOT_ZN_2,4.19,7.07,360.08,0.000,0.000,0.000,0.000
+,PERIMETER_BOT_ZN_3,6.61,11.16,568.77,0.000,0.001,0.000,0.000
+,PERIMETER_BOT_ZN_2,4.19,7.07,360.08,0.000,0.001,0.000,0.000
 ,PERIMETER_BOT_ZN_1,6.61,11.16,568.77,0.000,0.001,0.000,0.000
-,PERIMETER_BOT_ZN_4,4.19,7.06,360.05,0.000,0.000,0.000,0.000
-,PERIMETER_MID_ZN_3,6.61,11.16,568.77,0.000,0.000,0.000,0.000
-,PERIMETER_MID_ZN_2,4.04,7.07,360.08,0.000,0.000,0.000,0.000
-,PERIMETER_MID_ZN_1,6.61,11.16,568.77,0.000,0.000,0.000,0.000
-,PERIMETER_MID_ZN_4,4.19,7.06,360.05,0.000,0.000,0.000,0.000
+,PERIMETER_BOT_ZN_4,4.19,7.06,360.05,0.000,0.001,0.000,0.000
+,PERIMETER_MID_ZN_3,6.61,11.16,568.77,0.000,0.001,0.000,0.000
+,PERIMETER_MID_ZN_2,4.04,7.07,360.08,0.000,0.001,0.000,0.000
+,PERIMETER_MID_ZN_1,6.61,11.16,568.77,0.000,0.001,0.000,0.000
+,PERIMETER_MID_ZN_4,4.19,7.06,360.05,0.000,0.001,0.000,0.000
 Values shown for a single zone without multipliers
 
 
@@ -2320,7 +2321,7 @@ FOR:,Entire Facility
 Annual and Peak Values - Electricity
 
 ,,Electricity Annual Value [GJ],Electricity Minimum Value [W],Timestamp of Minimum {TIMESTAMP},Electricity Maximum Value [W],Timestamp of Maximum {TIMESTAMP}
-,Electricity:Facility,5.48,16002.37,15-OCT-00:10,147166.97,15-OCT-14:10
+,Electricity:Facility,5.53,16002.37,15-OCT-00:10,157213.76,15-OCT-14:10
 ,Electricity:Building,3.41,13442.89,15-OCT-00:10,79210.85,15-OCT-07:10
 ,Electricity:Zone:CORE_BOTTOM,1.21,2653.79,15-OCT-00:10,34308.80,15-OCT-07:10
 ,InteriorLights:Electricity,0.91,1072.56,15-OCT-00:10,22480.94,15-OCT-07:10
@@ -2373,26 +2374,26 @@ Annual and Peak Values - Electricity
 ,InteriorEquipment:Electricity:Zone:PERIMETER_MID_ZN_4,0.05,325.89,15-OCT-00:10,908.57,15-OCT-07:10
 ,ElevatorLift:InteriorEquipment:Electricity,0.62,0.00,15-OCT-00:10,22155.82,15-OCT-07:10
 ,ElevatorLightsFan:InteriorEquipment:Electricity,0.00,0.00,15-OCT-00:10,86.25,15-OCT-07:10
-,Electricity:HVAC,1.93,200.83,15-OCT-00:10,79789.13,15-OCT-14:10
+,Electricity:HVAC,1.97,200.83,15-OCT-00:10,89835.92,15-OCT-14:10
 ,ExteriorEquipment:Electricity,0.04,200.83,15-OCT-00:10,836.80,15-OCT-07:20
 ,Transformer:ExteriorEquipment:Electricity,0.04,200.83,15-OCT-00:10,836.80,15-OCT-07:20
-,ElectricityPurchased:Facility,5.48,16002.37,15-OCT-00:10,147166.97,15-OCT-14:10
-,ElectricityPurchased:Plant,5.48,16002.37,15-OCT-00:10,147166.97,15-OCT-14:10
-,Cogeneration:ElectricityPurchased,5.48,16002.37,15-OCT-00:10,147166.97,15-OCT-14:10
+,ElectricityPurchased:Facility,5.53,16002.37,15-OCT-00:10,157213.76,15-OCT-14:10
+,ElectricityPurchased:Plant,5.53,16002.37,15-OCT-00:10,157213.76,15-OCT-14:10
+,Cogeneration:ElectricityPurchased,5.53,16002.37,15-OCT-00:10,157213.76,15-OCT-14:10
 ,ElectricitySurplusSold:Facility,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
 ,ElectricitySurplusSold:Plant,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
 ,Cogeneration:ElectricitySurplusSold,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,ElectricityNet:Facility,5.48,16002.37,15-OCT-00:10,147166.97,15-OCT-14:10
-,ElectricityNet:Plant,5.48,16002.37,15-OCT-00:10,147166.97,15-OCT-14:10
-,Cogeneration:ElectricityNet,5.48,16002.37,15-OCT-00:10,147166.97,15-OCT-14:10
-,Heating:Electricity,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Fans:Electricity,0.45,0.00,15-OCT-00:10,21097.72,15-OCT-06:10
-,General:Fans:Electricity,0.45,0.00,15-OCT-00:10,21097.72,15-OCT-06:10
+,ElectricityNet:Facility,5.53,16002.37,15-OCT-00:10,157213.76,15-OCT-14:10
+,ElectricityNet:Plant,5.53,16002.37,15-OCT-00:10,157213.76,15-OCT-14:10
+,Cogeneration:ElectricityNet,5.53,16002.37,15-OCT-00:10,157213.76,15-OCT-14:10
+,Heating:Electricity,0.01,0.00,15-OCT-00:10,2981.66,15-OCT-06:20
+,Fans:Electricity,0.45,0.00,15-OCT-00:10,28336.59,15-OCT-19:20
+,General:Fans:Electricity,0.45,0.00,15-OCT-00:10,28336.59,15-OCT-19:20
 ,ExteriorLights:Electricity,0.14,0.00,15-OCT-06:40,5236.50,15-OCT-05:10
 ,General:ExteriorLights:Electricity,0.14,0.00,15-OCT-06:40,5236.50,15-OCT-05:10
-,Cooling:Electricity,1.44,0.00,15-OCT-00:10,58308.21,15-OCT-14:10
-,Electricity:Plant,0.00,0.00,15-OCT-00:10,6.85,15-OCT-07:10
-,Pumps:Electricity,0.00,0.00,15-OCT-00:10,6.85,15-OCT-07:10
+,Cooling:Electricity,1.48,0.00,15-OCT-00:10,64447.54,15-OCT-14:10
+,Electricity:Plant,0.00,0.00,15-OCT-00:10,6.85,15-OCT-07:20
+,Pumps:Electricity,0.00,0.00,15-OCT-00:10,6.85,15-OCT-07:20
 ,WIRED_LTG_ELECTRICITY,0.03,0.00,15-OCT-00:10,631.71,15-OCT-07:20
 ,WIRED_INT_EQUIP,1.88,12370.33,15-OCT-00:10,34574.08,15-OCT-07:10
 
@@ -2400,10 +2401,10 @@ Annual and Peak Values - Electricity
 Annual and Peak Values - Gas
 
 ,,Gas Annual Value [GJ],Gas Minimum Value [W],Timestamp of Minimum {TIMESTAMP},Gas Maximum Value [W],Timestamp of Maximum {TIMESTAMP}
-,Gas:Facility,0.22,1886.44,15-OCT-00:10,9485.26,15-OCT-11:20
-,Gas:Plant,0.22,1886.44,15-OCT-00:10,9485.26,15-OCT-11:20
-,WaterSystems:Gas,0.22,1886.44,15-OCT-00:10,9485.26,15-OCT-11:20
-,Water Heater:WaterSystems:Gas,0.22,1886.44,15-OCT-00:10,9485.26,15-OCT-11:20
+,Gas:Facility,0.22,1886.44,15-OCT-00:10,9484.01,15-OCT-11:20
+,Gas:Plant,0.22,1886.44,15-OCT-00:10,9484.01,15-OCT-11:20
+,WaterSystems:Gas,0.22,1886.44,15-OCT-00:10,9484.01,15-OCT-11:20
+,Water Heater:WaterSystems:Gas,0.22,1886.44,15-OCT-00:10,9484.01,15-OCT-11:20
 ,Gas:HVAC,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
 ,Heating:Gas,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
 
@@ -2451,74 +2452,74 @@ Annual and Peak Values - Other Liquid/Gas
 Annual and Peak Values - Other
 
 ,,Annual Value [GJ],Minimum Value [W],Timestamp of Minimum {TIMESTAMP},Maximum Value [W],Timestamp of Maximum {TIMESTAMP}
-,PlantLoopHeatingDemand:Facility,0.14,0.00,15-OCT-00:10,4263.39,15-OCT-11:30
-,PlantLoopHeatingDemand:Plant,0.14,0.00,15-OCT-00:10,4263.39,15-OCT-11:30
-,WaterSystems:PlantLoopHeatingDemand,0.14,0.00,15-OCT-00:10,4263.39,15-OCT-11:30
+,PlantLoopHeatingDemand:Facility,0.14,0.00,15-OCT-00:10,4262.54,15-OCT-11:30
+,PlantLoopHeatingDemand:Plant,0.14,0.00,15-OCT-00:10,4262.54,15-OCT-11:30
+,WaterSystems:PlantLoopHeatingDemand,0.14,0.00,15-OCT-00:10,4262.54,15-OCT-11:30
 ,Water Heater:WaterSystems:PlantLoopHeatingDemand,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,EnergyTransfer:Facility,10.94,0.00,15-OCT-00:10,387416.07,15-OCT-14:10
-,EnergyTransfer:Building,5.36,0.00,15-OCT-00:10,173180.71,15-OCT-14:10
-,EnergyTransfer:Zone:CORE_BOTTOM,1.22,0.00,15-OCT-00:10,38131.71,15-OCT-08:00
-,Heating:EnergyTransfer,0.02,0.00,15-OCT-00:10,2676.89,15-OCT-05:10
+,EnergyTransfer:Facility,11.17,0.00,15-OCT-00:10,427215.27,15-OCT-14:10
+,EnergyTransfer:Building,5.37,0.00,15-OCT-00:10,190600.12,15-OCT-14:10
+,EnergyTransfer:Zone:CORE_BOTTOM,1.21,0.00,15-OCT-00:10,37122.15,15-OCT-14:10
+,Heating:EnergyTransfer,0.02,0.00,15-OCT-00:10,2511.16,15-OCT-05:10
 ,Heating:EnergyTransfer:Zone:CORE_BOTTOM,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer,5.35,0.00,15-OCT-00:10,173180.71,15-OCT-14:10
-,Cooling:EnergyTransfer:Zone:CORE_BOTTOM,1.22,0.00,15-OCT-00:10,38131.71,15-OCT-08:00
-,EnergyTransfer:Zone:TOPFLOOR_PLENUM,0.16,0.00,15-OCT-00:10,9050.93,15-OCT-14:10
-,Heating:EnergyTransfer:Zone:TOPFLOOR_PLENUM,0.01,0.00,15-OCT-00:10,1689.27,15-OCT-05:10
-,Cooling:EnergyTransfer:Zone:TOPFLOOR_PLENUM,0.15,0.00,15-OCT-00:10,9050.93,15-OCT-14:10
-,EnergyTransfer:Zone:MIDFLOOR_PLENUM,0.11,0.00,15-OCT-00:10,5562.08,15-OCT-19:20
-,Heating:EnergyTransfer:Zone:MIDFLOOR_PLENUM,0.00,0.00,15-OCT-00:10,395.84,15-OCT-05:10
-,Cooling:EnergyTransfer:Zone:MIDFLOOR_PLENUM,0.11,0.00,15-OCT-00:10,5562.08,15-OCT-19:20
-,EnergyTransfer:Zone:FIRSTFLOOR_PLENUM,0.16,0.00,15-OCT-00:10,8373.83,15-OCT-06:20
-,Heating:EnergyTransfer:Zone:FIRSTFLOOR_PLENUM,0.01,0.00,15-OCT-00:10,789.35,15-OCT-15:50
-,Cooling:EnergyTransfer:Zone:FIRSTFLOOR_PLENUM,0.15,0.00,15-OCT-00:10,8373.83,15-OCT-06:20
-,EnergyTransfer:Zone:CORE_MID,0.72,0.00,15-OCT-00:10,22235.82,15-OCT-06:10
+,Cooling:EnergyTransfer,5.35,0.00,15-OCT-00:10,190600.12,15-OCT-14:10
+,Cooling:EnergyTransfer:Zone:CORE_BOTTOM,1.21,0.00,15-OCT-00:10,37122.15,15-OCT-14:10
+,EnergyTransfer:Zone:TOPFLOOR_PLENUM,0.16,0.00,15-OCT-00:10,11317.95,15-OCT-14:20
+,Heating:EnergyTransfer:Zone:TOPFLOOR_PLENUM,0.01,0.00,15-OCT-00:10,1666.37,15-OCT-05:10
+,Cooling:EnergyTransfer:Zone:TOPFLOOR_PLENUM,0.15,0.00,15-OCT-00:10,11317.95,15-OCT-14:20
+,EnergyTransfer:Zone:MIDFLOOR_PLENUM,0.10,0.00,15-OCT-00:10,7526.16,15-OCT-19:20
+,Heating:EnergyTransfer:Zone:MIDFLOOR_PLENUM,0.00,0.00,15-OCT-00:10,310.79,15-OCT-05:10
+,Cooling:EnergyTransfer:Zone:MIDFLOOR_PLENUM,0.10,0.00,15-OCT-00:10,7526.16,15-OCT-19:20
+,EnergyTransfer:Zone:FIRSTFLOOR_PLENUM,0.16,0.00,15-OCT-00:10,10274.01,15-OCT-19:20
+,Heating:EnergyTransfer:Zone:FIRSTFLOOR_PLENUM,0.01,0.00,15-OCT-00:10,1047.93,15-OCT-11:40
+,Cooling:EnergyTransfer:Zone:FIRSTFLOOR_PLENUM,0.15,0.00,15-OCT-00:10,10274.01,15-OCT-19:20
+,EnergyTransfer:Zone:CORE_MID,0.71,0.00,15-OCT-00:10,25312.13,15-OCT-19:10
 ,Heating:EnergyTransfer:Zone:CORE_MID,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:CORE_MID,0.72,0.00,15-OCT-00:10,22235.82,15-OCT-06:10
-,EnergyTransfer:Zone:CORE_TOP,0.68,0.00,15-OCT-00:10,23368.20,15-OCT-14:10
+,Cooling:EnergyTransfer:Zone:CORE_MID,0.71,0.00,15-OCT-00:10,25312.13,15-OCT-19:10
+,EnergyTransfer:Zone:CORE_TOP,0.67,0.00,15-OCT-00:10,26619.97,15-OCT-14:10
 ,Heating:EnergyTransfer:Zone:CORE_TOP,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:CORE_TOP,0.68,0.00,15-OCT-00:10,23368.20,15-OCT-14:10
-,EnergyTransfer:Zone:PERIMETER_TOP_ZN_3,0.15,0.00,15-OCT-00:10,6037.67,15-OCT-14:10
+,Cooling:EnergyTransfer:Zone:CORE_TOP,0.67,0.00,15-OCT-00:10,26619.97,15-OCT-14:10
+,EnergyTransfer:Zone:PERIMETER_TOP_ZN_3,0.15,0.00,15-OCT-00:10,6922.38,15-OCT-14:10
 ,Heating:EnergyTransfer:Zone:PERIMETER_TOP_ZN_3,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_3,0.15,0.00,15-OCT-00:10,6037.67,15-OCT-14:10
-,EnergyTransfer:Zone:PERIMETER_TOP_ZN_2,0.14,0.00,15-OCT-00:10,6471.39,15-OCT-10:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_3,0.15,0.00,15-OCT-00:10,6922.38,15-OCT-14:10
+,EnergyTransfer:Zone:PERIMETER_TOP_ZN_2,0.15,0.00,15-OCT-00:10,7014.67,15-OCT-09:10
 ,Heating:EnergyTransfer:Zone:PERIMETER_TOP_ZN_2,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_2,0.14,0.00,15-OCT-00:10,6471.39,15-OCT-10:10
-,EnergyTransfer:Zone:PERIMETER_TOP_ZN_1,0.29,0.00,15-OCT-00:10,10113.43,15-OCT-12:20
+,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_2,0.15,0.00,15-OCT-00:10,7014.67,15-OCT-09:10
+,EnergyTransfer:Zone:PERIMETER_TOP_ZN_1,0.29,0.00,15-OCT-00:10,10239.20,15-OCT-14:10
 ,Heating:EnergyTransfer:Zone:PERIMETER_TOP_ZN_1,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_1,0.29,0.00,15-OCT-00:10,10113.43,15-OCT-12:20
-,EnergyTransfer:Zone:PERIMETER_TOP_ZN_4,0.15,0.00,15-OCT-00:10,8330.93,15-OCT-16:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_1,0.29,0.00,15-OCT-00:10,10239.20,15-OCT-14:10
+,EnergyTransfer:Zone:PERIMETER_TOP_ZN_4,0.15,0.00,15-OCT-00:10,7097.68,15-OCT-15:00
 ,Heating:EnergyTransfer:Zone:PERIMETER_TOP_ZN_4,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_4,0.15,0.00,15-OCT-00:10,8330.93,15-OCT-16:10
-,EnergyTransfer:Zone:PERIMETER_BOT_ZN_3,0.17,0.00,15-OCT-00:10,5757.28,15-OCT-14:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_TOP_ZN_4,0.15,0.00,15-OCT-00:10,7097.68,15-OCT-15:00
+,EnergyTransfer:Zone:PERIMETER_BOT_ZN_3,0.17,0.00,15-OCT-00:10,6670.21,15-OCT-19:30
 ,Heating:EnergyTransfer:Zone:PERIMETER_BOT_ZN_3,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_3,0.17,0.00,15-OCT-00:10,5757.28,15-OCT-14:10
-,EnergyTransfer:Zone:PERIMETER_BOT_ZN_2,0.17,0.00,15-OCT-00:10,6372.40,15-OCT-10:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_3,0.17,0.00,15-OCT-00:10,6670.21,15-OCT-19:30
+,EnergyTransfer:Zone:PERIMETER_BOT_ZN_2,0.17,0.00,15-OCT-00:10,6979.05,15-OCT-09:10
 ,Heating:EnergyTransfer:Zone:PERIMETER_BOT_ZN_2,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_2,0.17,0.00,15-OCT-00:10,6372.40,15-OCT-10:10
-,EnergyTransfer:Zone:PERIMETER_BOT_ZN_1,0.33,0.00,15-OCT-00:10,9900.76,15-OCT-16:30
-,Heating:EnergyTransfer:Zone:PERIMETER_BOT_ZN_1,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_1,0.33,0.00,15-OCT-00:10,9900.76,15-OCT-16:30
-,EnergyTransfer:Zone:PERIMETER_BOT_ZN_4,0.17,0.00,15-OCT-00:10,7462.29,15-OCT-16:20
+,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_2,0.17,0.00,15-OCT-00:10,6979.05,15-OCT-09:10
+,EnergyTransfer:Zone:PERIMETER_BOT_ZN_1,0.35,0.00,15-OCT-00:10,9569.18,15-OCT-16:30
+,Heating:EnergyTransfer:Zone:PERIMETER_BOT_ZN_1,0.00,0.00,15-OCT-00:10,1821.37,15-OCT-06:20
+,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_1,0.34,0.00,15-OCT-00:10,9569.18,15-OCT-16:30
+,EnergyTransfer:Zone:PERIMETER_BOT_ZN_4,0.17,0.00,15-OCT-00:10,6490.59,15-OCT-15:00
 ,Heating:EnergyTransfer:Zone:PERIMETER_BOT_ZN_4,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_4,0.17,0.00,15-OCT-00:10,7462.29,15-OCT-16:20
-,EnergyTransfer:Zone:PERIMETER_MID_ZN_3,0.16,0.00,15-OCT-00:10,5687.83,15-OCT-14:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_BOT_ZN_4,0.17,0.00,15-OCT-00:10,6490.59,15-OCT-15:00
+,EnergyTransfer:Zone:PERIMETER_MID_ZN_3,0.15,0.00,15-OCT-00:10,6368.54,15-OCT-19:10
 ,Heating:EnergyTransfer:Zone:PERIMETER_MID_ZN_3,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_3,0.16,0.00,15-OCT-00:10,5687.83,15-OCT-14:10
-,EnergyTransfer:Zone:PERIMETER_MID_ZN_2,0.16,0.00,15-OCT-00:10,5694.97,15-OCT-09:00
+,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_3,0.15,0.00,15-OCT-00:10,6368.54,15-OCT-19:10
+,EnergyTransfer:Zone:PERIMETER_MID_ZN_2,0.16,0.00,15-OCT-00:10,5673.36,15-OCT-09:00
 ,Heating:EnergyTransfer:Zone:PERIMETER_MID_ZN_2,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_2,0.16,0.00,15-OCT-00:10,5694.97,15-OCT-09:00
-,EnergyTransfer:Zone:PERIMETER_MID_ZN_1,0.29,0.00,15-OCT-00:10,9310.72,15-OCT-12:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_2,0.16,0.00,15-OCT-00:10,5673.36,15-OCT-09:00
+,EnergyTransfer:Zone:PERIMETER_MID_ZN_1,0.29,0.00,15-OCT-00:10,9335.36,15-OCT-13:10
 ,Heating:EnergyTransfer:Zone:PERIMETER_MID_ZN_1,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_1,0.29,0.00,15-OCT-00:10,9310.72,15-OCT-12:10
-,EnergyTransfer:Zone:PERIMETER_MID_ZN_4,0.15,0.00,15-OCT-00:10,8066.45,15-OCT-16:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_1,0.29,0.00,15-OCT-00:10,9335.36,15-OCT-13:10
+,EnergyTransfer:Zone:PERIMETER_MID_ZN_4,0.16,0.00,15-OCT-00:10,6895.29,15-OCT-15:00
 ,Heating:EnergyTransfer:Zone:PERIMETER_MID_ZN_4,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_4,0.15,0.00,15-OCT-00:10,8066.45,15-OCT-16:10
-,EnergyTransfer:Plant,0.14,0.00,15-OCT-00:10,4263.39,15-OCT-11:30
-,WaterSystems:EnergyTransfer,0.14,0.00,15-OCT-00:10,4263.39,15-OCT-11:30
-,WaterUse:WaterSystems:EnergyTransfer,0.14,0.00,15-OCT-00:10,4263.39,15-OCT-11:30
-,EnergyTransfer:HVAC,5.45,0.00,15-OCT-00:10,211793.60,15-OCT-14:10
-,HeatingCoils:EnergyTransfer,0.00,0.00,15-OCT-00:10,0.00,15-OCT-00:10
-,CoolingCoils:EnergyTransfer,5.45,0.00,15-OCT-00:10,211793.60,15-OCT-14:10
+,Cooling:EnergyTransfer:Zone:PERIMETER_MID_ZN_4,0.16,0.00,15-OCT-00:10,6895.29,15-OCT-15:00
+,EnergyTransfer:Plant,0.14,0.00,15-OCT-00:10,4262.54,15-OCT-11:30
+,WaterSystems:EnergyTransfer,0.14,0.00,15-OCT-00:10,4262.54,15-OCT-11:30
+,WaterUse:WaterSystems:EnergyTransfer,0.14,0.00,15-OCT-00:10,4262.54,15-OCT-11:30
+,EnergyTransfer:HVAC,5.67,0.00,15-OCT-00:10,234171.24,15-OCT-14:10
+,HeatingCoils:EnergyTransfer,0.01,0.00,15-OCT-00:10,2981.66,15-OCT-06:20
+,CoolingCoils:EnergyTransfer,5.66,0.00,15-OCT-00:10,234171.24,15-OCT-14:10
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2527,49 +2528,49 @@ FOR:,Entire Facility
 Annual Building Sensible Heat Gain Components
 
 ,,HVAC Zone Eq & Other Sensible Air Heating [GJ],HVAC Zone Eq & Other Sensible Air Cooling [GJ],HVAC Terminal Unit Sensible Air Heating [GJ],HVAC Terminal Unit Sensible Air Cooling [GJ],HVAC Input Heated Surface Heating [GJ],HVAC Input Cooled Surface Cooling [GJ],People Sensible Heat Addition [GJ],Lights Sensible Heat Addition [GJ],Equipment Sensible Heat Addition [GJ],Window Heat Addition [GJ],Interzone Air Transfer Heat Addition [GJ],Infiltration Heat Addition [GJ],Opaque Surface Conduction and Other Heat Addition [GJ],Equipment Sensible Heat Removal [GJ],Window Heat Removal [GJ],Interzone Air Transfer Heat Removal [GJ],Infiltration Heat Removal [GJ],Opaque Surface Conduction and Other Heat Removal [GJ]
-,CORE_BOTTOM,0.000,0.000,0.000,-1.219,0.000,0.000,0.117,0.218,0.992,0.000,0.000,0.000,0.002,0.000,0.000,0.000,0.000,-0.108
-,CORE_MID,0.000,0.000,0.000,-0.718,0.000,0.000,0.120,0.218,0.371,0.000,0.000,0.000,0.008,0.000,0.000,0.000,0.000,-0.001
-,CORE_TOP,0.000,0.000,0.000,-0.682,0.000,0.000,0.121,0.218,0.371,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,-0.029
-,PERIMETER_TOP_ZN_3,0.000,0.000,0.000,-0.149,0.000,0.000,0.026,0.027,0.078,0.045,0.000,0.002,0.026,0.000,-0.049,0.000,-0.005,-0.000
-,PERIMETER_TOP_ZN_2,0.000,0.000,0.000,-0.144,0.000,0.000,0.016,0.016,0.050,0.118,0.000,0.001,0.000,0.000,-0.031,0.000,-0.004,-0.022
-,PERIMETER_TOP_ZN_1,0.000,0.000,0.000,-0.285,0.000,0.000,0.025,0.026,0.078,0.278,0.000,0.001,0.000,0.000,-0.050,0.000,-0.006,-0.067
-,PERIMETER_TOP_ZN_4,0.000,0.000,0.000,-0.149,0.000,0.000,0.016,0.017,0.050,0.122,0.000,0.001,0.000,0.000,-0.035,0.000,-0.004,-0.018
-,PERIMETER_BOT_ZN_3,0.000,0.000,0.000,-0.172,0.000,0.000,0.025,0.027,0.078,0.044,0.000,0.001,0.055,0.000,-0.055,0.000,-0.003,0.000
-,PERIMETER_BOT_ZN_2,0.000,0.000,0.000,-0.169,0.000,0.000,0.016,0.016,0.050,0.117,0.000,0.001,0.008,0.000,-0.035,0.000,-0.002,-0.000
-,PERIMETER_BOT_ZN_1,0.000,0.000,0.000,-0.328,0.000,0.000,0.024,0.026,0.078,0.276,0.000,0.047,0.001,0.000,-0.060,0.000,-0.037,-0.026
-,PERIMETER_BOT_ZN_4,0.000,0.000,0.000,-0.168,0.000,0.000,0.016,0.017,0.050,0.121,0.000,0.001,0.007,0.000,-0.040,0.000,-0.002,-0.000
-,PERIMETER_MID_ZN_3,0.000,0.000,0.000,-0.156,0.000,0.000,0.026,0.027,0.078,0.045,0.000,0.001,0.036,0.000,-0.052,0.000,-0.005,0.000
-,PERIMETER_MID_ZN_2,0.000,0.000,0.000,-0.158,0.000,0.000,0.012,0.016,0.050,0.118,0.000,0.001,0.001,0.000,-0.032,0.000,-0.003,-0.004
-,PERIMETER_MID_ZN_1,0.000,0.000,0.000,-0.287,0.000,0.000,0.024,0.026,0.078,0.277,0.000,0.001,0.001,0.000,-0.053,0.000,-0.005,-0.062
-,PERIMETER_MID_ZN_4,0.000,0.000,0.000,-0.153,0.000,0.000,0.016,0.017,0.050,0.122,0.000,0.001,0.001,0.000,-0.037,0.000,-0.003,-0.012
-,TOPFLOOR_PLENUM,0.010,-0.150,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.002,0.146,0.000,0.000,0.000,-0.007,-0.000
-,MIDFLOOR_PLENUM,0.000,-0.105,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.002,0.112,0.000,0.000,0.000,-0.008,0.000
-,FIRSTFLOOR_PLENUM,0.005,-0.154,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.001,0.154,0.000,0.000,0.000,-0.007,0.000
-,Total Facility,0.015,-0.409,0.000,-4.937,0.000,0.000,0.599,0.911,2.502,1.683,0.000,0.063,0.557,0.000,-0.530,0.000,-0.101,-0.349
+,CORE_BOTTOM,0.000,0.000,0.000,-1.213,0.000,0.000,0.117,0.218,0.992,0.000,0.000,0.000,0.002,0.000,0.000,0.000,0.000,-0.114
+,CORE_MID,0.000,0.000,0.000,-0.711,0.000,0.000,0.121,0.218,0.371,0.000,0.000,0.000,0.001,0.000,0.000,0.000,0.000,-0.003
+,CORE_TOP,0.000,0.000,0.000,-0.671,0.000,0.000,0.121,0.218,0.371,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,-0.039
+,PERIMETER_TOP_ZN_3,0.000,0.000,0.000,-0.148,0.000,0.000,0.026,0.027,0.078,0.045,0.000,0.002,0.025,0.000,-0.049,0.000,-0.005,-0.001
+,PERIMETER_TOP_ZN_2,0.000,0.000,0.000,-0.145,0.000,0.000,0.016,0.016,0.050,0.117,0.000,0.001,0.001,0.000,-0.030,0.000,-0.003,-0.022
+,PERIMETER_TOP_ZN_1,0.000,0.000,0.000,-0.287,0.000,0.000,0.025,0.026,0.078,0.278,0.000,0.001,0.002,0.000,-0.049,0.000,-0.005,-0.067
+,PERIMETER_TOP_ZN_4,0.000,0.000,0.000,-0.153,0.000,0.000,0.016,0.017,0.050,0.122,0.000,0.001,0.001,0.000,-0.035,0.000,-0.004,-0.014
+,PERIMETER_BOT_ZN_3,0.000,0.000,0.000,-0.169,0.000,0.000,0.025,0.027,0.078,0.044,0.000,0.001,0.052,0.000,-0.055,0.000,-0.003,0.000
+,PERIMETER_BOT_ZN_2,0.000,0.000,0.000,-0.169,0.000,0.000,0.016,0.016,0.050,0.117,0.000,0.001,0.007,0.000,-0.034,0.000,-0.002,-0.001
+,PERIMETER_BOT_ZN_1,0.000,0.000,0.002,-0.345,0.000,0.000,0.024,0.026,0.078,0.277,0.000,0.047,0.001,0.000,-0.057,0.000,-0.037,-0.015
+,PERIMETER_BOT_ZN_4,0.000,0.000,0.000,-0.173,0.000,0.000,0.016,0.017,0.050,0.122,0.000,0.001,0.010,0.000,-0.039,0.000,-0.002,-0.000
+,PERIMETER_MID_ZN_3,0.000,0.000,0.000,-0.153,0.000,0.000,0.026,0.027,0.078,0.045,0.000,0.001,0.032,0.000,-0.052,0.000,-0.005,-0.000
+,PERIMETER_MID_ZN_2,0.000,0.000,0.000,-0.156,0.000,0.000,0.012,0.016,0.050,0.119,0.000,0.001,0.001,0.000,-0.032,0.000,-0.003,-0.006
+,PERIMETER_MID_ZN_1,0.000,0.000,0.000,-0.290,0.000,0.000,0.025,0.026,0.078,0.278,0.000,0.001,0.002,0.000,-0.052,0.000,-0.005,-0.061
+,PERIMETER_MID_ZN_4,0.000,0.000,0.000,-0.156,0.000,0.000,0.016,0.017,0.050,0.122,0.000,0.001,0.000,0.000,-0.037,0.000,-0.003,-0.009
+,TOPFLOOR_PLENUM,0.011,-0.152,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.002,0.147,0.000,0.000,0.000,-0.007,-0.000
+,MIDFLOOR_PLENUM,0.000,-0.104,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.002,0.111,0.000,0.000,0.000,-0.008,0.000
+,FIRSTFLOOR_PLENUM,0.006,-0.152,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.001,0.152,0.000,0.000,0.000,-0.007,0.000
+,Total Facility,0.017,-0.409,0.002,-4.939,0.000,0.000,0.601,0.911,2.502,1.685,0.000,0.062,0.545,0.000,-0.521,0.000,-0.100,-0.353
 
 
 Peak Cooling Sensible Heat Gain Components
 
 ,,Time of Peak {TIMESTAMP},HVAC Zone Eq & Other Sensible Air Heating [W],HVAC Zone Eq & Other Sensible Air Cooling [W],HVAC Terminal Unit Sensible Air Heating [W],HVAC Terminal Unit Sensible Air Cooling [W],HVAC Input Heated Surface Heating [W],HVAC Input Cooled Surface Cooling [W],People Sensible Heat Addition [W],Lights Sensible Heat Addition [W],Equipment Sensible Heat Addition [W],Window Heat Addition [W],Interzone Air Transfer Heat Addition [W],Infiltration Heat Addition [W],Opaque Surface Conduction and Other Heat Addition [W],Equipment Sensible Heat Removal [W],Window Heat Removal [W],Interzone Air Transfer Heat Removal [W],Infiltration Heat Removal [W],Opaque Surface Conduction and Other Heat Removal [W]
-,CORE_BOTTOM,15-OCT-16:01,0.00,0.00,0.00,-52016.01,0.00,0.00,878.91,2921.34,23768.03,0.00,0.00,0.00,24447.73,0.00,-0.00,0.00,0.00,0.00
-,CORE_MID,15-OCT-10:04,0.00,0.00,0.00,-28969.20,0.00,0.00,3206.59,5258.41,6808.32,0.00,0.00,0.00,13695.88,0.00,-0.00,0.00,0.00,0.00
-,CORE_TOP,15-OCT-16:04,0.00,0.00,0.00,-30945.30,0.00,0.00,984.99,2921.34,3782.40,0.00,0.00,0.00,23256.57,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_TOP_ZN_3,15-OCT-16:01,0.00,0.00,0.00,-9346.39,0.00,0.00,203.23,324.44,797.36,1026.91,0.00,36.48,6957.97,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_TOP_ZN_2,15-OCT-16:01,0.00,0.00,0.00,-8676.86,0.00,0.00,124.49,205.16,504.76,646.68,0.00,23.79,7171.98,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_TOP_ZN_1,15-OCT-12:05,0.00,0.00,0.00,-10819.18,0.00,0.00,638.28,528.76,1435.24,11998.91,0.00,67.68,0.00,0.00,-0.00,0.00,0.00,-3849.70
-,PERIMETER_TOP_ZN_4,15-OCT-16:01,0.00,0.00,0.00,-10408.97,0.00,0.00,117.29,185.96,504.76,8476.90,0.00,20.24,1103.81,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_3,15-OCT-16:01,0.00,0.00,0.00,-7861.91,0.00,0.00,205.39,323.07,797.36,1026.68,0.00,20.27,5489.14,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_2,15-OCT-16:01,0.00,0.00,0.00,-7828.60,0.00,0.00,123.17,204.42,504.76,620.08,0.00,12.55,6363.62,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_1,15-OCT-16:17,0.00,0.00,0.00,-10552.02,0.00,0.00,197.50,293.76,797.35,3346.65,0.00,4956.29,960.46,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_4,15-OCT-16:01,0.00,0.00,0.00,-8656.17,0.00,0.00,117.29,185.96,504.76,8533.90,0.00,10.90,0.00,0.00,-0.00,0.00,0.00,-696.64
-,PERIMETER_MID_ZN_3,15-OCT-16:01,0.00,0.00,0.00,-8341.92,0.00,0.00,206.03,324.44,797.36,1051.16,0.00,31.09,5931.84,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_MID_ZN_2,15-OCT-10:02,0.00,0.00,0.00,-7287.69,0.00,0.00,448.97,334.75,908.57,5000.17,0.00,9.70,585.53,0.00,-0.00,0.00,0.00,0.00
-,PERIMETER_MID_ZN_1,15-OCT-12:05,0.00,0.00,0.00,-9969.30,0.00,0.00,638.28,528.76,1435.24,12021.41,0.00,53.57,0.00,0.00,-0.00,0.00,0.00,-4707.97
-,PERIMETER_MID_ZN_4,15-OCT-16:01,0.00,0.00,0.00,-9904.43,0.00,0.00,117.29,185.96,504.76,8495.30,0.00,16.83,584.28,0.00,-0.00,0.00,0.00,0.00
-,TOPFLOOR_PLENUM,15-OCT-16:13,0.00,-11687.75,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,45.31,11642.44,0.00,-0.00,0.00,0.00,0.00
-,MIDFLOOR_PLENUM,15-OCT-19:12,0.00,-7413.29,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,8.79,7404.50,0.00,-0.00,0.00,0.00,0.00
-,FIRSTFLOOR_PLENUM,15-OCT-19:12,0.00,-10761.31,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,5.36,10755.95,0.00,-0.00,0.00,0.00,0.00
-,Total Facility,15-OCT-16:01,0.00,-4399.72,0.00,-214193.80,0.00,0.00,4779.45,11789.85,39145.54,42266.69,0.00,4917.04,115694.94,0.00,0.00,0.00,0.00,0.00
+,CORE_BOTTOM,15-OCT-08:04,0.00,0.00,0.00,-48483.83,0.00,0.00,3023.89,5258.41,20669.32,0.00,0.00,0.00,19532.21,0.00,-0.00,0.00,0.00,0.00
+,CORE_MID,15-OCT-08:03,0.00,0.00,0.00,-29279.53,0.00,0.00,3241.42,5258.41,6808.32,0.00,0.00,0.00,13971.39,0.00,-0.00,0.00,0.00,0.00
+,CORE_TOP,15-OCT-14:05,0.00,0.00,0.00,-30576.76,0.00,0.00,3160.33,5258.41,6808.32,0.00,0.00,0.00,15349.71,0.00,-0.00,0.00,0.00,0.00
+,PERIMETER_TOP_ZN_3,15-OCT-14:02,0.00,0.00,0.00,-9305.76,0.00,0.00,666.23,528.76,1435.25,1699.91,0.00,46.59,4929.01,0.00,-0.00,0.00,0.00,0.00
+,PERIMETER_TOP_ZN_2,15-OCT-08:03,0.00,0.00,0.00,-8707.52,0.00,0.00,403.57,334.75,908.57,7562.61,0.00,0.00,0.00,0.00,-0.00,0.00,-25.50,-476.49
+,PERIMETER_TOP_ZN_1,15-OCT-13:03,0.00,0.00,0.00,-10888.53,0.00,0.00,630.67,528.76,1435.24,11430.45,0.00,39.14,0.00,0.00,-0.00,0.00,0.00,-3175.74
+,PERIMETER_TOP_ZN_4,15-OCT-14:02,0.00,0.00,0.00,-9490.96,0.00,0.00,421.77,334.73,908.57,5484.24,0.00,32.01,2309.65,0.00,-0.00,0.00,0.00,0.00
+,PERIMETER_BOT_ZN_3,15-OCT-14:02,0.00,0.00,0.00,-7857.19,0.00,0.00,666.23,528.76,1435.25,1712.99,0.00,25.35,3488.61,0.00,-0.00,0.00,0.00,0.00
+,PERIMETER_BOT_ZN_2,15-OCT-08:04,0.00,0.00,0.00,-7706.25,0.00,0.00,403.57,334.75,908.57,7593.45,0.00,0.00,0.00,0.00,-0.00,0.00,-12.41,-1521.68
+,PERIMETER_BOT_ZN_1,15-OCT-14:07,0.00,0.00,0.00,-10121.95,0.00,0.00,666.14,528.76,1435.24,10049.52,0.00,921.81,0.00,0.00,-0.00,0.00,0.00,-3479.53
+,PERIMETER_BOT_ZN_4,15-OCT-14:02,0.00,0.00,0.00,-7874.79,0.00,0.00,421.77,334.73,908.57,5514.68,0.00,17.18,677.87,0.00,-0.00,0.00,0.00,0.00
+,PERIMETER_MID_ZN_3,15-OCT-14:03,0.00,0.00,0.00,-7983.93,0.00,0.00,666.23,528.76,1435.25,1723.81,0.00,42.35,3587.53,0.00,-0.00,0.00,0.00,0.00
+,PERIMETER_MID_ZN_2,15-OCT-10:01,0.00,0.00,0.00,-8265.09,0.00,0.00,448.97,334.75,908.57,5009.08,0.00,9.84,1553.87,0.00,-0.00,0.00,0.00,0.00
+,PERIMETER_MID_ZN_1,15-OCT-13:03,0.00,0.00,0.00,-9828.56,0.00,0.00,630.67,528.76,1435.24,11464.29,0.00,32.01,0.00,0.00,-0.00,0.00,0.00,-4262.41
+,PERIMETER_MID_ZN_4,15-OCT-19:01,0.00,0.00,0.00,-8578.23,0.00,0.00,46.43,155.94,403.81,0.00,0.00,7.49,8284.83,0.00,-320.25,0.00,0.00,0.00
+,TOPFLOOR_PLENUM,15-OCT-14:15,0.00,-13331.62,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,49.01,13282.61,0.00,-0.00,0.00,0.00,0.00
+,MIDFLOOR_PLENUM,15-OCT-19:07,0.00,-8421.22,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,12.75,8408.47,0.00,-0.00,0.00,0.00,0.00
+,FIRSTFLOOR_PLENUM,15-OCT-19:06,0.00,-11883.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,8.32,11875.08,0.00,-0.00,0.00,0.00,0.00
+,Total Facility,15-OCT-14:02,0.00,-14456.23,0.00,-205534.42,0.00,0.00,16036.10,20956.25,46414.74,55162.74,0.00,1403.91,80016.92,0.00,0.00,0.00,0.00,0.00
 
 
 Peak Heating Sensible Heat Gain Components
@@ -2584,16 +2585,16 @@ Peak Heating Sensible Heat Gain Components
 ,PERIMETER_TOP_ZN_4,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,PERIMETER_BOT_ZN_3,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,PERIMETER_BOT_ZN_2,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,PERIMETER_BOT_ZN_1,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,PERIMETER_BOT_ZN_1,15-OCT-06:07,0.00,0.00,2679.48,-0.00,0.00,0.00,157.54,369.51,637.88,0.00,0.00,0.00,5574.54,0.00,-1722.64,0.00,-7696.30,0.00
 ,PERIMETER_BOT_ZN_4,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,PERIMETER_MID_ZN_3,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,PERIMETER_MID_ZN_2,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,PERIMETER_MID_ZN_1,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,PERIMETER_MID_ZN_4,-,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,TOPFLOOR_PLENUM,15-OCT-05:02,5799.94,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,-0.00,0.00,-68.68,-5731.26
-,MIDFLOOR_PLENUM,15-OCT-05:02,1847.61,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,-0.00,0.00,-78.77,-1768.84
-,FIRSTFLOOR_PLENUM,15-OCT-05:02,3403.51,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,-0.00,0.00,-64.41,-3339.10
-,Total Facility,15-OCT-05:02,-122087.81,133138.87,0.00,-133138.87,0.00,0.00,1685.77,1072.56,15327.93,0.00,0.00,0.00,121690.55,0.00,-15618.64,0.00,-2070.35,0.00
+,TOPFLOOR_PLENUM,15-OCT-05:01,5823.48,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,-0.00,0.00,-67.44,-5756.04
+,MIDFLOOR_PLENUM,15-OCT-05:01,1502.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,-0.00,0.00,-77.65,-1424.55
+,FIRSTFLOOR_PLENUM,15-OCT-05:01,3183.93,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,-0.00,0.00,-63.28,-3120.65
+,Total Facility,15-OCT-05:01,-127801.45,138311.07,0.00,-138311.07,0.00,0.00,1703.08,1072.56,15327.93,0.00,0.00,0.00,127169.40,0.00,-15436.11,0.00,-2035.40,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -2707,6 +2708,7 @@ Sec1.1A-General Information
 ,,Data
 ,Weather File,RUNPERIOD 1 ** Tucson-Davis Monthan AFB AZ USA TMY3 WMO#=722745
 ,Total gross floor area [m2],4982.19
+,Principal Heating Source,Electricity
 
 
 EAp2-1. Space Usage Type
@@ -2737,8 +2739,8 @@ EAp2-2. Advisory Messages
 
 ,,Data
 ,Number of hours heating loads not met,0.00
-,Number of hours cooling loads not met,4.67
-,Number of hours not met,4.67
+,Number of hours cooling loads not met,3.67
+,Number of hours not met,3.67
 
 
 EAp2-3. Energy Type Summary
@@ -2750,20 +2752,20 @@ EAp2-3. Energy Type Summary
 EAp2-4/5. Performance Rating Method Compliance
 
 ,,Electric Energy Use [GJ],Electric Demand [W],Natural Gas Energy Use [GJ],Natural Gas Demand [W],Additional Fuel Use [GJ],Additional Fuel Demand [W],District Cooling Use [GJ],District Cooling Demand [W],District Heating Use [GJ],District Heating Demand [W]
-,Heating -- Not Subdivided,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Cooling -- Not Subdivided,1.44,58308.21,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Heating -- Not Subdivided,0.01,2981.66,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Cooling -- Not Subdivided,1.48,64447.54,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Interior Lighting -- LightsWired,0.91,22480.94,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Exterior Lighting -- General,0.14,5236.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Interior Equipment -- MiscPlug,1.88,34487.83,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Interior Equipment -- ElevatorLift,0.62,22155.82,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Interior Equipment -- ElevatorLightsFan,0.00,86.25,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Exterior Equipment -- Transformer,0.04,836.80,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Fans -- General,0.45,21097.72,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Fans -- General,0.45,28336.59,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Pumps -- Not Subdivided,0.00,6.85,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Heat Rejection -- Not Subdivided,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Humidification -- Not Subdivided,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Heat Recovery -- Not Subdivided,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Water Systems -- Water Heater,0.00,0.00,0.22,9485.26,0.00,0.00,0.00,0.00,0.00,0.00
+,Water Systems -- Water Heater,0.00,0.00,0.22,9484.01,0.00,0.00,0.00,0.00,0.00,0.00
 ,Water Systems -- WaterUse,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Refrigeration -- Not Subdivided,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,Generators -- Not Subdivided,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
@@ -2772,10 +2774,10 @@ EAp2-4/5. Performance Rating Method Compliance
 EAp2-6. Energy Use Summary
 
 ,,Process Subtotal [GJ],Total Energy Use [GJ]
-,Electricity,2.50,5.48
+,Electricity,2.50,5.53
 ,Natural Gas,0.00,0.22
 ,Additional,0.00,0.00
-,Total,2.50,5.70
+,Total,2.50,5.74
 
 
 EAp2-7. Energy Cost Summary
@@ -2800,12 +2802,12 @@ EAp2-17a. Energy Use Intensity - Electricity
 ,,Electricty [MJ/m2]
 ,Interior Lighting (All),0.18
 ,Space Heating,0.00
-,Space Cooling,0.29
+,Space Cooling,0.30
 ,Fans (All),0.09
 ,Service Water Heating,0.00
 ,Receptacle Equipment,0.50
-,Miscellaneous (All),1.10
-,Subtotal,1.10
+,Miscellaneous (All),1.11
+,Subtotal,1.11
 
 
 EAp2-17b. Energy Use Intensity - Natural Gas
@@ -2827,13 +2829,13 @@ EAp2-17c. Energy Use Intensity - Additional
 EAp2-18. End Use Percentage
 
 ,,Percent [%]
-,Interior Lighting (All),15.99
-,Space Heating,0.00
-,Space Cooling,25.26
-,Fans (All),7.87
-,Service Water Heating,3.79
-,Receptacle Equipment,43.93
-,Miscellaneous,3.16
+,Interior Lighting (All),15.85
+,Space Heating,0.10
+,Space Cooling,25.76
+,Fans (All),7.83
+,Service Water Heating,3.76
+,Receptacle Equipment,43.56
+,Miscellaneous,3.14
 
 
 Schedules-Equivalent Full Load Hours (Schedule Type=Fraction)
@@ -2902,8 +2904,8 @@ Schedules-Equivalent Full Load Hours (Schedule Type=Fraction)
 Schedules-SetPoints (Schedule Type=Temperature)
 
 ,,First Object Used,Month Assumed,11am First Wednesday [C],Days with Same 11am Value,11pm First Wednesday [C],Days with Same 11pm Value
-,HTGSETP_SCH_YES_OPTIMUM,CORE_BOTTOM DUALSPSCHED,January,18.61,365,15.59,365
-,CLGSETP_SCH_YES_OPTIMUM,CORE_BOTTOM DUALSPSCHED,July,23.60,365,29.85,365
+,HTGSETP_SCH_YES_OPTIMUM,CORE_BOTTOM DUALSPSCHED,January,20.04,365,14.60,365
+,CLGSETP_SCH_YES_OPTIMUM,CORE_BOTTOM DUALSPSCHED,July,24.79,365,28.89,365
 ,HTGSETP_SCH_YES_OPTIMUM_W_SB,PERIMETER_MID_ZN_2 DUALSPSCHED,January,20.44,365,15.60,365
 ,CLGSETP_SCH_YES_OPTIMUM_W_SB,PERIMETER_MID_ZN_2 DUALSPSCHED,July,24.00,365,26.70,365
 
@@ -3139,13 +3141,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.121884E+10,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.121268E+10,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.121884E+10,,,,,,,
-,Minimum of Months,0.121884E+10,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.121884E+10,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.121268E+10,,,,,,,
+,Minimum of Months,0.121268E+10,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.121268E+10,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3163,13 +3165,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.150074E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.152057E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.150074E+09,,,,,,,
-,Minimum of Months,0.150074E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.150074E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.152057E+09,,,,,,,
+,Minimum of Months,0.152057E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.152057E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3187,13 +3189,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.105401E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.104407E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.105401E+09,,,,,,,
-,Minimum of Months,0.105401E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.105401E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.104407E+09,,,,,,,
+,Minimum of Months,0.104407E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.104407E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3211,13 +3213,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.153565E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.152415E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.153565E+09,,,,,,,
-,Minimum of Months,0.153565E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.153565E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.152415E+09,,,,,,,
+,Minimum of Months,0.152415E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.152415E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3235,13 +3237,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.718005E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.711432E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.718005E+09,,,,,,,
-,Minimum of Months,0.718005E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.718005E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.711432E+09,,,,,,,
+,Minimum of Months,0.711432E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.711432E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3259,13 +3261,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.681591E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.671032E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.681591E+09,,,,,,,
-,Minimum of Months,0.681591E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.681591E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.671032E+09,,,,,,,
+,Minimum of Months,0.671032E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.671032E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3283,13 +3285,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.148692E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.148460E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.148692E+09,,,,,,,
-,Minimum of Months,0.148692E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.148692E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.148460E+09,,,,,,,
+,Minimum of Months,0.148460E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.148460E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3307,13 +3309,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.144046E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.145006E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.144046E+09,,,,,,,
-,Minimum of Months,0.144046E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.144046E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.145006E+09,,,,,,,
+,Minimum of Months,0.145006E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.145006E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3331,13 +3333,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.285340E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.286728E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.285340E+09,,,,,,,
-,Minimum of Months,0.285340E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.285340E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.286728E+09,,,,,,,
+,Minimum of Months,0.286728E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.286728E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3355,13 +3357,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.148536E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.153156E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.148536E+09,,,,,,,
-,Minimum of Months,0.148536E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.148536E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.153156E+09,,,,,,,
+,Minimum of Months,0.153156E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.153156E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3379,13 +3381,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.172007E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.168938E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.172007E+09,,,,,,,
-,Minimum of Months,0.172007E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.172007E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.168938E+09,,,,,,,
+,Minimum of Months,0.168938E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.168938E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3403,13 +3405,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.169326E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.169253E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.169326E+09,,,,,,,
-,Minimum of Months,0.169326E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.169326E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.169253E+09,,,,,,,
+,Minimum of Months,0.169253E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.169253E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3427,13 +3429,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.328443E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.344723E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.328443E+09,,,,,,,
-,Minimum of Months,0.328443E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.328443E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.344723E+09,,,,,,,
+,Minimum of Months,0.344723E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.344723E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3451,13 +3453,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.168366E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.172842E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.168366E+09,,,,,,,
-,Minimum of Months,0.168366E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.168366E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.172842E+09,,,,,,,
+,Minimum of Months,0.172842E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.172842E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3475,13 +3477,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.155686E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.152645E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.155686E+09,,,,,,,
-,Minimum of Months,0.155686E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.155686E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.152645E+09,,,,,,,
+,Minimum of Months,0.152645E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.152645E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3499,13 +3501,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.158041E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.156147E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.158041E+09,,,,,,,
-,Minimum of Months,0.158041E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.158041E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.156147E+09,,,,,,,
+,Minimum of Months,0.156147E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.156147E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3523,13 +3525,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.287312E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.289879E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.287312E+09,,,,,,,
-,Minimum of Months,0.287312E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.287312E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.289879E+09,,,,,,,
+,Minimum of Months,0.289879E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.289879E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3547,13 +3549,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.152694E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.156502E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
-,Annual Sum or Average,0.152694E+09,,,,,,,
-,Minimum of Months,0.152694E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.152694E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.156502E+09,,,,,,,
+,Minimum of Months,0.156502E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.156502E+09,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3595,13 +3597,13 @@ Custom Monthly Report
 ,July,-,-,-
 ,August,-,-,-
 ,September,-,-,-
-,October,9852164.87,0.00,0.00
+,October,10569561.68,0.00,0.00
 ,November,-,-,-
 ,December,-,-,-
 ,,,,
-,Annual Sum or Average,9852164.87,,
-,Minimum of Months,9852164.87,0.00,0.00
-,Maximum of Months,9852164.87,0.00,0.00
+,Annual Sum or Average,10569561.68,,
+,Minimum of Months,10569561.68,0.00,0.00
+,Maximum of Months,10569561.68,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3619,13 +3621,13 @@ Custom Monthly Report
 ,July,-,-,-
 ,August,-,-,-
 ,September,-,-,-
-,October,295014.59,0.00,0.00
+,October,307328.34,0.00,0.00
 ,November,-,-,-
 ,December,-,-,-
 ,,,,
-,Annual Sum or Average,295014.59,,
-,Minimum of Months,295014.59,0.00,0.00
-,Maximum of Months,295014.59,0.00,0.00
+,Annual Sum or Average,307328.34,,
+,Minimum of Months,307328.34,0.00,0.00
+,Maximum of Months,307328.34,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3643,13 +3645,13 @@ Custom Monthly Report
 ,July,-,-,-
 ,August,-,-,-
 ,September,-,-,-
-,October,5272882.38,0.00,0.00
+,October,6359522.69,0.00,0.00
 ,November,-,-,-
 ,December,-,-,-
 ,,,,
-,Annual Sum or Average,5272882.38,,
-,Minimum of Months,5272882.38,0.00,0.00
-,Maximum of Months,5272882.38,0.00,0.00
+,Annual Sum or Average,6359522.69,,
+,Minimum of Months,6359522.69,0.00,0.00
+,Maximum of Months,6359522.69,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -3859,13 +3861,13 @@ Custom Monthly Report
 ,July,-,-,-
 ,August,-,-,-
 ,September,-,-,-
-,October,0.00,0.00,0.00
+,October,2014382.30,0.00,0.00
 ,November,-,-,-
 ,December,-,-,-
 ,,,,
-,Annual Sum or Average,0.00,,
-,Minimum of Months,0.00,0.00,0.00
-,Maximum of Months,0.00,0.00,0.00
+,Annual Sum or Average,2014382.30,,
+,Minimum of Months,2014382.30,0.00,0.00
+,Maximum of Months,2014382.30,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4003,13 +4005,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-
 ,August,-,-,-,-,-,-
 ,September,-,-,-,-,-,-
-,October,0.547918E+10,147166.97,15-OCT-14:09,0.216006E+09,9485.26,15-OCT-11:20
+,October,0.552737E+10,157213.76,15-OCT-14:09,0.215991E+09,9484.01,15-OCT-11:20
 ,November,-,-,-,-,-,-
 ,December,-,-,-,-,-,-
 ,,,,,,,
-,Annual Sum or Average,0.547918E+10,,,0.216006E+09,,
-,Minimum of Months,0.547918E+10,147166.97,,0.216006E+09,9485.26,
-,Maximum of Months,0.547918E+10,147166.97,,0.216006E+09,9485.26,
+,Annual Sum or Average,0.552737E+10,,,0.215991E+09,,
+,Minimum of Months,0.552737E+10,157213.76,,0.215991E+09,9484.01,
+,Maximum of Months,0.552737E+10,157213.76,,0.215991E+09,9484.01,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4027,13 +4029,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-
-,October,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.448061E+09,443895.01,0.00,0.143843E+10,0.00,0.00,0.00,0.00,0.00
+,October,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.449559E+09,443895.01,5732340.51,0.147940E+10,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,
-,Annual Sum or Average,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.448061E+09,443895.01,0.00,0.143843E+10,,,,,
-,Minimum of Months,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.448061E+09,443895.01,0.00,0.143843E+10,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.448061E+09,443895.01,0.00,0.143843E+10,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.449559E+09,443895.01,5732340.51,0.147940E+10,,,,,
+,Minimum of Months,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.449559E+09,443895.01,5732340.51,0.147940E+10,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.910537E+09,0.140690E+09,0.250207E+10,38937899.30,0.449559E+09,443895.01,5732340.51,0.147940E+10,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4051,13 +4053,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-
-,October,0.00,0.00,0.00,0.00,0.216006E+09,0.00,0.00
+,October,0.00,0.00,0.00,0.00,0.215991E+09,0.00,0.00
 ,November,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-
 ,,,,,,,,
-,Annual Sum or Average,,,0.00,,0.216006E+09,,
-,Minimum of Months,0.00,0.00,0.00,0.00,0.216006E+09,0.00,0.00
-,Maximum of Months,0.00,0.00,0.00,0.00,0.216006E+09,0.00,0.00
+,Annual Sum or Average,,,0.00,,0.215991E+09,,
+,Minimum of Months,0.00,0.00,0.00,0.00,0.215991E+09,0.00,0.00
+,Maximum of Months,0.00,0.00,0.00,0.00,0.215991E+09,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4075,13 +4077,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-,October,22480.94,15-OCT-07:10,5236.50,15-OCT-05:10,56729.91,15-OCT-07:10,836.80,15-OCT-07:19,21097.72,15-OCT-06:10,6.85,15-OCT-07:10,0.00,15-OCT-00:10
+,October,22480.94,15-OCT-07:10,5236.50,15-OCT-05:10,56729.91,15-OCT-07:10,836.80,15-OCT-07:19,28336.59,15-OCT-19:19,6.85,15-OCT-07:19,2981.66,15-OCT-06:19
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,,
 ,Annual Sum or Average,,,,,,,,,,,,,,
-,Minimum of Months,22480.94,,5236.50,,56729.91,,836.80,,21097.72,,6.85,,0.00,
-,Maximum of Months,22480.94,,5236.50,,56729.91,,836.80,,21097.72,,6.85,,0.00,
+,Minimum of Months,22480.94,,5236.50,,56729.91,,836.80,,28336.59,,6.85,,2981.66,
+,Maximum of Months,22480.94,,5236.50,,56729.91,,836.80,,28336.59,,6.85,,2981.66,
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4099,13 +4101,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-
-,October,58308.21,15-OCT-14:09,0.00,0.00,0.00,0.00,0.00
+,October,64447.54,15-OCT-14:09,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-
 ,,,,,,,,
 ,Annual Sum or Average,,,,,,,
-,Minimum of Months,58308.21,,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,58308.21,,0.00,0.00,0.00,0.00,0.00
+,Minimum of Months,64447.54,,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,64447.54,,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4123,13 +4125,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-
-,October,147166.97,15-OCT-14:09,20956.25,46414.74,0.00,832.89,20648.04,6.85,0.00,58308.21,0.00
+,October,157213.76,15-OCT-14:09,20956.25,46414.74,0.00,832.89,24555.50,6.85,0.00,64447.54,0.00
 ,November,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,
 ,Annual Sum or Average,,,,,,,,,,,
-,Minimum of Months,147166.97,,20956.25,46414.74,0.00,832.89,20648.04,6.85,0.00,58308.21,0.00
-,Maximum of Months,147166.97,,20956.25,46414.74,0.00,832.89,20648.04,6.85,0.00,58308.21,0.00
+,Minimum of Months,157213.76,,20956.25,46414.74,0.00,832.89,24555.50,6.85,0.00,64447.54,0.00
+,Maximum of Months,157213.76,,20956.25,46414.74,0.00,832.89,24555.50,6.85,0.00,64447.54,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4147,13 +4149,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-
-,October,0.00,0.00,0.00,15-OCT-00:10,0.00,9485.26,15-OCT-11:20,0.00
+,October,0.00,0.00,0.00,15-OCT-00:10,0.00,9484.01,15-OCT-11:20,0.00
 ,November,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-
 ,,,,,,,,,
 ,Annual Sum or Average,,,,,,,,
-,Minimum of Months,0.00,0.00,0.00,,0.00,9485.26,,0.00
-,Maximum of Months,0.00,0.00,0.00,,0.00,9485.26,,0.00
+,Minimum of Months,0.00,0.00,0.00,,0.00,9484.01,,0.00
+,Maximum of Months,0.00,0.00,0.00,,0.00,9484.01,,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4171,13 +4173,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,9.24486
+,October,18.00000,0.00000,0.00000,0.00000,9.02378
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,9.24486
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,9.24486
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,9.24486
+,Annual Sum or Average,18.00000,,,,9.02378
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,9.02378
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,9.02378
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4195,13 +4197,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,7.32358
+,October,18.00000,0.00000,0.00000,0.00000,7.18934
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,7.32358
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,7.32358
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,7.32358
+,Annual Sum or Average,18.00000,,,,7.18934
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,7.18934
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,7.18934
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4219,13 +4221,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,7.01617
+,October,18.00000,0.00000,0.00000,0.00000,7.02623
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,7.01617
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,7.01617
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,7.01617
+,Annual Sum or Average,18.00000,,,,7.02623
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,7.02623
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,7.02623
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4243,13 +4245,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,6.91145
+,October,18.00000,0.00000,0.00000,0.00000,7.01833
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,6.91145
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,6.91145
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,6.91145
+,Annual Sum or Average,18.00000,,,,7.01833
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,7.01833
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,7.01833
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4267,13 +4269,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,8.65067
+,October,18.00000,0.00000,0.00000,0.00000,8.55054
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,8.65067
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,8.65067
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,8.65067
+,Annual Sum or Average,18.00000,,,,8.55054
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,8.55054
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,8.55054
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4291,13 +4293,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,10.25200
+,October,18.00000,0.00000,0.00000,0.00000,10.16081
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,10.25200
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,10.25200
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,10.25200
+,Annual Sum or Average,18.00000,,,,10.16081
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,10.16081
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,10.16081
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4315,13 +4317,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,8.82029
+,October,18.00000,0.00000,0.00000,0.00000,8.34118
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,8.82029
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,8.82029
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,8.82029
+,Annual Sum or Average,18.00000,,,,8.34118
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,8.34118
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,8.34118
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4339,13 +4341,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,7.33580
+,October,18.00000,0.00000,0.00000,0.00000,7.30039
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,7.33580
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,7.33580
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,7.33580
+,Annual Sum or Average,18.00000,,,,7.30039
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,7.30039
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,7.30039
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4363,13 +4365,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,9.49509
+,October,18.00000,0.00000,0.00000,0.00000,9.27124
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,9.49509
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,9.49509
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,9.49509
+,Annual Sum or Average,18.00000,,,,9.27124
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,9.27124
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,9.27124
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4387,13 +4389,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,12.76415
+,October,18.00000,0.00000,0.00000,0.00000,11.23164
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,12.76415
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,12.76415
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,12.76415
+,Annual Sum or Average,18.00000,,,,11.23164
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,11.23164
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,11.23164
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4411,13 +4413,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,9.80011
+,October,18.00000,0.00000,0.00000,0.00000,8.95002
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,9.80011
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,9.80011
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,9.80011
+,Annual Sum or Average,18.00000,,,,8.95002
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,8.95002
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,8.95002
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4435,13 +4437,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,6.95116
+,October,18.00000,0.00000,0.00000,0.00000,6.96178
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,6.95116
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,6.95116
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,6.95116
+,Annual Sum or Average,18.00000,,,,6.96178
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,6.96178
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,6.96178
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4459,13 +4461,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,15.00000,0.00000,0.00000,0.00000,6.94903
+,October,15.00000,0.00000,0.00000,0.00000,6.86268
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,15.00000,,,,6.94903
-,Minimum of Months,15.00000,0.00000,0.00000,0.00000,6.94903
-,Maximum of Months,15.00000,0.00000,0.00000,0.00000,6.94903
+,Annual Sum or Average,15.00000,,,,6.86268
+,Minimum of Months,15.00000,0.00000,0.00000,0.00000,6.86268
+,Maximum of Months,15.00000,0.00000,0.00000,0.00000,6.86268
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4483,13 +4485,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,10.79652
+,October,18.00000,0.00000,0.00000,0.00000,10.34835
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,10.79652
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,10.79652
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,10.79652
+,Annual Sum or Average,18.00000,,,,10.34835
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,10.34835
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,10.34835
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4507,13 +4509,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-
 ,August,-,-,-,-,-
 ,September,-,-,-,-,-
-,October,18.00000,0.00000,0.00000,0.00000,8.95172
+,October,18.00000,0.00000,0.00000,0.00000,8.32539
 ,November,-,-,-,-,-
 ,December,-,-,-,-,-
 ,,,,,,
-,Annual Sum or Average,18.00000,,,,8.95172
-,Minimum of Months,18.00000,0.00000,0.00000,0.00000,8.95172
-,Maximum of Months,18.00000,0.00000,0.00000,0.00000,8.95172
+,Annual Sum or Average,18.00000,,,,8.32539
+,Minimum of Months,18.00000,0.00000,0.00000,0.00000,8.32539
+,Maximum of Months,18.00000,0.00000,0.00000,0.00000,8.32539
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4531,13 +4533,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-
-,October,0.220624E+10,0.578608E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.229544E+10,0.595880E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,
-,Annual Sum or Average,0.220624E+10,0.578608E+09,16.00,,,,,,,,,,
-,Minimum of Months,0.220624E+10,0.578608E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.220624E+10,0.578608E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.229544E+10,0.595880E+09,16.00,,,,,,,,,,
+,Minimum of Months,0.229544E+10,0.595880E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.229544E+10,0.595880E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4555,13 +4557,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-
-,October,0.161782E+10,0.426089E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.168435E+10,0.438456E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,
-,Annual Sum or Average,0.161782E+10,0.426089E+09,16.00,,,,,,,,,,
-,Minimum of Months,0.161782E+10,0.426089E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.161782E+10,0.426089E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.168435E+10,0.438456E+09,16.00,,,,,,,,,,
+,Minimum of Months,0.168435E+10,0.438456E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.168435E+10,0.438456E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4579,13 +4581,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-,-,-,-,-,-,-
-,October,0.162276E+10,0.433736E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,0.168124E+10,0.445060E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-,-,-,-,-,-,-
 ,,,,,,,,,,,,,,
-,Annual Sum or Average,0.162276E+10,0.433736E+09,16.00,,,,,,,,,,
-,Minimum of Months,0.162276E+10,0.433736E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.162276E+10,0.433736E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,0.168124E+10,0.445060E+09,16.00,,,,,,,,,,
+,Minimum of Months,0.168124E+10,0.445060E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,0.168124E+10,0.445060E+09,16.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -4939,13 +4941,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-
-,October,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,October,5732340.51,0.00,0.00,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-
 ,,,,,,,,
-,Annual Sum or Average,0.00,,,,,,
-,Minimum of Months,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,Maximum of Months,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+,Annual Sum or Average,5732340.51,,,,,,
+,Minimum of Months,5732340.51,0.00,0.00,0.00,0.00,0.00,0.00
+,Maximum of Months,5732340.51,0.00,0.00,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -5155,13 +5157,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-
-,October,0.00,0.00,0.220624E+10,0.00,0.00,0.00,0.00
+,October,0.00,0.00,0.229544E+10,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-
 ,,,,,,,,
-,Annual Sum or Average,,,0.220624E+10,,,,
-,Minimum of Months,0.00,0.00,0.220624E+10,0.00,0.00,0.00,0.00
-,Maximum of Months,0.00,0.00,0.220624E+10,0.00,0.00,0.00,0.00
+,Annual Sum or Average,,,0.229544E+10,,,,
+,Minimum of Months,0.00,0.00,0.229544E+10,0.00,0.00,0.00,0.00
+,Maximum of Months,0.00,0.00,0.229544E+10,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -5179,13 +5181,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-
-,October,0.00,0.00,0.161782E+10,0.00,0.00,0.00,0.00
+,October,0.00,0.00,0.168435E+10,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-
 ,,,,,,,,
-,Annual Sum or Average,,,0.161782E+10,,,,
-,Minimum of Months,0.00,0.00,0.161782E+10,0.00,0.00,0.00,0.00
-,Maximum of Months,0.00,0.00,0.161782E+10,0.00,0.00,0.00,0.00
+,Annual Sum or Average,,,0.168435E+10,,,,
+,Minimum of Months,0.00,0.00,0.168435E+10,0.00,0.00,0.00,0.00
+,Maximum of Months,0.00,0.00,0.168435E+10,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -5203,13 +5205,13 @@ Custom Monthly Report
 ,July,-,-,-,-,-,-,-
 ,August,-,-,-,-,-,-,-
 ,September,-,-,-,-,-,-,-
-,October,0.00,0.00,0.162276E+10,0.00,0.00,0.00,0.00
+,October,0.00,0.00,0.168124E+10,0.00,0.00,0.00,0.00
 ,November,-,-,-,-,-,-,-
 ,December,-,-,-,-,-,-,-
 ,,,,,,,,
-,Annual Sum or Average,,,0.162276E+10,,,,
-,Minimum of Months,0.00,0.00,0.162276E+10,0.00,0.00,0.00,0.00
-,Maximum of Months,0.00,0.00,0.162276E+10,0.00,0.00,0.00,0.00
+,Annual Sum or Average,,,0.168124E+10,,,,
+,Minimum of Months,0.00,0.00,0.168124E+10,0.00,0.00,0.00,0.00
+,Maximum of Months,0.00,0.00,0.168124E+10,0.00,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -5227,13 +5229,13 @@ Custom Monthly Report
 ,July,-,-,-,-
 ,August,-,-,-,-
 ,September,-,-,-,-
-,October,0.209992E+09,0.00,0.00,0.00
+,October,0.197317E+09,0.00,0.00,0.00
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,0.209992E+09,,,
-,Minimum of Months,0.209992E+09,0.00,0.00,0.00
-,Maximum of Months,0.209992E+09,0.00,0.00,0.00
+,Annual Sum or Average,0.197317E+09,,,
+,Minimum of Months,0.197317E+09,0.00,0.00,0.00
+,Maximum of Months,0.197317E+09,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -5251,13 +5253,13 @@ Custom Monthly Report
 ,July,-,-,-,-
 ,August,-,-,-,-
 ,September,-,-,-,-
-,October,0.129583E+09,0.00,0.00,0.00
+,October,0.133982E+09,0.00,0.00,0.00
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,0.129583E+09,,,
-,Minimum of Months,0.129583E+09,0.00,0.00,0.00
-,Maximum of Months,0.129583E+09,0.00,0.00,0.00
+,Annual Sum or Average,0.133982E+09,,,
+,Minimum of Months,0.133982E+09,0.00,0.00,0.00
+,Maximum of Months,0.133982E+09,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
@@ -5275,13 +5277,13 @@ Custom Monthly Report
 ,July,-,-,-,-
 ,August,-,-,-,-
 ,September,-,-,-,-
-,October,0.108485E+09,0.00,0.00,0.00
+,October,0.118260E+09,0.00,0.00,0.00
 ,November,-,-,-,-
 ,December,-,-,-,-
 ,,,,,
-,Annual Sum or Average,0.108485E+09,,,
-,Minimum of Months,0.108485E+09,0.00,0.00,0.00
-,Maximum of Months,0.108485E+09,0.00,0.00,0.00
+,Annual Sum or Average,0.118260E+09,,,
+,Minimum of Months,0.118260E+09,0.00,0.00,0.00
+,Maximum of Months,0.118260E+09,0.00,0.00,0.00
 
 
 ----------------------------------------------------------------------------------------------------
