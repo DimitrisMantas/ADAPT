@@ -37,7 +37,7 @@ from typing import Any, List, Union
 
 import numpy as np
 
-import utilities.directories
+import utilities.librarian
 
 def _normalize_objective_space_results(_objective_space_results: npt.NDArray) -> npt.NDArray:
     """

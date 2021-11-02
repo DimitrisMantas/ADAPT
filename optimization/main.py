@@ -55,16 +55,16 @@ from pymoo.factory import get_decision_making
 import algorithm
 import callback
 import termination
-import display
+import monitor
 
 import preferences.colors
 import preferences.parameters
 
-import simulation.controller
+import simulation.runner
 import simulation.modifier
 import simulation.reader
 
-import utilities.directories
+import utilities.librarian
 import utilities.optimization
 
 
@@ -91,7 +91,7 @@ class OptimizationProblem(ElementwiseProblem):
         simulation.modifier.modify_schedule(x[24:48], "../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 36)
 
         # Simulation Controller
-        simulation.controller.run_eplus("../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
+        simulation.runner.run_eplus("../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
                                         "../database/simulation/model/USA_AZ_Tucson-Davis-Monthan.AFB.722745_TMY3.epw",
                                         set_idd=False)
 
@@ -125,7 +125,7 @@ termination_criterion = termination.TerminationCriterion1(epsilon=2)
 convergence_callback = callback.ConvergenceCallback()
 
 res = minimize(optimization_problem, optimization_algorithm, termination_criterion, callback=convergence_callback,
-               seed=preferences.parameters.parameters["SEED"], display=display.ConvergenceMonitor(), verbose=True)
+               seed=preferences.parameters.parameters["SEED"], display=monitor.ConvergenceMonitor(), verbose=True)
 
 
 # API USAGE EXAMPLE
