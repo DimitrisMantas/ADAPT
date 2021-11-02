@@ -1,57 +1,56 @@
-# ![ADAPT](https://drive.google.com/uc?export=view&id=16f-V_Krxq2dnDeUeG1gldEZR4YHOjR_r)
+[![ADAPT](https://drive.google.com/uc?export=view&id=1YsXmL406EFRzlyCdZzz6B-fqRngIdJLO)]()
 
+[![Dependencies](https://img.shields.io/badge/Eppy-0.5.56-blue)]()
+[![Dependencies](https://img.shields.io/badge/OpenStudio-3.2.1-blue)]()
+[![Dependencies](https://img.shields.io/badge/Pymoo-0.5.0-blue)]()
+
+[![License](https://img.shields.io/badge/License-AGPL--3.0-orange)]()
+[![Version](https://img.shields.io/badge/Version-1.5.0-sucess)]()
+
+[![Python](https://img.shields.io/badge/Python-3.9-red)]()
+[![OS](https://img.shields.io/badge/OS-Windows%2010%2064--bit-red)]()
+
+[![DOI](https://img.shields.io/badge/DOI-10.13140%2FRG.2.2.11774.72007-blue)]()
 
 ## ABOUT
 
-**ADAPT** is an open-source Python 3 module for the optimization of building energy consumption and human comfort using 
-genetic algorithms coupled with whole building performance simulation software.
+**ADAPT** is an open-source Python 3 software package for the optimization of building energy consumption and human
+comfort using state-of-the-art genetic algorithms coupled industry standard whole building performance simulation
+software.
 
-**ADAPT** was originally developed for the electric power and natural gas business unit of MYTILINEOS S.A., under the
-supervision of Dr. Vassilis Nikolopoulos, Head of Applied Research and Development.
+**ADAPT** was originally developed for the electric power and natural gas business unit of MYTILINEOS S.A., one of the
+largest independent industrial conglomerates and electricity producers in Greece, under the direct supervision of Dr. 
+Vassilis Nikolopoulos, Head of Applied Research & Development.
 
-**ADAPT** consists of two distinct modules: an optimization and a simulation engine. The former is based on the NGAII
-algorithm, while the latter is based on EnergyPlus and OpenStudio.
+The core of **ADAPT** is made up of two distinct modules: (i) a simulation and (ii) an optimization engine. The former
+module is based on a custom implementation of the NSGA-II algorithm, while the latter on EnergyPlus and OpenStudio.
 
-Insisting on an open-source design philosophy, **ADAPT** comes bundled with EnergyPlus™, a whole building performance
-simulation engine developed and under direct funding from the United States Department of Energy. However, this engine
-can - with some effort - be swapped out for another similar computer program, as long as it features a Python 3 API and
-can produce the required simulation data.
+## LICENSE
+## Copyright Information
+Copyright © 2021
 
+Dimitris Mantas\
+Senior Undergraduate Student
 
-## LICENSE INFORMATION
-### Disclaimer of Warranty
-THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING
-THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
-IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU
-ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+Department of Civil Engineering\
+School of Engineering\
+University of Patras
 
-### Limitation of Liability
-IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO
-MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL,
-INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO 
-OSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO
-OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
-DAMAGES.
+A: University Campus, Rio, Achaia, 265 04, Greece\
+Ε: dimitris.mantas@outlook.com\
+T: +30 698 995 8826
 
-    Copyright (C) 2021
-        Dimitris Mantas
+## Disclaimer of Warranty
+There in no warranty for **ADAPT**, to the extent permitted by applicable law. Except when otherwise stated in writing
+the copyright holder and/or other parties provide **ADAPT** “as is” without warrant of any kind, either expressed or
+implied, including, but not limited to, the implied warranties od merchantability and fitness for a particular purpose.
+The entire risk as to the quality and performance of **ADAPT** is with you. Should **ADAPT** prove defective, you assume
+the cost of all necessary servicing, repair or correction.
 
-        Department of Civil Engineering
-        School of Engineering
-        University of Patras
-
-        A: University Campus, Rio, Achaia, 265 04, Greece
-        Ε: dimitris.mantas@outlook.com
-        T: +30 698 995 8826
-
-THIS PROGRAM IS FREE SOFTWARE: YOU CAN REDISTRIBUTE IT AND/OR MODIFY IT UNDER THE TERMS OF THE GNU AFFERO GENERAL PUBLIC
-LICENSE AS PUBLISHED BY THE FREE SOFTWARE FOUNDATION, EITHER VERSION 3 OF THE LICENSE, OR (AT YOUR OPTION) ANY LATER
-VERSION.
-
-THIS PROGRAM IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL,nBUT WITHOUT ANY WARRANTY; WITHOUT EVEN THE IMPLIED
-WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. SEE THE GNU AFFERO GENERAL PUBLIC LICENSE FOR MORE
-DETAILS.
-
-YOU SHOULD HAVE RECEIVED A COPY OF THE GNU AFFERO GENERAL PUBLIC LICENSE ALONG WITH THIS PROGRAM.
-IF NOT, SEE <HTTPS://WWW.GNU.ORG/LICENSES/>.
+## Limitation of Liability
+In no event unless required by applicable law or agreed to in writing will any copyright holder, or any other party who
+modifies and/or conveys **ADAPT** as permitted above, be liable to you for damages, including any general, special,
+incidental or consequential damages arising out of the use or inability to use **ADAPT** (including but not limited to
+loss of data or data being rendered inaccurate or losses sustained by you or third partied or a failure of **ADAPT** to
+operate with any other programs), even if such holder or other party has been advised of the possibility of such
+damages.

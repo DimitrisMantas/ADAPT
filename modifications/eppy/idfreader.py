@@ -41,7 +41,6 @@ def iddversiontuple(afile):
         fhandle = afile
     line1 = fhandle.readline()
 
-    # Version: 0.5.56
     # Ensures a ResourceWarning concerning an open .IDD file is not raised during program execution.
     fhandle.close()
 
