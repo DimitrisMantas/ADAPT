@@ -52,7 +52,7 @@ from pymoo.factory import get_decision_making
 import algorithm
 import callback
 import monitor
-import TerminationCriterion
+import termination_criterion
 
 import preferences.colors
 import preferences.parameters
@@ -101,7 +101,7 @@ class OptimizationProblem(ElementwiseProblem):
 
 optimization_problem = OptimizationProblem()
 
-optimization_algorithm = NSGA2(pop_size=5,
+optimization_algorithm = NSGA2(pop_size=100,
                                sampling=algorithm.SamplingScheme(),
                                # NOTE - Check the parent population selection process.
                                crossover=algorithm.CrossoverScheme(
@@ -112,8 +112,18 @@ optimization_algorithm = NSGA2(pop_size=5,
                                eliminate_duplicates=True
                                )
 
-termination_criterion = TerminationCriterion.TerminationCriterion(tol=0.10)
-# termination_criterion = TerminationCriterion.TerminationCriterion(tol=0.01)
+
+# The termination criterion is checked against before each new generation. It cannot be checked againts before the
+# whole population is evaluated, so the smallest input arguments it can take are: (i) n_max_gen = 1, (ii) n_max_evals
+# = pop_size, and (iii) max_time = pop_size * mean (or max) simulation time.
+
+# Similarly, the possible values of those input arguments are: (i) n_max_gen = k, where k is an integer,
+# (ii) n_max_evals = k * pop_size, and (iii) max_time = k * pop_size * mean (or max) simulation time.
+
+# Other values are also valid, but may yield unexpected results. For example, when pop_size = 100 and n_max_evals =
+# 150, then the optimization will stop after the evaluation of the second generation is finished.
+
+termination_criterion = termination_criterion.TerminationCriterion()
 
 convergence_callback = callback.ConvergenceCallback()
 

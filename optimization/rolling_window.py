@@ -5,15 +5,15 @@ from pymoo.util.termination.collection import TerminationCollection
 from pymoo.util.termination.max_eval import MaximumFunctionCallTermination
 from pymoo.util.termination.max_gen import MaximumGenerationTermination
 
-import MaximumWallTime
+import max_wall_time
 
 
-class CustomSlidingWindow(TerminationCollection):
+class RollingWindow(TerminationCollection):
 
     def __init__(self,
                  metric_window_size=None,
-                 data_window_size=None,
-                 min_data_for_metric=1,
+                 data_window_size=2,
+                 min_data_for_metric=2,
                  nth_gen=1,
                  n_max_gen=None,
                  n_max_evals=None,
@@ -39,7 +39,7 @@ class CustomSlidingWindow(TerminationCollection):
 
         super().__init__(MaximumGenerationTermination(n_max_gen=n_max_gen),
                          MaximumFunctionCallTermination(n_max_evals=n_max_evals),
-                         MaximumWallTime.MaximumWallTime(max_time=max_time))
+                         max_wall_time.MaxWallTime(max_time=max_time))
 
         # the window sizes stored in objects
         self.data_window_size = data_window_size

@@ -4,7 +4,7 @@ from pymoo.core.termination import Termination
 from pymoo.util.misc import time_to_int
 
 
-class MaximumWallTime(Termination):
+class MaxWallTime(Termination):
 
     def __init__(self, max_time) -> None:
         super().__init__()

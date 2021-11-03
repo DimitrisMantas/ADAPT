@@ -1,21 +1,19 @@
 import numpy as np
 
-import CustomSlidingWindow
+import rolling_window
 
 
-class TerminationCriterion(CustomSlidingWindow.CustomSlidingWindow):
+class TerminationCriterion(rolling_window.RollingWindow):
 
     def __init__(self,
                  n_last=20,
-                 tol=1e-6,
-                 mode="normal",
+                 tol=1,
+                 mode="medium",
                  n_max_gen=None,  # None sets it equal to the IEEE 754 32-bit limit.
                  n_max_evals=None,
                  max_time=None
                  ) -> None:
         super().__init__(metric_window_size=n_last,
-                         data_window_size=2,
-                         min_data_for_metric=2,
                          n_max_gen=n_max_gen,
                          n_max_evals=n_max_evals,
                          max_time=max_time)
@@ -27,19 +25,19 @@ class TerminationCriterion(CustomSlidingWindow.CustomSlidingWindow):
 
     def _metric(self, data):
         input_argument = np.abs(data[-1] - data[-2])
-        if self.mode.lower() == "normal":
+        if self.mode.lower() == "soft" or self.mode.lower() == "medium":
             return np.mean(input_argument)
-        elif self.mode.lower() == "strict":
+        elif self.mode.lower() == "hard":
             return np.max(input_argument)
         else:
-            raise NameError("The termination criterion mode must be set to either normal or strict.")
+            raise NameError("The termination criterion mode must be set to either soft, medium, or hard.")
 
     def _decide(self, metrics):
-        if self.mode.lower() == "normal":
+        if self.mode.lower() == "soft":
             comparison_argument = np.mean(metrics)
-        elif self.mode.lower() == "strict":
+        elif self.mode.lower() == "medium" or self.mode.lower() == "hard":
             comparison_argument = np.max(metrics)
         else:
-            raise NameError("The termination criterion mode must be set to either normal or strict.")
+            raise NameError("The termination criterion mode must be set to either soft, medium, or hard.")
 
         return comparison_argument > self.tol
