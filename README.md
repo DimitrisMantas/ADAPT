@@ -1,11 +1,11 @@
 # <img src="https://drive.google.com/uc?export=view&id=1YsXmL406EFRzlyCdZzz6B-fqRngIdJLO" height="94" />
 
-[![Dependencies](https://img.shields.io/badge/Eppy-0.5.56-blue)]()
+[![Dependencies](https://img.shields.io/badge/Eppy-0.5.56-orange)]()
 [![Dependencies](https://img.shields.io/badge/OpenStudio-3.2.1-blue)]()
 [![Dependencies](https://img.shields.io/badge/Pymoo-0.5.0-blue)]()
 
 [![License](https://img.shields.io/badge/License-AGPL--3.0-orange)]()
-[![Version](https://img.shields.io/badge/Version-1.6.1-green)]()
+[![Version](https://img.shields.io/badge/Version-1.6.2-green)]()
 
 [![Python](https://img.shields.io/badge/Python-3.9-red)]()
 [![OS](https://img.shields.io/badge/OS-Windows%2010%2064--bit-red)]()

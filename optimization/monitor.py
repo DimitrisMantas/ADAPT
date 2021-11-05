@@ -21,7 +21,7 @@ class ConvergenceMonitor(Display):
 
         self.output = OutputSettings()
 
-        self.metric_window_size=20
+        self.metric_window_size=21 # The first generation cannot be compared to anything, so we need 20 + 1 = 21 generations for 20 pairs.
         self.min_generations = 2
 
     def _do(self, problem, evaluator, algorithm):

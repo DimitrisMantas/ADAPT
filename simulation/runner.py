@@ -33,7 +33,7 @@ import eppy.modeleditor
 
 
 def run_eplus(idf: str, epw: str, idd="eplus/eplus.idd", set_idd=True, output_path="../database/simulation/logs/",
-              read_vars=True, verbose="q") -> None:
+              read_vars=True, verbose="S") -> None:
     """Run an eplus™ whole building performance simulation."""
 
     # The .IDD file needs to be set only once during a given workflow.

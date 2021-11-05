@@ -40,10 +40,8 @@ def iddversiontuple(afile):
     except TypeError:
         fhandle = afile
     line1 = fhandle.readline()
-
-    # Ensures a ResourceWarning concerning an open .IDD file is not raised during program execution.
-    fhandle.close()
-
+    if fhandle != afile:
+        fhandle.close()
     try:
         line1 = line1.decode("ISO-8859-2")
     except AttributeError:
@@ -88,7 +86,7 @@ def makeabunch(commdct, obj, obj_i, debugidd=True, block=None):
 
 
 def makebunches(data, commdct):
-    """make bunches with database"""
+    """make bunches with data"""
     bunchdt = CaseInsensitiveDict()
     ddtt, dtls = data.dt, data.dtls
     for obj_i, key in enumerate(dtls):
@@ -102,7 +100,7 @@ def makebunches(data, commdct):
 
 
 def makebunches_alter(data, commdct, theidf, block=None):
-    """make bunches with database"""
+    """make bunches with data"""
     bunchdt = CaseInsensitiveDict()
     dt, dtls = data.dt, data.dtls
     for obj_i, key in enumerate(dtls):
@@ -307,7 +305,7 @@ def idfreader1(fname, iddfile, theidf, conv=True, commdct=None, block=None):
         skiplist = None
     nofirstfields = iddgaps.missingkeys_standard(commdct, dtls, skiplist=skiplist)
     iddgaps.missingkeys_nonstandard(block, commdct, dtls, nofirstfields)
-    # bunchdt = makebunches(database, commdct)
+    # bunchdt = makebunches(data, commdct)
     bunchdt = makebunches_alter(data, commdct, theidf, block)
     return bunchdt, block, data, commdct, idd_index, versiontuple
 
