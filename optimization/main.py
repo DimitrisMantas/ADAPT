@@ -123,7 +123,7 @@ optimization_algorithm = NSGA2(pop_size=100,
 # Other values are also valid, but may yield unexpected results. For example, when pop_size = 100 and n_max_evals =
 # 150, then the optimization will stop after the evaluation of the second generation is finished.
 
-termination_criterion = termination_criterion.TerminationCriterion(tol=2)
+termination_criterion = termination_criterion.TerminationCriterion()
 
 convergence_callback = callback.ConvergenceCallback()
 
