@@ -1,6 +1,6 @@
 """
-    This file is part of the simulation engine of ADAPT. It defines the
-    utilities used by this engine.
+    This file is part of the sim engine of ADAPT. It defines the
+    utils used by this engine.
 
     Copyright (C) 2021-2022
         Dimitris Mantas, MEng (s)
@@ -37,18 +37,18 @@ from typing import Any, List, Union
 
 import numpy as np
 
-import utilities.librarian
+import utils.librarian
 
 def _normalize_objective_space_results(_objective_space_results: npt.NDArray) -> npt.NDArray:
     """
-    Normalize a non-dominated solution preferences using min-max feature scaling.
+    Normalize a non-dominated solution prefs using min-max feature scaling.
 
     ----------------
     Input Parameters
     ----------------
 
     objective_space_results: numpy.ndarray
-        The non-dominated solution preferences to be normalized.
+        The non-dominated solution prefs to be normalized.
     """
 
     _normalized_objective_space_results = np.empty_like(_objective_space_results)
@@ -66,9 +66,9 @@ def _normalize_objective_space_results(_objective_space_results: npt.NDArray) ->
 
 def close_bound(bound: npt.NDArray, decimals: int) -> npt.NDArray:
     """
-    Close the simulation problem bounds.
+    Close the sim problem bounds.
 
-    The initial population sampling process for discontinuous simulation variables is performed by uniformly
+    The initial population sampling process for discontinuous sim variables is performed by uniformly
     sampling real-floating point numbers over half-open interval [a, b), a < b, where a and b are the lower and upper
     bounds of these variables, respectively, and then rounding them as required.
 
@@ -81,7 +81,7 @@ def close_bound(bound: npt.NDArray, decimals: int) -> npt.NDArray:
     ----------------
 
     _xu: numpy.ndarray
-        The upper simulation variable bounds.
+        The upper sim variable bounds.
 
     _decimals: int
         The accuracy level, to which the initial population sampling process should be performed, measured by the
@@ -92,7 +92,7 @@ def close_bound(bound: npt.NDArray, decimals: int) -> npt.NDArray:
 
 
 def read_problem_bounds(path: str) -> List[Union[int, float]]:
-    """Read the simulation problem bounds from a givem .CSV file."""
+    """Read the sim problem bounds from a givem .CSV file."""
 
     with open(path, "r") as file:
         reader = csv.reader(file)

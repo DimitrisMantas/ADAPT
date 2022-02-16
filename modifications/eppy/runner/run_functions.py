@@ -123,7 +123,7 @@ def paths_from_version(version):
 
 
 def wrapped_help_text(wrapped_func):
-    """Decorator to pass through the documentation from a wrapped function."""
+    """Decorator to pass through the docs from a wrapped function."""
 
     def decorator(wrapper_func):
         """The decorator.
@@ -235,22 +235,22 @@ def run(
         Full or relative path to an output directory (default: 'run_outputs)
 
     annual : bool, optional
-        If True then force annual simulation (default: False)
+        If True then force annual sim (default: False)
 
     design_day : bool, optional
-        Force design-day-only simulation (default: False)
+        Force design-day-only sim (default: False)
 
     idd : str, optional
         Input data dictionary (default: Energy+.idd in EnergyPlus directory)
 
     epmacro : str, optional
-        Run EPMacro prior to simulation (default: False).
+        Run EPMacro prior to sim (default: False).
 
     expandobjects : bool, optional
-        Run ExpandObjects prior to simulation (default: False)
+        Run ExpandObjects prior to sim (default: False)
 
     readvars : bool, optional
-        Run ReadVarsESO after simulation (default: False)
+        Run ReadVarsESO after sim (default: False)
 
     output_prefix : str, optional
         Prefix for output file names (default: eplus)

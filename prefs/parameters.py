@@ -40,7 +40,7 @@ parameters = {
     # NOTE - This value must be a positive integer.
     "SAMPLING_DECIMALS": 2,
 
-    # This setting controls the seed of the RNG engine used during the simulation process to ensure reproducible
+    # This setting controls the seed of the RNG engine used during the sim process to ensure reproducible
     # results.
     # NOTE - This value must be a positive integer.
     "SEED": 4144415054,
@@ -58,8 +58,8 @@ parameters = {
     # NOTE -
     "MUTATION_ETA": 1,
 
-    # This value is the reporting time interval used in the CSV output file of the simulation engine.
-    # NOTE - This value must be less than or equal to the simulation process time interval and such that it divides
+    # This value is the reporting time interval used in the CSV output file of the sim engine.
+    # NOTE - This value must be less than or equal to the sim process time interval and such that it divides
     #  said interval exactly.
     "DF_FREQ_STR": "1H",
     "DF_FREQ_NUM": 1

@@ -54,47 +54,47 @@ import callback
 import monitor
 import termination_criterion
 
-import preferences.colors
-import preferences.parameters
+import prefs.colors
+import prefs.parameters
 
-import simulation.runner
-import simulation.modifier
-import simulation.reader
+import sim.runner
+import sim.modifier
+import sim.reader
 
-import utilities.librarian
-import utilities.optimization
+import utils.librarian
+import utils.optimization
 
 
 class OptimizationProblem(ElementwiseProblem):
-    """Formulate the simulation problem."""
+    """Formulate the sim problem."""
 
-    def __init__(self, decimals=preferences.parameters.parameters["SAMPLING_DECIMALS"]):
+    def __init__(self, decimals=prefs.parameters.parameters["SAMPLING_DECIMALS"]):
         """..."""
 
-        variable_bounds = utilities.optimization.read_problem_bounds(
+        variable_bounds = utils.optimization.read_problem_bounds(
             "../database/optimization/model/variable_bounds.csv")
 
-        # The number of design space variables depends on the simulation unit time.
+        # The number of design space variables depends on the sim unit time.
         super().__init__(n_var=48, n_obj=2, xl=variable_bounds[0],
-                         xu=utilities.optimization.close_bound(variable_bounds[1], decimals=decimals))
+                         xu=utils.optimization.close_bound(variable_bounds[1], decimals=decimals))
 
     def _evaluate(self, x, out, *args, **kwargs):
         """..."""
 
         # Heating Schedule
-        simulation.modifier.modify_schedule(x[00:24], "../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 29)
+        sim.modifier.modify_schedule(x[00:24], "../database/sim/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 29)
 
         # Cooling Schedule
-        simulation.modifier.modify_schedule(x[24:48], "../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 36)
+        sim.modifier.modify_schedule(x[24:48], "../database/sim/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 36)
 
         # Simulation Controller
-        simulation.runner.run_eplus("../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
-                                        "../database/simulation/model/USA_AZ_Tucson-Davis-Monthan.AFB.722745_TMY3.epw",
-                                        set_idd=False)
+        sim.runner.run_eplus("../database/sim/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
+                                        "../database/sim/model/USA_AZ_Tucson-Davis-Monthan.AFB.722745_TMY3.epw",
+                             set_idd=False)
 
         # Objectives
-        nse = simulation.reader.read_nse()
-        ppd = simulation.reader.read_ppd()
+        nse = sim.reader.read_nse()
+        ppd = sim.reader.read_ppd()
 
         out["F"] = [ppd, nse]
 
@@ -105,9 +105,9 @@ optimization_algorithm = NSGA2(pop_size=100,
                                sampling=algorithm.SamplingScheme(),
                                # NOTE - Check the parent population selection process.
                                crossover=algorithm.CrossoverScheme(
-                                   eta=preferences.parameters.parameters["CROSSOVER_ETA"],
-                                   prob=preferences.parameters.parameters["CROSSOVER_PROBABILITY"]),
-                               mutation=algorithm.MutationScheme(eta=preferences.parameters.parameters["MUTATION_ETA"]),
+                                   eta=prefs.parameters.parameters["CROSSOVER_ETA"],
+                                   prob=prefs.parameters.parameters["CROSSOVER_PROBABILITY"]),
+                               mutation=algorithm.MutationScheme(eta=prefs.parameters.parameters["MUTATION_ETA"]),
                                # NOTE - Check the population survival selection process.
                                eliminate_duplicates=True
                                )
@@ -115,20 +115,20 @@ optimization_algorithm = NSGA2(pop_size=100,
 
 # The termination criterion is checked against before each new generation. It cannot be checked againts before the
 # whole population is evaluated, so the smallest input arguments it can take are: (i) n_max_gen = 1, (ii) n_max_evals
-# = pop_size, and (iii) max_time = pop_size * mean (or max) simulation time.
+# = pop_size, and (iii) max_time = pop_size * mean (or max) sim time.
 
 # Similarly, the possible values of those input arguments are: (i) n_max_gen = k, where k is an integer,
-# (ii) n_max_evals = k * pop_size, and (iii) max_time = k * pop_size * mean (or max) simulation time.
+# (ii) n_max_evals = k * pop_size, and (iii) max_time = k * pop_size * mean (or max) sim time.
 
 # Other values are also valid, but may yield unexpected results. For example, when pop_size = 100 and n_max_evals =
-# 150, then the optimization will stop after the evaluation of the second generation is finished.
+# 150, then the opt will stop after the evaluation of the second generation is finished.
 
 termination_criterion = termination_criterion.TerminationCriterion()
 
 convergence_callback = callback.ConvergenceCallback()
 
 res = minimize(optimization_problem, optimization_algorithm, termination_criterion, callback=convergence_callback,
-               seed=preferences.parameters.parameters["SEED"], display=monitor.ConvergenceMonitor(), verbose=True)
+               seed=prefs.parameters.parameters["SEED"], display=monitor.ConvergenceMonitor(), verbose=True)
 
 
 # API USAGE EXAMPLE
@@ -149,15 +149,15 @@ if __name__ == "__main__":
 def algorithm_performance(objective_space_results, reference_point=(1., 1.), reference_set=None,
                                               extreme_solutions=None
                                               ):
-    """Assess the performance of the simulation algorithm using various relevant metrics."""
+    """Assess the performance of the sim algorithm using various relevant metrics."""
 
     # NO COMPARISON
 
     # NOTE - The OVERALL NON-DOMINATED VECTOR GENERATION (ONVG) performance indicator refers to the cardinality of
-    #  the non-dominated solution preferences and needs to be maximized.
+    #  the non-dominated solution prefs and needs to be maximized.
     onvg = np.shape(objective_space_results)[0]
 
-    # Build the reference preferences (i.e. the the X- and Y- axes for the normalized solution preferences).
+    # Build the reference prefs (i.e. the the X- and Y- axes for the normalized solution prefs).
     if reference_set is None:
         # Calculate the number of points per axis.
         num_points = int(0.5 * onvg)
@@ -169,7 +169,7 @@ def algorithm_performance(objective_space_results, reference_point=(1., 1.), ref
         y_axis = np.column_stack([np.zeros(num_points), point_coordinates])
 
         # TODO - The origin is included twice. Check if this can cause a bug.
-        # TODO - Does it matter of the solution preferences is not sorted?
+        # TODO - Does it matter of the solution prefs is not sorted?
         reference_set = np.row_stack([x_axis, y_axis])
 
         # NOTE - Check for shape match as a debugging tool. Remove this before final release.
@@ -177,50 +177,50 @@ def algorithm_performance(objective_space_results, reference_point=(1., 1.), ref
         assert np.shape(reference_set) == np.shape(
             non_dominated_solutions), "The dimensions of the reference and the non-dominated solution sets do not match."
 
-    # Normalize the the non-dominated solution preferences.
-    normalized_objective_space_results = utilities.optimization._normalize_objective_space_results(
+    # Normalize the the non-dominated solution prefs.
+    normalized_objective_space_results = utils.optimization._normalize_objective_space_results(
         objective_space_results)
 
     # COMPARISON TO REFERENCE POINT
 
-    # NOTE - The HYPERVOLUME (HV) performance indicator refers to the area enclosed by the non-dominated solution preferences
+    # NOTE - The HYPERVOLUME (HV) performance indicator refers to the area enclosed by the non-dominated solution prefs
     #  and a reference point in the feasible region, which is taken to be as "bad" as possible [i.e. (1, 1) for the
-    #  normalized solution preferences] and needs to be maximized.
+    #  normalized solution prefs] and needs to be maximized.
     hv = get_performance_indicator("hv", ref_point=np.array(reference_point)).do(normalized_objective_space_results)
 
     # COMPARISON TO A REFERENCE SET
 
     # NOTE - The GENERATIONAL DISTANCE (GD) performance indicator refers to the Euclidean distance between the
-    #  non-dominated solution preferences and a reference point preferences, which is taken to be the actual Pareto Frontier [i.e.
-    #  the X- and Y- axes for the normalized solution preferences] and needs to be minimized.
+    #  non-dominated solution prefs and a reference point prefs, which is taken to be the actual Pareto Frontier [i.e.
+    #  the X- and Y- axes for the normalized solution prefs] and needs to be minimized.
     gd = get_performance_indicator("gd", reference_set).do(normalized_objective_space_results)
 
     # NOTE - The INVERTED GENERATIONAL DISTANCE PLUS (IDG+) performance indicator refers to the inverted GD between
-    #  the non-dominated solution preferences and a reference point preferences, which is taken to be the actual Pareto Frontier [
-    #  i.e. the X- and Y- axes for the normalized solution preferences] and needs to be minimized.
+    #  the non-dominated solution prefs and a reference point prefs, which is taken to be the actual Pareto Frontier [
+    #  i.e. the X- and Y- axes for the normalized solution prefs] and needs to be minimized.
 
     # NOTE - In contrast to IGD, IGD+ is weakly Pareto compliant, meaning that given two distinct non-dominated
     #  solutions sets A and B, if A < B, then IGD+(A) >= IGD+(B). This is property is essential if IDG+ is to be used
-    #  a stopping criterion for the simulation process.
+    #  a stopping criterion for the sim process.
 
     igd_plus = get_performance_indicator("igd+", reference_set).do(normalized_objective_space_results)
 
     # NOTE - The DELTA (Δ OR Δ') performance indicator refers to the difference between the Euclidean distance
-    #  between consecutive elements of the non-dominated solution preferences and the average of said distances while also
+    #  between consecutive elements of the non-dominated solution prefs and the average of said distances while also
     #  taking its extents into account and needs to be minimized.
 
     def _delta(_objective_space_results=objective_space_results, _extreme_solutions=extreme_solutions, _onvg=onvg):
         """..."""
 
-        # Sort the non-dominated solution preferences with respect to its X-axis coordinates.
+        # Sort the non-dominated solution prefs with respect to its X-axis coordinates.
         _sorted_objective_space_results = _objective_space_results[_objective_space_results[:, 0].argsort()]
 
-        # Compute the lower and upper bounds of the non-dominated solution preferences.
+        # Compute the lower and upper bounds of the non-dominated solution prefs.
         _lower_bound = _sorted_objective_space_results[0, :]
         _upper_bound = _sorted_objective_space_results[-1, :]
 
-        # The extreme solutions (i.e. the boundary elements of the reference solution preferences) are arbitrarily taken to
-        # be 25% "better" than the boundary elements of the non-dominated solution preferences.
+        # The extreme solutions (i.e. the boundary elements of the reference solution prefs) are arbitrarily taken to
+        # be 25% "better" than the boundary elements of the non-dominated solution prefs.
         if _extreme_solutions is None:
             _padding = 0.25
 
@@ -234,11 +234,11 @@ def algorithm_performance(objective_space_results, reference_point=(1., 1.), ref
                                   )
 
         # Compute the Euclidean distances between the extreme solutions and the boundary elements of the
-        # non-dominated solution preferences.
+        # non-dominated solution prefs.
         _df = math.dist(_extreme_solutions[0], _lower_bound)
         _dl = math.dist(_extreme_solutions[1], _upper_bound)
 
-        # Compute Euclidean distances between consecutive internal elements of the non-dominated solution preferences.
+        # Compute Euclidean distances between consecutive internal elements of the non-dominated solution prefs.
         _di = []
         for _i in range(onvg - 1):
             _di.append(math.dist(_sorted_objective_space_results[_i, :], _sorted_objective_space_results[_i + 1, :]))
@@ -277,18 +277,18 @@ if __name__ == "__main__":
 
 def recommend_point(objective_space_results, max_ppd=10.0):
     """
-    Decompose the multi-objective simulation problem of BEC vs. owPPD and and estimate its optimal solution.
+    Decompose the multi-objective sim problem of BEC vs. owPPD and and estimate its optimal solution.
 
-    Decompose the multi-objective simulation problem of BEC vs. owPPD, which is represented by its corresponding
+    Decompose the multi-objective sim problem of BEC vs. owPPD, which is represented by its corresponding
     Pareto Frontier, by using the a priori method of formulating and solving an equivalent single-objective
-    simulation problem such that its optimal solution is (i) also a non-dominated optimal solution to the initial
+    sim problem such that its optimal solution is (i) also a non-dominated optimal solution to the initial
     problem and (ii) mathematically and objectively "optimal" with respect to an arbitrarily pre-specified criterion.
 
     # TODO - Confirm the maximum value of PPD in ISO 7730:2005.
 
     If owPPD(x) ≤ 15% (i.e. the maximum value recommended by ISO 7730:2005), then the optimal solution of the
-    aforementioned single-objective simulation problem is equivalent to argmax(owPPD). However, in all other cases,
-    the non-dominated solutions of the initial multi-objective simulation problem are (i) normalized using minimax
+    aforementioned single-objective sim problem is equivalent to argmax(owPPD). However, in all other cases,
+    the non-dominated solutions of the initial multi-objective sim problem are (i) normalized using minimax
     feature scaling [1] to fit within the range [0, 1] and evaluated using the Achievement Scalarization Function
     (ASF) proposed by Wierzbicki [2].
     """
@@ -299,16 +299,16 @@ def recommend_point(objective_space_results, max_ppd=10.0):
     # If all values of the difference matrix need to be masked, then owPPD(x) > max_owPPD.
     if np.all(mask):
         warnings.warn(
-            "owPPD(x) > {}%: Switching to Wierzbicki's ASF assuming equal simulation objective importance.".format(
+            "owPPD(x) > {}%: Switching to Wierzbicki's ASF assuming equal sim objective importance.".format(
                 max_ppd))
-        # CASE 2: Normalize the non-dominated solutions of the initial multi-objective simulation problem to fit
+        # CASE 2: Normalize the non-dominated solutions of the initial multi-objective sim problem to fit
         # within the range [0, 1].
 
-        normalized_objective_space_results = utilities.optimization._normalize_objective_space_results(
+        normalized_objective_space_results = utils.optimization._normalize_objective_space_results(
             objective_space_results)
 
-        # CASE 2: This is a measure of how "important" each objective of the initial multi-objective simulation
-        # problem is. Since, BEC and owPPD are of equal importance, their individual weights will be be preferences to 1.
+        # CASE 2: This is a measure of how "important" each objective of the initial multi-objective sim
+        # problem is. Since, BEC and owPPD are of equal importance, their individual weights will be be prefs to 1.
         weights = np.array([1, 1])
         # Since the range of F is normalized to [0, 1], the default values, which result in the corresponding utopian
         # point being placed at the origin, are OK and we don't need to calculate it ourselves.
@@ -368,15 +368,15 @@ if __name__ == "__main__":
 
 # STEP 12 - SAVE THE NON GRAPHICAL OUTPUT TO FILE
 
-def write_logs(callback, decimals=preferences.parameters.parameters["OUTPUT_DECIMALS"], paths=None):
+def write_logs(callback, decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"], paths=None):
     """
     Write the objective and design space output for each generation to a CSV file for further manipulation.
     """
 
     # NOTE - This avoids a mutable default argument.
     if paths is None:
-        paths = {"F": "../database/optimization/logs/objective_space.csv",
-                 "X": "../database/optimization/logs/design_space.csv"
+        paths = {"F": "../database/opt/logs/objective_space.csv",
+                 "X": "../database/opt/logs/design_space.csv"
                  }
 
     # Instantiate two dataframes to store the design and objective space output per population generation.
@@ -397,15 +397,15 @@ def write_logs(callback, decimals=preferences.parameters.parameters["OUTPUT_DECI
 
     # Write the required dataframes to CSV files.
     # TODO - Find a better way to write this.
-    utilities.librarian.create_directory(os.path.split(paths["F"])[0])
-    utilities.librarian.create_directory(os.path.split(paths["X"])[0])
+    utils.librarian.create_directory(os.path.split(paths["F"])[0])
+    utils.librarian.create_directory(os.path.split(paths["X"])[0])
 
     dataframe_F.to_csv(paths["F"], index_label="Evaluation")
     dataframe_X.to_csv(paths["X"], index_label="Evaluation")
 
 
-def write_result(design_space_result, lookup_table, decimals=preferences.parameters.parameters["OUTPUT_DECIMALS"],
-                 path="../database/optimization/output/schedules.csv"):
+def write_result(design_space_result, lookup_table, decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"],
+                 path="../database/opt/output/schedules.csv"):
     """
     # TODO - Fix the function docstring.
     Write the design space output to a CSV file.
@@ -427,8 +427,8 @@ def write_result(design_space_result, lookup_table, decimals=preferences.paramet
 
     # Create the time column.
     # NOTE - This will return a timeseries starting from 01:00, up to 24:00, repeating every freq hours.
-    dataframe["Time (HH:MM:SS)"] = pd.date_range("01:00", freq=preferences.parameters.parameters["DF_FREQ_STR"],
-                                                 periods=24 / preferences.parameters.parameters["DF_FREQ_NUM"]).time
+    dataframe["Time (HH:MM:SS)"] = pd.date_range("01:00", freq=prefs.parameters.parameters["DF_FREQ_STR"],
+                                                 periods=24 / prefs.parameters.parameters["DF_FREQ_NUM"]).time
 
     # NOTE - The following procedure is repeated for each element of the supplemental database (i.e. each required database
     #  column).
@@ -448,7 +448,7 @@ def write_result(design_space_result, lookup_table, decimals=preferences.paramet
         dataframe[lookup_table[i][2]] = np.round(decompressed_column_data, decimals)
 
     # Write the required dataframe to a CSV file.
-    utilities.librarian.create_directory(os.path.split(path)[0])
+    utils.librarian.create_directory(os.path.split(path)[0])
     dataframe.to_csv(path, index=False)
 
 
@@ -496,7 +496,7 @@ if __name__ == "__main__":
 # STEP 14 - GRAPH THE MINIMUM REQUIRED DATA TO HELP SET UP THE MAIN AND SECONDARY AXES - DONE
 
 
-def scatter(figure_object, main_axes_object, data, marker=".", marker_fill_color=preferences.colors.colors["CORNFLOWERBLUE"],
+def scatter(figure_object, main_axes_object, data, marker=".", marker_fill_color=prefs.colors.colors["CORNFLOWERBLUE"],
             marker_label=None, marker_size=None
             ):
     """Create a scatter plot of a given colors, label, marker and marker size."""
@@ -527,7 +527,7 @@ if __name__ == "__main__":
 
 
 def setup_axes(axes_object, axes_name, num_ticks, optimal_point,
-               decimals=preferences.parameters.parameters["OUTPUT_DECIMALS"], axes_limits=None,
+               decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"], axes_limits=None,
                secondary_axes_limits=None,
                secondary_axis_scale=1.
                ):
@@ -581,7 +581,7 @@ def setup_axes(axes_object, axes_name, num_ticks, optimal_point,
 
     SETTINGS[axes_name][3].set_major_formatter(FormatStrFormatter('%.' + str(decimals) + 'f'))
 
-    if axes_limits == "preferences":
+    if axes_limits == "prefs":
         SETTINGS[axes_name][4](min_value, max_value)
 
     # Disable axis autoscaling.
@@ -597,7 +597,7 @@ if __name__ == "__main__":
     # We need the Y-axis limits for the secondary axis.
     main_axes_limits = setup_axes(main_axes, "y", 10, P0, axes_limits="return")
     # Secondary axis.
-    setup_axes(secondary_axes, "y", 10, P0, axes_limits="preferences", secondary_axes_limits=main_axes_limits,
+    setup_axes(secondary_axes, "y", 10, P0, axes_limits="prefs", secondary_axes_limits=main_axes_limits,
                secondary_axis_scale=0.579249757500518)
 
 
@@ -608,10 +608,10 @@ if __name__ == "__main__":
 
 
 def draw_recommended_point(figure_object, main_axes_object, optimal_point,
-                       marker_fill_color=preferences.colors.colors["MEDIUMSEAGREEN"],
-                       marker_label="Optimal Point", marker_size=0.25,
-                       crosshair_stroke_color=preferences.colors.colors["MEDIUMSEAGREEN"], crosshair_stroke_weight=None
-                       ):
+                           marker_fill_color=prefs.colors.colors["MEDIUMSEAGREEN"],
+                           marker_label="Optimal Point", marker_size=0.25,
+                           crosshair_stroke_color=prefs.colors.colors["MEDIUMSEAGREEN"], crosshair_stroke_weight=None
+                           ):
     def _draw_crosshair(_figure_object=figure_object, _main_axes_object=main_axes_object, _optimal_point=optimal_point,
                         _crosshair_stroke_color=crosshair_stroke_color, _crosshair_stroke_weight=crosshair_stroke_weight
                         ):
@@ -646,10 +646,10 @@ if __name__ == "__main__":
 
 
 def draw_high_tradeoff_area(figure_object, main_axes_object, high_tradeoff_area,
-                            marker_fill_color=preferences.colors.colors["LIGHTCORAL"],
+                            marker_fill_color=prefs.colors.colors["LIGHTCORAL"],
                             marker_label="High Trade-Off Area",
                             marker_size=0.25, rectangle_fill=False, rectangle_fill_color=None,
-                            rectangle_stroke_color=preferences.colors.colors["LIGHTCORAL"],
+                            rectangle_stroke_color=prefs.colors.colors["LIGHTCORAL"],
                             rectangle_stroke_weight=None,
                             rectangle_size=0.5
                             ):
@@ -718,15 +718,15 @@ if __name__ == "__main__":
 # STEP 18 - FINALIZE AND ACTIVATE THE FIGURE FOR THE GRAPHICAL OUTPUT
 
 
-def finalize_figure(main_axes_object, grid_linestyle="--", color=preferences.colors.colors["GRAY"],
-                    path="../database/optimization/output/pareto.png", dpi=300):
+def finalize_figure(main_axes_object, grid_linestyle="--", color=prefs.colors.colors["GRAY"],
+                    path="../database/opt/output/pareto.png", dpi=300):
     main_axes_object.grid(ls=grid_linestyle, c=color)
 
     main_axes_object.legend()
 
     # plt.show()
 
-    utilities.librarian.create_directory(os.path.split(path)[0])
+    utils.librarian.create_directory(os.path.split(path)[0])
     plt.savefig(path, dpi=dpi)
 
 
@@ -739,6 +739,6 @@ if __name__ == "__main__":
 """
 [1]https://en.wikipedia.org/wiki/Feature_scaling
 [2]Wierzbicki, A.P., 1980. The use of reference objectives in 
-multiobjective simulation, in: Multiple criteria decision making theory and application. Springer, pp. 468–486.
+multiobjective sim, in: Multiple criteria decision making theory and application. Springer, pp. 468–486.
 [20]    doi:10.1007/978-3-642-48782-8_32
 """

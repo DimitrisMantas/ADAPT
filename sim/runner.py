@@ -32,9 +32,9 @@
 import eppy.modeleditor
 
 
-def run_eplus(idf: str, epw: str, idd="eplus/eplus.idd", set_idd=True, output_path="../database/simulation/logs/",
+def run_eplus(idf: str, epw: str, idd="eplus/eplus.idd", set_idd=True, output_path="../database/sim/logs/",
               read_vars=True, verbose="S") -> None:
-    """Run an eplus™ whole building performance simulation."""
+    """Run an eplus™ whole building performance sim."""
 
     # The .IDD file needs to be set only once during a given workflow.
     if set_idd:
@@ -47,8 +47,8 @@ if __name__ == "__main__":
     def main():
         """Entry point for debugging purposes."""
 
-        run_eplus("../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
-                  "../database/simulation/model/USA_AZ_Tucson-Davis-Monthan.AFB.722745_TMY3.epw")
+        run_eplus("../database/sim/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf",
+                  "../database/sim/model/USA_AZ_Tucson-Davis-Monthan.AFB.722745_TMY3.epw")
 
 
     main()

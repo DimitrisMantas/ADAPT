@@ -37,8 +37,8 @@ with open("README.md", "r") as file:
 setup(name="ADAPT",
       version="1.0.0",
 
-      description="ADAPT is a Python 3 module for the optimization of building energy consumption and human comfort "
-                  "using genetic algorithms coupled with whole building performance simulation software.",
+      description="ADAPT is a Python 3 module for the opt of building energy consumption and human comfort "
+                  "using genetic algorithms coupled with whole building performance sim software.",
       long_description=read_me,
 
       license="AGPL-3.0",
@@ -47,6 +47,6 @@ setup(name="ADAPT",
       author_email="dimitris.mantas@outlook.com",
       url="https://github.com/DimitrisMantas/ADAPT",
 
-      packages=["optimization", "preferences", "simulation", "utilities"],
+      packages=["opt", "prefs", "sim", "utils"],
       install_requires=["eppy==0.5.56", "matplotlib==3.4.3", "numpy==1.21.2", "openstudio==3.2.1", "pandas==1.3.3",
                         "pymoo==0.5.0"])

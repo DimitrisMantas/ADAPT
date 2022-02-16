@@ -32,7 +32,7 @@
 import eppy.modeleditor
 
 
-def modify_schedule(x, idf, schedule_object, idd="../simulation/eplus/eplus.idd", set_idd=True) -> None:
+def modify_schedule(x, idf, schedule_object, idd="../sim/eplus/eplus.idd", set_idd=True) -> None:
     """Edit any schedule inside a standard .IDF file."""
 
     # The .IDD file needs to be set only once during a given workflow.
@@ -104,6 +104,6 @@ x = [15.00,  # 1
      15.001,  # 24
      ]
 # Heating
-modify_schedule(x[00:24], "../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 29)
+modify_schedule(x[00:24], "../database/sim/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 29)
 # Cooling
-modify_schedule(x[24:48], "../database/simulation/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 36)
+modify_schedule(x[24:48], "../database/sim/model/ASHRAE901_OfficeMedium_STD2019_Tucson.idf", 36)

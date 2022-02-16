@@ -37,7 +37,7 @@ import numpy
 import pandas
 
 
-def read_nse(path="../database/simulation/logs/eplustbl.htm", convert_value=True) -> float:
+def read_nse(path="../database/sim/logs/eplustbl.htm", convert_value=True) -> float:
     """Read the net site energy consumption from a standard eplustbl.HTM eplus™ result file."""
 
     with open(path, "r") as file:

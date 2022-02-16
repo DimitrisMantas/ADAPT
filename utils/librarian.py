@@ -1,7 +1,7 @@
 """
     This file is part of the interface of ADAPT. It defines the
     directory creation methods for reading and writing database parsed form its
-    performance simulation to its simulation engine and vice versa.
+    performance sim to its sim engine and vice versa.
 
     Copyright (C) 2021-2022
         Dimitris Mantas, MEng (s)

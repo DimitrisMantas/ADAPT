@@ -1,5 +1,5 @@
 """
-    This file is part of the simulation engine of ADAPT. It defines the
+    This file is part of the sim engine of ADAPT. It defines the
     input parameters of the corresponding algorithm.
 
     Copyright (C) 2021-2022
@@ -37,12 +37,12 @@ from pymoo.core.mutation import Mutation
 from pymoo.core.sampling import Sampling
 from pymoo.operators.repair.to_bound import set_to_bounds_if_outside_by_problem
 
-from preferences.parameters import parameters
+from prefs.parameters import parameters
 
 
 class SamplingScheme(Sampling):
     """Uniformly sample real floating-point numbers with a predefined number of decimal places by considering the
-    lower and upper bounds of the simulation problem."""
+    lower and upper bounds of the sim problem."""
 
     def __init__(self, decimals=parameters["SAMPLING_DECIMALS"]) -> None:
         """
@@ -62,7 +62,7 @@ class SamplingScheme(Sampling):
     def _do(self, problem, n_samples, **kwargs):
         # TODO - Fix the method docstring.
         """Uniformly sample real floating-point numbers with a predefined number of decimal places by considering the
-        lower and upper bounds of the simulation problem."""
+        lower and upper bounds of the sim problem."""
 
         # Initialize NumPy's recommended RNG.
         rng = np.random.default_rng(seed=parameters["SEED"])
@@ -217,7 +217,7 @@ class MutationScheme(Mutation):
         _Y[_Y < xl] = xl[_Y < xl]
         _Y[_Y > xu] = xu[_Y > xu]
 
-        # preferences the values for output
+        # prefs the values for output
         Y[do_mutation] = _Y
 
         # in case out of bounds repair (very unlikely)
