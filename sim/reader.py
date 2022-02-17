@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -44,12 +44,12 @@ import pandas
 
 
 def read_nse(path="../database/sim/logs/eplustbl.htm", convert_value=True) -> float:
-    """Read the net site energy consumption from a standard eplustbl.HTM eplus™ result file."""
+    """Read the net site energy consumption from a standard eplustbl.HTM EnergyPlus™ result file."""
 
     with open(path, "r") as file:
         value = eppy.results.fasthtml.tablebyindex(file, 0)[1][1][1]
 
-    # Convert NSE from GJ (i.e. the default value used by eplus™) to kWh.
+    # Convert NSE from GJ (i.e. the default value used by EnergyPlus™) to kWh.
     if convert_value:
         value *= 1E6 / 3600
 
@@ -57,10 +57,10 @@ def read_nse(path="../database/sim/logs/eplustbl.htm", convert_value=True) -> fl
 
 
 def read_ppd(mode="max") -> float:
-    """Read the occupancy-weighted PPD from a standard eplusout.HTM eplus™ result file."""
+    """Read the occupancy-weighted PPD from a standard eplusout.HTM EnergyPlus™ result file."""
 
     # The .CSV file contains timestamps, which are not required.
-    dataframe = pandas.read_csv("../database/simulation/logs/eplusout.csv").drop("Date/Time", axis=1)
+    dataframe = pandas.read_csv("../database/sim/logs/eplusout.csv").drop("Date/Time", axis=1)
 
     split_index = len(dataframe.columns) // 2
 

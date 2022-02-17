@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #

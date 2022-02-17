@@ -25,32 +25,26 @@ Vassilis Nikolopoulos, Head of Applied Research & Development.
 The core of **ADAPT** is made up of two distinct modules: (i) a simulation and (ii) an optimization engine. The former
 module is based on a custom implementation of the NSGA-II algorithm, while the latter on EnergyPlus and OpenStudio.
 
-## LICENSE
-## Copyright Information
-Copyright © 2021
+# License
 
-Dimitris Mantas\
-Senior Undergraduate Student
+ADAPT is a Python program for the optimization of building energy consumption and human comfort.
 
-Department of Civil Engineering\
-School of Engineering\
-University of Patras
+Copyright © 2021-2022 Dimitris Mantas
 
-A: University Campus, Rio, Achaia, 265 04, Greece\
-Ε: dimitris.mantas@outlook.com\
-T: +30 698 995 8826
+This program is free software: you can redistribute it and/or modify it under the terms of
+the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html) as published by
+the [Free Software Foundation](https://www.gnu.org/licenses/gpl-3.0.en.html#mission-statement),
+either [version 3](https://www.gnu.org/licenses/gpl-3.0.md) of the License, or (at your option) any later version.
 
-## Disclaimer of Warranty
-There in no warranty for **ADAPT**, to the extent permitted by applicable law. Except when otherwise stated in writing
-the copyright holder and/or other parties provide **ADAPT** “as is” without warrant of any kind, either expressed or
-implied, including, but not limited to, the implied warranties od merchantability and fitness for a particular purpose.
-The entire risk as to the quality and performance of **ADAPT** is with you. Should **ADAPT** prove defective, you assume
-the cost of all necessary servicing, repair or correction.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-## Limitation of Liability
-In no event unless required by applicable law or agreed to in writing will any copyright holder, or any other party who
-modifies and/or conveys **ADAPT** as permitted above, be liable to you for damages, including any general, special,
-incidental or consequential damages arising out of the use or inability to use **ADAPT** (including but not limited to
-loss of data or data being rendered inaccurate or losses sustained by you or third partied or a failure of **ADAPT** to
-operate with any other programs), even if such holder or other party has been advised of the possibility of such
-damages.
+You should have received a copy of the GNU General Public License along with this program. If not,
+see [https://www.gnu.org/licenses/]( https://www.gnu.org/licenses/).
+
+# Citations
+
+To cite **ADAPT** in your own work, please use the following reference:
+
+> D. Mantas, *ADAPT*. Irakleio, Greece: Department of Applied Research & Development, Power & Gas Business Unit, 
+> MYTILINEOS S.A., 2021.

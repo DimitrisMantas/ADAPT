@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -14,24 +14,3 @@
 #
 #          You should have received a copy of the GNU General Public License
 #          along with this program. If not, see <https://www.gnu.org/licenses/>.
-
-#      This program is part of ADAPT.
-#
-#      You should have received this program as part of its parent software
-#      package.  If not, see <https://www.github.com/DimitrisMantas/ADAPT>.
-#
-#      Copyright (C) 2021
-#
-#          Dimitris Mantas
-#          Senior Undergraduate Student
-#
-#          Department of Civil Engineering
-#          School of Engineering
-#          University of Patras
-#
-#          A: University Campus, Rio, Achaia, 265 04, Greece
-#          Ε: dimitris.mantas@outlook.com
-#          Τ: +30 698 995 8826
-#
-#
-#

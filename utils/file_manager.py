@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -32,6 +32,11 @@ def create_directories(path: str) -> None:
     pathlib.Path(path).mkdir(parents=True, exist_ok=True)
 
 
-# TODO
-def move_file():
+# TODO - Fill in this function.
+def delete_file(filepath: str) -> None:
+    pass
+
+
+# TODO - Fill in this function.
+def move_file(current_filepath: str, new_filepath: str) -> None:
     pass

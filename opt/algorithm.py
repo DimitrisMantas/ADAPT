@@ -27,7 +27,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -234,7 +234,7 @@ class MutationScheme(Mutation):
         _Y[_Y < xl] = xl[_Y < xl]
         _Y[_Y > xu] = xu[_Y > xu]
 
-        # prefs the values for output
+        # prefs the values for out
         Y[do_mutation] = _Y
 
         # in case out of bounds repair (very unlikely)

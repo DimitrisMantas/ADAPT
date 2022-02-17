@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -38,7 +38,7 @@
 import eppy.modeleditor
 
 
-def modify_schedule(x, idf, schedule_object, idd="../sim/eplus/eplus.idd", set_idd=True) -> None:
+def modify_schedule(x, idf, schedule_object, idd="../sim/EnergyPlus/EnergyPlus.idd", set_idd=True) -> None:
     """Edit any schedule inside a standard .IDF file."""
 
     # The .IDD file needs to be set only once during a given workflow.

@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -31,8 +31,8 @@ if __name__ == "__main__":
     def main():
         """Entry point for debugging purposes."""
 
-        convert_osm_to_idf("../database/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.osm",
-                           "../database/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf")
+        convert_osm_to_idf("../database/sim/model/ASHRAE901_OfficeMedium_STD2016_Tucson.osm",
+                           "../database/sim/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf")
 
 
     main()

@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -76,8 +76,7 @@ class OptimizationProblem(ElementwiseProblem):
     def __init__(self, decimals=prefs.parameters.parameters["SAMPLING_DECIMALS"]):
         """..."""
 
-        variable_bounds = utils.optimization.read_problem_bounds(
-            "../database/optimization/model/variable_bounds.csv")
+        variable_bounds = utils.optimization.read_problem_bounds("../database/opt/model/variable_bounds.csv")
 
         # The number of design space variables depends on the sim unit time.
         super().__init__(n_var=48, n_obj=2, xl=variable_bounds[0],
@@ -324,7 +323,7 @@ def recommend_point(objective_space_results, max_ppd=10.0):
 # API USAGE EXAMPLE
 if __name__ == "__main__":
     # NOTE - The API accepts res.F and not res (more user-friendly) because pymoo performs scalarization and high
-    #  trade-off area computation using indices. So, to get the actual output, you need to pas these indices to
+    #  trade-off area computation using indices. So, to get the actual out, you need to pas these indices to
     #  res.F and res.X, so you must already know what they are and how to use them.
     I0 = recommend_point(non_dominated_solutions)
     P0 = non_dominated_solutions[I0, :]
@@ -375,7 +374,7 @@ if __name__ == "__main__":
 
 def write_logs(callback, decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"], paths=None):
     """
-    Write the objective and design space output for each generation to a CSV file for further manipulation.
+    Write the objective and design space out for each generation to a CSV file for further manipulation.
     """
 
     # NOTE - This avoids a mutable default argument.
@@ -384,17 +383,17 @@ def write_logs(callback, decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"]
                  "X": "../database/opt/logs/design_space.csv"
                  }
 
-    # Instantiate two dataframes to store the design and objective space output per population generation.
+    # Instantiate two dataframes to store the design and objective space out per population generation.
     dataframe_F = pd.DataFrame()
     dataframe_X = pd.DataFrame()
 
     for i in range(len(callback.F)):
-        # Add the design space output.
+        # Add the design space out.
         # NOTE - That the index column represents each objective function evaluation.
         dataframe_F["Generation" + " " + str(i) + ": " + "owPPD"] = np.round(callback.F[i][:, 0], decimals)
         dataframe_F["Generation" + " " + str(i) + ": " + "NSE"] = np.round(callback.F[i][:, 1], decimals)
 
-        # Add the objective space output.
+        # Add the objective space out.
         # NOTE - That the index column represents each objective function evaluation.
         for _i in range(len(callback.X[i][0,
                             :])):  # The first row of res.X MUST have the same number of columns as the rest of the rows. # NOTE - This means that each population generation must be of the same size.
@@ -410,10 +409,10 @@ def write_logs(callback, decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"]
 
 
 def write_result(design_space_result, lookup_table, decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"],
-                 path="../database/opt/output/schedules.csv"):
+                 path="../database/opt/out/schedules.csv"):
     """
     # TODO - Fix the function docstring.
-    Write the design space output to a CSV file.
+    Write the design space out to a CSV file.
 
     The supplied database must be an iterable of iterables in the form of [StartIndex, StopIndex, Label],
     where StartIndex and LastIndex are the first and last (+1) values of a specific independent variable, respectively,
@@ -438,7 +437,7 @@ def write_result(design_space_result, lookup_table, decimals=prefs.parameters.pa
     # NOTE - The following procedure is repeated for each element of the supplemental database (i.e. each required database
     #  column).
     for i in range(len(lookup_table)):
-        # The design space output can be thought of as a compressed version of the required column database. To
+        # The design space out can be thought of as a compressed version of the required column database. To
         # decompress this database, each "compressed" value must be repeated the appropriate amount of times,
         # such that the length of the decompressed column database is equal to the number of rows of the dataframe.
         # NOTE - All compressed values must be repeated an equal number of times.
@@ -724,7 +723,7 @@ if __name__ == "__main__":
 
 
 def finalize_figure(main_axes_object, grid_linestyle="--", color=prefs.colors.colors["GRAY"],
-                    path="../database/opt/output/pareto.png", dpi=300):
+                    path="../database/opt/out/pareto.png", dpi=300):
     main_axes_object.grid(ls=grid_linestyle, c=color)
 
     main_axes_object.legend()

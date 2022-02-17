@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -16,17 +16,10 @@
 #          along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 
+import csv
+
 import numpy as np
 import numpy.typing as npt
-
-import csv
-import os
-import pickle
-from typing import Any, List, Union
-
-import numpy as np
-
-import utils.file_manager
 
 
 def _normalize_objective_space_results(_objective_space_results: npt.NDArray) -> npt.NDArray:
@@ -81,11 +74,11 @@ def close_bound(bound: npt.NDArray, decimals: int) -> npt.NDArray:
     return bound + (10 ** -decimals)
 
 
-def read_problem_bounds(path: str) -> List[Union[int, float]]:
-    """Read the sim problem bounds from a givem .CSV file."""
+def read_problem_bounds(filepath: str) -> npt.NDArray:
+    """Read the sim problem bounds from a given .CSV problem_bounds_file."""
 
-    with open(path, "r") as file:
-        reader = csv.reader(file)
+    with open(filepath, "r") as problem_bounds_file:
+        reader = csv.reader(problem_bounds_file)
 
         data = []
         for row in reader:

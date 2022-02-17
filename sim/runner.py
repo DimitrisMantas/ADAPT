@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -38,9 +38,9 @@
 import eppy.modeleditor
 
 
-def run_eplus(idf: str, epw: str, idd="eplus/eplus.idd", set_idd=True, output_path="../database/sim/logs/",
-              read_vars=True, verbose="S") -> None:
-    """Run an eplus™ whole building performance sim."""
+def run_eplus(idf: str, epw: str, idd="EnergyPlus/EnergyPlus.idd", set_idd=True, output_path="../database/sim/logs/",
+              read_vars=True, verbose="s") -> None:
+    """Run an EnergyPlus™ whole building performance sim."""
 
     # The .IDD file needs to be set only once during a given workflow.
     if set_idd:

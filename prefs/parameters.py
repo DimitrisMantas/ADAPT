@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -64,7 +64,7 @@ parameters = {
     # NOTE -
     "MUTATION_ETA": 1,
 
-    # This value is the reporting time interval used in the CSV output file of the sim engine.
+    # This value is the reporting time interval used in the CSV out file of the sim engine.
     # NOTE - This value must be less than or equal to the sim process time interval and such that it divides
     #  said interval exactly.
     "DF_FREQ_STR": "1H",

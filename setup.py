@@ -1,4 +1,4 @@
-#  ADAPT is a Python program for the optimization of building energy
+#  ADAPT is a Python program for the opt of building energy
 #  consumption and human comfort.
 #          Copyright (C) 2021-2022 Dimitris Mantas
 #
@@ -24,7 +24,7 @@ with open("README.md", "r") as readme:
 setuptools.setup(name="ADAPT",
                  version="1.0.0",
 
-                 description="ADAPT is a Python program for the optimization of building energy consumption and human "
+                 description="ADAPT is a Python program for the opt of building energy consumption and human "
                              "comfort.",
                  long_description=read_me,
 
@@ -35,9 +35,9 @@ setuptools.setup(name="ADAPT",
                  url="https://github.com/DimitrisMantas/ADAPT",
 
                  packages=["opt", "prefs", "sim", "utils"],
-                 install_requires=["eppy==0.5.57",
-                                   "matplotlib==3.4.3",
-                                   "numpy==1.21.2",
-                                   "openstudio==3.2.1",
-                                   "pandas==1.3.3",
+                 install_requires=["eppy>=0.5.57",
+                                   "matplotlib",
+                                   "numpy",
+                                   "openstudio",
+                                   "pandas",
                                    "pymoo==0.5.0"])
