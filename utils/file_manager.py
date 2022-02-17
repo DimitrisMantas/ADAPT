@@ -16,23 +16,22 @@
 #          along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 
-import openstudio
+import pathlib
 
 
-def convert_osm_to_idf(osm_filepath: str, idf_filepath: str) -> None:
+def create_directories(path: str) -> None:
+    """
+    Create a directory along with all its parents at a specified location.
 
-    # DO NOT TOUCH THIS!
-    openstudio.energyplus.ForwardTranslator().translateModel(
-        openstudio.osversion.VersionTranslator().loadModel(openstudio.path(osm_filepath)).get()).save(
-        openstudio.path(idf_filepath), True)
-
-
-if __name__ == "__main__":
-    def main():
-        """Entry point for debugging purposes."""
-
-        convert_osm_to_idf("../database/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.osm",
-                           "../database/simulation/model/ASHRAE901_OfficeMedium_STD2016_Tucson.idf")
+    Parameters:
+        path (str):
+    Returns:
+        None
+    """
+    # NOTE - This input argument setup helps to mimic the behavior of the POSIX **mkdir -p** command.
+    pathlib.Path(path).mkdir(parents=True, exist_ok=True)
 
 
-    main()
+# TODO
+def move_file():
+    pass

@@ -26,7 +26,7 @@ from typing import Any, List, Union
 
 import numpy as np
 
-import utils.librarian
+import utils.file_manager
 
 
 def _normalize_objective_space_results(_objective_space_results: npt.NDArray) -> npt.NDArray:

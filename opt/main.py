@@ -66,7 +66,7 @@ import sim.runner
 import sim.modifier
 import sim.reader
 
-import utils.librarian
+import utils.file_manager
 import utils.optimization
 
 
@@ -402,8 +402,8 @@ def write_logs(callback, decimals=prefs.parameters.parameters["OUTPUT_DECIMALS"]
 
     # Write the required dataframes to CSV files.
     # TODO - Find a better way to write this.
-    utils.librarian.create_directory(os.path.split(paths["F"])[0])
-    utils.librarian.create_directory(os.path.split(paths["X"])[0])
+    utils.librarian.create_directories(os.path.split(paths["F"])[0])
+    utils.librarian.create_directories(os.path.split(paths["X"])[0])
 
     dataframe_F.to_csv(paths["F"], index_label="Evaluation")
     dataframe_X.to_csv(paths["X"], index_label="Evaluation")
@@ -453,7 +453,7 @@ def write_result(design_space_result, lookup_table, decimals=prefs.parameters.pa
         dataframe[lookup_table[i][2]] = np.round(decompressed_column_data, decimals)
 
     # Write the required dataframe to a CSV file.
-    utils.librarian.create_directory(os.path.split(path)[0])
+    utils.librarian.create_directories(os.path.split(path)[0])
     dataframe.to_csv(path, index=False)
 
 
@@ -731,7 +731,7 @@ def finalize_figure(main_axes_object, grid_linestyle="--", color=prefs.colors.co
 
     # plt.show()
 
-    utils.librarian.create_directory(os.path.split(path)[0])
+    utils.librarian.create_directories(os.path.split(path)[0])
     plt.savefig(path, dpi=dpi)
 
 
